@@ -69,20 +69,20 @@ export const sendInquiryEmails = async (inquiry) => {
     `;
 
     const results = await Promise.allSettled([
-        transporter.sendMail({
-            from: fromAddress,
-            to: adminEmail,
-            replyTo: inquiry.email,
-            subject: `New Inquiry: ${inquiry.projectId} — ${inquiry.name}`,
-            html: adminHtml,
-        }),
-        transporter.sendMail({
-            from: fromAddress,
-            to: inquiry.email,
-            subject: `We received your project brief — ${inquiry.projectId}`,
-            html: userHtml,
-        }),
-    ]);
+    transporter.sendMail({
+        from: fromAddress,
+        to: adminEmail,
+        replyTo: inquiry.email,
+        subject: `New Inquiry: ${inquiry.projectId} — ${inquiry.name}`,
+        html: adminHtml,
+    }),
+    transporter.sendMail({
+        from: fromAddress,
+        to: inquiry.email,
+        subject: `We received your project brief — ${inquiry.projectId}`,
+        html: userHtml,
+    }),
+]);
 
     const [adminResult, userResult] = results;
 
