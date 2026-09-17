@@ -1,0 +1,552 @@
+/* ============================================================
+   DEVFORGE — PROJECT OVERVIEW
+============================================================ */
+
+.project-overview {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding:
+        7rem clamp(1.2rem, 5vw, 5rem) 8rem;
+
+    background:
+        var(--df-ivory);
+
+    color:
+        var(--df-charcoal);
+}
+
+
+/* ============================================================
+   META
+============================================================ */
+
+.project-overview__meta {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom:
+        1.1rem;
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.project-overview__index {
+
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        0.7rem;
+}
+
+
+.project-overview__dot {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-studio-lime);
+
+    box-shadow:
+        0 0 10px var(--df-studio-dot-glow);
+}
+
+
+/* ============================================================
+   CONTENT
+============================================================ */
+
+.project-overview__content {
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    padding:
+        7rem 0 8rem;
+}
+
+
+.project-overview__label {
+
+    margin-bottom:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.project-overview__main {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr) minmax(300px, 0.8fr);
+
+    align-items:
+        end;
+
+    gap:
+        clamp(3rem, 9vw, 10rem);
+}
+
+
+.project-overview__title {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            8vw,
+            9rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.82;
+
+    letter-spacing:
+        -0.075em;
+
+    color:
+        var(--df-charcoal);
+}
+
+
+.project-overview__title span {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.project-overview__copy {
+
+    padding-bottom:
+        0.5rem;
+}
+
+
+.project-overview__copy p {
+
+    max-width:
+        540px;
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        clamp(0.95rem,
+            1.25vw,
+            1.15rem);
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+.project-overview__line {
+
+    width:
+        100%;
+
+    height:
+        1px;
+
+    margin-top:
+        3rem;
+
+    background:
+        var(--df-studio-line);
+}
+
+
+/* ============================================================
+   PROJECT INFORMATION
+============================================================ */
+
+.project-overview__details {
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    border-top:
+        1px solid var(--df-studio-line);
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+}
+
+
+.project-overview__details-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding:
+        1rem 0;
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.13em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.project-overview__details-header span:last-child {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.project-overview__details-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+
+.project-overview__detail {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1.2rem;
+
+    min-height:
+        120px;
+
+    padding:
+        1.5rem;
+
+    border-right:
+        1px solid var(--df-studio-line);
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+}
+
+
+.project-overview__detail:nth-child(3n) {
+
+    border-right:
+        0;
+}
+
+
+.project-overview__detail:nth-last-child(-n + 3) {
+
+    border-bottom:
+        0;
+}
+
+
+.project-overview__detail span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.project-overview__detail strong {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        0.85rem;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.02em;
+
+    color:
+        var(--df-charcoal);
+}
+
+
+/* ============================================================
+   STATEMENT
+============================================================ */
+
+.project-overview__statement {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        3rem;
+
+    max-width:
+        1500px;
+
+    margin:
+        5rem auto 0;
+}
+
+
+.project-overview__statement>span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.13em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.project-overview__statement p {
+
+    max-width:
+        480px;
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        0.9rem;
+
+    line-height:
+        1.7;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .project-overview {
+
+        padding:
+            5rem 1.2rem 6rem;
+    }
+
+
+    .project-overview__content {
+
+        padding:
+            5rem 0 6rem;
+    }
+
+
+    .project-overview__main {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            3rem;
+    }
+
+
+    .project-overview__details-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .project-overview__detail:nth-child(3n) {
+
+        border-right:
+            1px solid var(--df-studio-line);
+    }
+
+
+    .project-overview__detail:nth-child(2n) {
+
+        border-right:
+            0;
+    }
+
+
+    .project-overview__detail:nth-last-child(-n + 3) {
+
+        border-bottom:
+            1px solid var(--df-studio-line);
+    }
+
+
+    .project-overview__detail:nth-last-child(-n + 2) {
+
+        border-bottom:
+            0;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .project-overview__meta {
+
+        font-size:
+            7px;
+    }
+
+
+    .project-overview__meta>span:last-child {
+
+        display:
+            none;
+    }
+
+
+    .project-overview__title {
+
+        font-size:
+            clamp(3.5rem,
+                18vw,
+                6rem);
+    }
+
+
+    .project-overview__details-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .project-overview__detail,
+    .project-overview__detail:nth-child(2n),
+    .project-overview__detail:nth-child(3n) {
+
+        min-height:
+            95px;
+
+        border-right:
+            0;
+
+        border-bottom:
+            1px solid var(--df-studio-line);
+    }
+
+
+    .project-overview__detail:last-child {
+
+        border-bottom:
+            0;
+    }
+
+
+    .project-overview__statement {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            1.5rem;
+
+        margin-top:
+            4rem;
+    }
+
+}

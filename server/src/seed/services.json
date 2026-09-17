@@ -1,0 +1,810 @@
+[
+  {
+    "key": "web-ui-design",
+    "number": "01",
+    "slug": "web-ui-design",
+    "title": "WEB / UI DESIGN",
+    "label": "DESIGN SYSTEM",
+    "description": "Distinctive digital interfaces and web experiences designed around clarity, character and conversion.",
+    "heroMeta": [
+      "LAYOUT",
+      "TYPE",
+      "UI"
+    ],
+    "statement": {
+      "eyebrow": "WHAT WE DESIGN",
+      "title": "WE DON'T JUST DESIGN SCREENS.",
+      "emphasis": "WE DESIGN EXPERIENCES."
+    },
+    "capabilities": {
+      "title": "DESIGN WITH INTENT.",
+      "description": "Every interface starts with structure, hierarchy and a clear visual direction before it becomes a polished digital experience.",
+      "items": [
+        "Wireframing",
+        "UI Design",
+        "UX Structure",
+        "Design Systems",
+        "Typography",
+        "Responsive Design",
+        "Interaction Design",
+        "Visual Direction"
+      ]
+    },
+    "process": [
+      {
+        "number": "01",
+        "title": "DISCOVER",
+        "description": "Understand the product, audience, goals and visual direction before defining the experience."
+      },
+      {
+        "number": "02",
+        "title": "STRUCTURE",
+        "description": "Build the information architecture, layout hierarchy and wireframe foundation."
+      },
+      {
+        "number": "03",
+        "title": "DESIGN",
+        "description": "Transform the structure into a distinctive interface through typography, colour, spacing and visual systems."
+      },
+      {
+        "number": "04",
+        "title": "REFINE",
+        "description": "Polish responsive states, interactions and visual details until the experience feels intentional."
+      }
+    ],
+    "experience": {
+      "eyebrow": "DESIGN EXPERIENCE",
+      "title": "FROM WIREFRAME TO SIGNATURE UI.",
+      "description": "Raw structure evolves into a polished interface where every visual decision has a purpose."
+    },
+    "toolchain": [
+      {
+        "category": "DESIGN",
+        "tools": [
+          "Figma",
+          "FigJam"
+        ]
+      },
+      {
+        "category": "SYSTEM",
+        "tools": [
+          "Design Tokens",
+          "Typography",
+          "Components"
+        ]
+      },
+      {
+        "category": "PROTOTYPING",
+        "tools": [
+          "Figma Prototype",
+          "Interaction Flows"
+        ]
+      }
+    ],
+    "deliverables": [
+      "Wireframes",
+      "UI Screens",
+      "Design System",
+      "Responsive Layouts",
+      "Interactive Prototype",
+      "Developer Handoff"
+    ],
+    "engagement": {
+      "title": "DESIGN TO BUILD.",
+      "description": "Create a strong visual foundation that can move seamlessly from concept into development."
+    },
+    "relatedWork": [
+      {
+        "title": "SIGNATURE INTERFACE",
+        "category": "UI DESIGN",
+        "description": "A distinctive interface system built around typography, hierarchy and visual direction."
+      },
+      {
+        "title": "DIGITAL PRODUCT UI",
+        "category": "WEB / UI",
+        "description": "A responsive interface designed around clarity and a consistent visual language."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do you design responsive interfaces?",
+        "answer": "Yes. Interfaces are planned for desktop, tablet and mobile experiences."
+      },
+      {
+        "question": "Do you create design systems?",
+        "answer": "Yes. Components, typography, spacing and visual rules can be organized into a reusable design system."
+      },
+      {
+        "question": "Can the design move directly into development?",
+        "answer": "Yes. Designs can be structured for a clean developer handoff and frontend implementation."
+      }
+    ],
+    "cta": {
+      "eyebrow": "READY TO DESIGN?",
+      "title": "FORGE THE EXPERIENCE.",
+      "description": "Bring the idea. We will turn it into a distinctive digital interface."
+    },
+    "shortTitle": "DESIGN"
+  },
+  {
+    "key": "web-development",
+    "number": "02",
+    "slug": "web-development",
+    "title": "WEB DEVELOPMENT",
+    "label": "DEVELOPMENT",
+    "description": "Fast, responsive and carefully engineered websites built to feel as good as they perform.",
+    "heroMeta": [
+      "WEB",
+      "PERFORMANCE",
+      "SEO"
+    ],
+    "statement": {
+      "eyebrow": "WHAT WE BUILD",
+      "title": "WE DON'T JUST BUILD WEBSITES.",
+      "emphasis": "WE BUILD DIGITAL EXPERIENCES."
+    },
+    "capabilities": {
+      "title": "BUILT TO PERFORM.",
+      "description": "Modern websites engineered around responsive behaviour, performance, accessibility and a strong digital experience.",
+      "items": [
+        "Responsive Development",
+        "Frontend Architecture",
+        "Performance Optimization",
+        "SEO Foundations",
+        "Interactive Animations",
+        "Accessibility",
+        "API Integration",
+        "Production Deployment"
+      ]
+    },
+    "process": [
+      {
+        "number": "01",
+        "title": "PLAN",
+        "description": "Define the technical direction, page structure, functionality and development requirements."
+      },
+      {
+        "number": "02",
+        "title": "BUILD",
+        "description": "Turn the approved design into a responsive and interactive production-ready website."
+      },
+      {
+        "number": "03",
+        "title": "OPTIMIZE",
+        "description": "Improve loading behaviour, responsiveness, accessibility, SEO and interaction quality."
+      },
+      {
+        "number": "04",
+        "title": "LAUNCH",
+        "description": "Prepare the final build for production, deployment and real-world usage."
+      }
+    ],
+    "experience": {
+      "eyebrow": "DEVELOPMENT EXPERIENCE",
+      "title": "FROM CODE TO LIVE EXPERIENCE.",
+      "description": "The interface moves from raw code into a fast, responsive and living digital experience."
+    },
+    "toolchain": [
+      {
+        "category": "CORE",
+        "tools": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
+      },
+      {
+        "category": "FRONTEND",
+        "tools": [
+          "React",
+          "Vite"
+        ]
+      },
+      {
+        "category": "MOTION",
+        "tools": [
+          "GSAP",
+          "Lenis"
+        ]
+      },
+      {
+        "category": "WORKFLOW",
+        "tools": [
+          "Git",
+          "GitHub"
+        ]
+      }
+    ],
+    "deliverables": [
+      "Responsive Website",
+      "Interactive Experience",
+      "Performance Optimization",
+      "SEO Foundations",
+      "Animation System",
+      "Production Deployment"
+    ],
+    "engagement": {
+      "title": "IDEA TO LAUNCH.",
+      "description": "From the first component to a production-ready website built around your goals."
+    },
+    "relatedWork": [
+      {
+        "title": "FORGED WEB EXPERIENCE",
+        "category": "WEB DEVELOPMENT",
+        "description": "A responsive digital experience engineered around performance, interaction and conversion."
+      },
+      {
+        "title": "INTERACTIVE STUDIO",
+        "category": "FRONTEND",
+        "description": "A motion-led website combining structured frontend architecture with immersive interactions."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do you build responsive websites?",
+        "answer": "Yes. Websites are developed to adapt across desktop, tablet and mobile screen sizes."
+      },
+      {
+        "question": "Can you build custom animations?",
+        "answer": "Yes. Scroll interactions, transitions and custom motion can be engineered around the experience."
+      },
+      {
+        "question": "Do you handle deployment?",
+        "answer": "Yes. Production deployment can be included as part of the development process."
+      }
+    ],
+    "cta": {
+      "eyebrow": "READY TO BUILD?",
+      "title": "LET'S SHIP SOMETHING DIFFERENT.",
+      "description": "Bring the idea. We will forge the digital experience."
+    },
+    "shortTitle": "WEB"
+  },
+  {
+    "key": "full-stack-mern",
+    "number": "03",
+    "slug": "full-stack-mern",
+    "title": "FULL-STACK (MERN) APPLICATIONS",
+    "label": "FULL PRODUCT",
+    "description": "Complete digital products connecting thoughtful interfaces with powerful backend systems.",
+    "heroMeta": [
+      "REACT",
+      "NODE",
+      "MONGO"
+    ],
+    "statement": {
+      "eyebrow": "WHAT WE ENGINEER",
+      "title": "FROM INTERFACE",
+      "emphasis": "TO COMPLETE PRODUCT."
+    },
+    "capabilities": {
+      "title": "FULL PRODUCT ENGINEERING.",
+      "description": "Frontend, backend and database layers connected into one complete product architecture.",
+      "items": [
+        "React Applications",
+        "REST APIs",
+        "Node.js Backend",
+        "Express.js",
+        "MongoDB",
+        "Authentication",
+        "CRUD Systems",
+        "Database Architecture",
+        "API Integration",
+        "Deployment"
+      ]
+    },
+    "process": [
+      {
+        "number": "01",
+        "title": "ARCHITECT",
+        "description": "Define the product structure, data model, application flow and technical architecture."
+      },
+      {
+        "number": "02",
+        "title": "BUILD",
+        "description": "Develop the frontend, backend and database layers as connected parts of one product."
+      },
+      {
+        "number": "03",
+        "title": "CONNECT",
+        "description": "Connect interfaces, APIs, authentication and data into a reliable application flow."
+      },
+      {
+        "number": "04",
+        "title": "DEPLOY",
+        "description": "Test the complete product and prepare the application for production."
+      }
+    ],
+    "experience": {
+      "eyebrow": "FULL-STACK EXPERIENCE",
+      "title": "ONE PRODUCT. EVERY LAYER.",
+      "description": "From the first React component to the database behind it, every layer works together as one system."
+    },
+    "toolchain": [
+      {
+        "category": "FRONTEND",
+        "tools": [
+          "React",
+          "JavaScript",
+          "Vite"
+        ]
+      },
+      {
+        "category": "BACKEND",
+        "tools": [
+          "Node.js",
+          "Express.js"
+        ]
+      },
+      {
+        "category": "DATABASE",
+        "tools": [
+          "MongoDB",
+          "Mongoose"
+        ]
+      },
+      {
+        "category": "AUTH",
+        "tools": [
+          "JWT",
+          "Authentication",
+          "Authorization"
+        ]
+      }
+    ],
+    "deliverables": [
+      "Full-Stack Web Application",
+      "React Frontend",
+      "REST API",
+      "Database Architecture",
+      "Authentication System",
+      "CRUD Operations",
+      "Production Deployment"
+    ],
+    "engagement": {
+      "title": "FROM IDEA TO PRODUCT.",
+      "description": "A complete development workflow for turning a product idea into a working full-stack application."
+    },
+    "relatedWork": [
+      {
+        "title": "PRODUCT PLATFORM",
+        "category": "FULL-STACK MERN",
+        "description": "A complete application connecting React, APIs, authentication and persistent data."
+      },
+      {
+        "title": "BUSINESS APPLICATION",
+        "category": "FULL PRODUCT",
+        "description": "A connected product experience spanning frontend, backend and database architecture."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do you build both frontend and backend?",
+        "answer": "Yes. Full-stack projects connect the React frontend with Node.js, Express.js and MongoDB backend systems."
+      },
+      {
+        "question": "Can you build authentication?",
+        "answer": "Yes. Authentication and authorization systems can be integrated into the application architecture."
+      },
+      {
+        "question": "Can you build custom APIs?",
+        "answer": "Yes. REST APIs can be designed around the application and its required data flows."
+      }
+    ],
+    "cta": {
+      "eyebrow": "BUILD THE PRODUCT",
+      "title": "FORGE THE FULL SYSTEM.",
+      "description": "From interface to database, build the complete product with one connected architecture."
+    },
+    "shortTitle": "MERN"
+  },
+  {
+    "key": "frontend-engineering",
+    "number": "04",
+    "slug": "frontend-engineering",
+    "title": "FRONTEND ENGINEERING",
+    "label": "ENGINEERING",
+    "description": "Interactive frontend experiences built with modern technologies, smooth motion and clean architecture.",
+    "heroMeta": [
+      "REACT",
+      "MOTION",
+      "UX"
+    ],
+    "statement": {
+      "eyebrow": "WHAT WE ENGINEER",
+      "title": "INTERFACE",
+      "emphasis": "AS ENGINEERING."
+    },
+    "capabilities": {
+      "title": "FRONTEND, ENGINEERED.",
+      "description": "Interfaces engineered for maintainability, interaction quality, responsiveness and performance.",
+      "items": [
+        "React Architecture",
+        "Component Systems",
+        "State Management",
+        "Responsive UI",
+        "Motion Systems",
+        "Interaction Design",
+        "Performance",
+        "Accessibility",
+        "Reusable Components"
+      ]
+    },
+    "process": [
+      {
+        "number": "01",
+        "title": "STRUCTURE",
+        "description": "Break the interface into reusable components and define a scalable frontend architecture."
+      },
+      {
+        "number": "02",
+        "title": "ENGINEER",
+        "description": "Build clean components, states and responsive behaviours around the interface."
+      },
+      {
+        "number": "03",
+        "title": "INTERACT",
+        "description": "Add meaningful motion, transitions and interactions without sacrificing usability."
+      },
+      {
+        "number": "04",
+        "title": "REFINE",
+        "description": "Optimize rendering, responsiveness, accessibility and overall interaction quality."
+      }
+    ],
+    "experience": {
+      "eyebrow": "FRONTEND EXPERIENCE",
+      "title": "COMPONENTS THAT COME ALIVE.",
+      "description": "A strong frontend is more than visual code. It is structure, interaction, motion and performance working together."
+    },
+    "toolchain": [
+      {
+        "category": "CORE",
+        "tools": [
+          "React",
+          "JavaScript",
+          "TypeScript"
+        ]
+      },
+      {
+        "category": "BUILD",
+        "tools": [
+          "Vite"
+        ]
+      },
+      {
+        "category": "MOTION",
+        "tools": [
+          "GSAP",
+          "Lenis"
+        ]
+      },
+      {
+        "category": "WORKFLOW",
+        "tools": [
+          "Git",
+          "GitHub"
+        ]
+      }
+    ],
+    "deliverables": [
+      "React Frontend",
+      "Component Architecture",
+      "Responsive Interface",
+      "Interaction System",
+      "Animation System",
+      "Performance Optimization"
+    ],
+    "engagement": {
+      "title": "ENGINEER THE INTERFACE.",
+      "description": "Turn a visual direction into a scalable frontend experience that feels precise and alive."
+    },
+    "relatedWork": [
+      {
+        "title": "INTERACTIVE FRONTEND",
+        "category": "FRONTEND ENGINEERING",
+        "description": "A component-driven frontend built around interaction, responsive behaviour and smooth motion."
+      },
+      {
+        "title": "MOTION EXPERIENCE",
+        "category": "FRONTEND / MOTION",
+        "description": "A highly interactive interface where animation and engineering work together."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do you work with React?",
+        "answer": "Yes. React is used to build modular and reusable frontend experiences."
+      },
+      {
+        "question": "Can you build advanced animations?",
+        "answer": "Yes. Motion systems can be engineered using tools such as GSAP and Lenis where appropriate."
+      },
+      {
+        "question": "Do you focus on performance?",
+        "answer": "Yes. Rendering behaviour, responsive layouts and interaction performance are considered throughout development."
+      }
+    ],
+    "cta": {
+      "eyebrow": "READY TO ENGINEER?",
+      "title": "MAKE THE INTERFACE ALIVE.",
+      "description": "Build a frontend that looks intentional and behaves beautifully."
+    },
+    "shortTitle": "FRONTEND"
+  },
+  {
+    "key": "backend-api-systems",
+    "number": "05",
+    "slug": "backend-api-systems",
+    "title": "BACKEND & API SYSTEMS",
+    "label": "SYSTEMS",
+    "description": "Reliable server-side systems, APIs and data architecture designed to power real products.",
+    "heroMeta": [
+      "NODE",
+      "API",
+      "DATABASE"
+    ],
+    "statement": {
+      "eyebrow": "WHAT WE POWER",
+      "title": "BUILD THE ENGINE",
+      "emphasis": "BEHIND THE PRODUCT."
+    },
+    "capabilities": {
+      "title": "SYSTEMS THAT POWER PRODUCTS.",
+      "description": "Backend architecture designed around reliable data flow, predictable APIs and secure application logic.",
+      "items": [
+        "REST APIs",
+        "Node.js Services",
+        "Express.js",
+        "Database Architecture",
+        "Authentication",
+        "Authorization",
+        "Validation",
+        "Error Handling",
+        "API Integration",
+        "Security Foundations"
+      ]
+    },
+    "process": [
+      {
+        "number": "01",
+        "title": "ARCHITECT",
+        "description": "Define the system architecture, data models, endpoints and application responsibilities."
+      },
+      {
+        "number": "02",
+        "title": "IMPLEMENT",
+        "description": "Build server-side logic, routes, controllers and database interactions."
+      },
+      {
+        "number": "03",
+        "title": "SECURE",
+        "description": "Add validation, authentication, authorization and reliable error handling."
+      },
+      {
+        "number": "04",
+        "title": "CONNECT",
+        "description": "Connect the backend to the consuming application and prepare it for production."
+      }
+    ],
+    "experience": {
+      "eyebrow": "SYSTEM EXPERIENCE",
+      "title": "REQUEST. PROCESS. RESPONSE.",
+      "description": "A reliable backend turns application requests into predictable, secure and useful responses."
+    },
+    "toolchain": [
+      {
+        "category": "RUNTIME",
+        "tools": [
+          "Node.js"
+        ]
+      },
+      {
+        "category": "API",
+        "tools": [
+          "Express.js",
+          "REST"
+        ]
+      },
+      {
+        "category": "DATABASE",
+        "tools": [
+          "MongoDB",
+          "Mongoose"
+        ]
+      },
+      {
+        "category": "SECURITY",
+        "tools": [
+          "JWT",
+          "Validation",
+          "Authorization"
+        ]
+      }
+    ],
+    "deliverables": [
+      "REST API",
+      "Backend Services",
+      "Database Structure",
+      "Authentication",
+      "Authorization",
+      "API Documentation",
+      "Production Backend"
+    ],
+    "engagement": {
+      "title": "POWER THE PRODUCT.",
+      "description": "Build the server-side foundation that keeps the product connected, reliable and ready to scale."
+    },
+    "relatedWork": [
+      {
+        "title": "API ENGINE",
+        "category": "BACKEND / API",
+        "description": "A structured backend system built around APIs, authentication and reliable data flow."
+      },
+      {
+        "title": "DATA SERVICE",
+        "category": "BACKEND SYSTEMS",
+        "description": "A server-side architecture connecting application logic with persistent data."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can you build REST APIs?",
+        "answer": "Yes. REST APIs can be designed and developed around the needs of the product."
+      },
+      {
+        "question": "Do you handle authentication and authorization?",
+        "answer": "Yes. Authentication and role-based authorization can be incorporated into the backend architecture."
+      },
+      {
+        "question": "Can you work with MongoDB?",
+        "answer": "Yes. MongoDB can be used for application data and connected through a Node.js backend."
+      }
+    ],
+    "cta": {
+      "eyebrow": "BUILD THE ENGINE",
+      "title": "POWER WHAT COMES NEXT.",
+      "description": "Create the backend systems your product needs to actually work."
+    },
+    "shortTitle": "BACKEND"
+  },
+  {
+    "key": "admin-dashboards",
+    "number": "06",
+    "slug": "admin-dashboards",
+    "title": "ADMIN DASHBOARDS",
+    "label": "BUSINESS TOOLS",
+    "description": "Focused management interfaces that turn complex business data into simple, useful workflows.",
+    "heroMeta": [
+      "DATA",
+      "CONTROL",
+      "WORKFLOW"
+    ],
+    "statement": {
+      "eyebrow": "WHAT WE BUILD",
+      "title": "TURN COMPLEX DATA",
+      "emphasis": "INTO CLEAR CONTROL."
+    },
+    "capabilities": {
+      "title": "CLARITY FOR COMPLEX DATA.",
+      "description": "Business dashboards designed to make information easier to understand, manage and act on.",
+      "items": [
+        "Dashboard UI",
+        "Data Visualization",
+        "Tables",
+        "Charts",
+        "Search",
+        "Filters",
+        "Sorting",
+        "CRUD Workflows",
+        "Authentication",
+        "Role-based Access",
+        "Responsive Management UI"
+      ]
+    },
+    "process": [
+      {
+        "number": "01",
+        "title": "MAP",
+        "description": "Understand the business data, users, roles and workflows that the dashboard needs to support."
+      },
+      {
+        "number": "02",
+        "title": "STRUCTURE",
+        "description": "Organize information into clear navigation, tables, metrics and management views."
+      },
+      {
+        "number": "03",
+        "title": "VISUALIZE",
+        "description": "Transform important information into useful metrics, charts and visual summaries."
+      },
+      {
+        "number": "04",
+        "title": "CONTROL",
+        "description": "Connect actions, filters, CRUD workflows and permissions into a practical management system."
+      }
+    ],
+    "experience": {
+      "eyebrow": "DASHBOARD EXPERIENCE",
+      "title": "FROM RAW DATA TO BUSINESS CONTROL.",
+      "description": "Complex information becomes easier to understand when the right data appears at the right moment."
+    },
+    "toolchain": [
+      {
+        "category": "FRONTEND",
+        "tools": [
+          "React",
+          "JavaScript",
+          "TypeScript"
+        ]
+      },
+      {
+        "category": "VISUALIZATION",
+        "tools": [
+          "Charts",
+          "Data Visualization"
+        ]
+      },
+      {
+        "category": "DATA",
+        "tools": [
+          "REST API",
+          "MongoDB"
+        ]
+      },
+      {
+        "category": "ACCESS",
+        "tools": [
+          "Authentication",
+          "Role-based Access"
+        ]
+      }
+    ],
+    "deliverables": [
+      "Admin Dashboard",
+      "Analytics Views",
+      "Data Tables",
+      "Charts & Metrics",
+      "Search & Filters",
+      "CRUD Workflows",
+      "Authentication",
+      "Role-based Access"
+    ],
+    "engagement": {
+      "title": "MAKE DATA USEFUL.",
+      "description": "Turn scattered business information into a focused interface built for everyday decisions."
+    },
+    "relatedWork": [
+      {
+        "title": "CONTROL CENTER",
+        "category": "ADMIN DASHBOARD",
+        "description": "A focused management interface bringing important business metrics and workflows into one place."
+      },
+      {
+        "title": "DATA COMMAND",
+        "category": "BUSINESS TOOLS",
+        "description": "A structured dashboard combining tables, filters, metrics and operational controls."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can dashboards include charts and analytics?",
+        "answer": "Yes. Important business data can be presented through charts, metrics and visual summaries."
+      },
+      {
+        "question": "Can users have different permissions?",
+        "answer": "Yes. Role-based access can be used to control which parts of the dashboard different users can access."
+      },
+      {
+        "question": "Can dashboards connect to an existing API?",
+        "answer": "Yes. Dashboards can consume existing APIs or be connected to a new backend system."
+      }
+    ],
+    "cta": {
+      "eyebrow": "READY TO TAKE CONTROL?",
+      "title": "TURN DATA INTO ACTION.",
+      "description": "Build a dashboard that makes your business easier to understand and manage."
+    },
+    "shortTitle": "DASHBOARD"
+  }
+]

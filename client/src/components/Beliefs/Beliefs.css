@@ -1,0 +1,1643 @@
+/* ============================================================
+   DEVFORGE — WHAT WE BELIEVE
+   Theme-driven / Global Tokens
+============================================================ */
+
+.beliefs-section {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        100vh;
+
+    min-height:
+        700px;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--df-belief-bg);
+
+    color:
+        var(--df-belief-dark);
+
+    isolation:
+        isolate;
+}
+
+
+/* ============================================================
+   BACKGROUND
+============================================================ */
+
+.beliefs-grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        0;
+
+    pointer-events:
+        none;
+
+    background-image:
+
+        linear-gradient(var(--df-belief-grid) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            var(--df-belief-grid) 1px,
+            transparent 1px);
+
+    background-size:
+        72px 72px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent);
+
+    -webkit-mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent);
+}
+
+
+/* ============================================================
+   SUBTLE GREEN GLOW
+============================================================ */
+
+.beliefs-glow {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        550px;
+
+    height:
+        550px;
+
+    transform:
+        translate(-50%,
+            -50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            var(--df-belief-glow),
+            transparent 68%);
+
+    filter:
+        blur(20px);
+
+    pointer-events:
+        none;
+
+    z-index:
+        1;
+}
+
+
+/* ============================================================
+   TOP META
+============================================================ */
+
+.beliefs-top {
+
+    position:
+        absolute;
+
+    left:
+        4rem;
+
+    right:
+        4rem;
+
+    top:
+        2rem;
+
+    z-index:
+        30;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding-bottom:
+        1.2rem;
+
+    border-bottom:
+        1px solid var(--df-belief-line);
+}
+
+
+.beliefs-index,
+.beliefs-meta {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-belief-muted);
+}
+
+
+.beliefs-index {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+}
+
+
+.beliefs-index span {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-belief-green);
+
+    box-shadow:
+        0 0 14px var(--df-belief-shadow);
+}
+
+
+/* ============================================================
+   MAIN STAGE
+============================================================ */
+
+.beliefs-stage {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        5;
+}
+
+
+/* ============================================================
+   SCREEN BASE
+============================================================ */
+
+.belief-screen {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    padding:
+        8rem 4rem 4rem;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    pointer-events:
+        none;
+}
+
+
+/* ============================================================
+   SCREEN NUMBER
+============================================================ */
+
+.belief-screen-number {
+
+    position:
+        absolute;
+
+    right:
+        4rem;
+
+    bottom:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-belief-muted);
+}
+
+
+/* ============================================================
+   INTRO
+============================================================ */
+
+.beliefs-screen--intro {
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        center;
+
+    padding-left:
+        clamp(3rem,
+            10vw,
+            10rem);
+}
+
+
+.belief-eyebrow {
+
+    margin-bottom:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.5;
+
+    letter-spacing:
+        0.18em;
+
+    color:
+        var(--df-belief-green);
+}
+
+
+.belief-main-heading {
+
+    margin:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(5rem,
+            13vw,
+            13rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.72;
+
+    letter-spacing:
+        -0.08em;
+}
+
+
+.belief-main-heading span {
+
+    display:
+        block;
+
+    white-space:
+        nowrap;
+}
+
+
+.belief-heading-offset {
+
+    padding-left:
+        clamp(3rem,
+            11vw,
+            12rem);
+
+    color:
+        var(--df-belief-heading-offset);
+}
+
+
+.belief-main-heading i {
+
+    color:
+        var(--df-belief-green);
+
+    font-style:
+        normal;
+}
+
+
+/* ============================================================
+   DESIGN / CODE
+============================================================ */
+
+.beliefs-screen--split {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1px 1fr;
+
+    padding:
+        0;
+}
+
+
+.belief-half {
+
+    position:
+        relative;
+
+    height:
+        100%;
+
+    padding:
+        7rem clamp(2.5rem,
+            7vw,
+            8rem);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    overflow:
+        hidden;
+}
+
+
+.belief-half::after {
+
+    content:
+        '';
+
+    position:
+        absolute;
+
+    width:
+        320px;
+
+    height:
+        320px;
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+
+    background:
+        radial-gradient(circle,
+            var(--df-belief-soft),
+            transparent 68%);
+}
+
+
+.belief-half--design::after {
+
+    right:
+        -150px;
+
+    bottom:
+        -150px;
+}
+
+
+.belief-half--code::after {
+
+    left:
+        -150px;
+
+    top:
+        -150px;
+}
+
+
+.belief-half-label {
+
+    position:
+        absolute;
+
+    top:
+        7rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-belief-muted);
+}
+
+
+.belief-half--design .belief-half-label {
+
+    left:
+        clamp(2.5rem,
+            7vw,
+            8rem);
+}
+
+
+.belief-half--code .belief-half-label {
+
+    right:
+        clamp(2.5rem,
+            7vw,
+            8rem);
+
+    text-align:
+        right;
+}
+
+
+.belief-half h3 {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4.5rem,
+            9vw,
+            9rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.8;
+
+    letter-spacing:
+        -0.07em;
+}
+
+
+.belief-half--code h3 {
+
+    text-align:
+        right;
+
+    color:
+        var(--df-belief-heading-soft);
+}
+
+
+.belief-half-words {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    gap:
+        16px;
+
+    margin-top:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-belief-muted);
+}
+
+
+.belief-half--code .belief-half-words {
+
+    justify-content:
+        flex-end;
+}
+
+
+.belief-half-words span::before {
+
+    content:
+        '/';
+
+    margin-right:
+        6px;
+
+    color:
+        var(--df-belief-green);
+}
+
+
+/* ============================================================
+   CENTER LINE
+============================================================ */
+
+.belief-center-line {
+
+    position:
+        relative;
+
+    width:
+        1px;
+
+    height:
+        70%;
+
+    align-self:
+        center;
+
+    background:
+        var(--df-belief-line);
+
+    transform-origin:
+        center center;
+}
+
+
+.belief-center-line span {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        9px;
+
+    height:
+        9px;
+
+    transform:
+        translate(-50%,
+            -50%);
+
+    border:
+        1px solid var(--df-belief-green);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-belief-bg);
+
+    box-shadow:
+        0 0 18px var(--df-belief-shadow);
+}
+
+
+/* ============================================================
+   MERGE
+============================================================ */
+
+.beliefs-screen--merge {
+
+    flex-direction:
+        column;
+
+    text-align:
+        center;
+}
+
+
+.belief-merge-small {
+
+    margin-bottom:
+        1.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.18em;
+
+    color:
+        var(--df-belief-muted);
+}
+
+
+.beliefs-screen--merge h3 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            9vw,
+            9rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.8;
+
+    letter-spacing:
+        -0.07em;
+}
+
+
+.belief-formula {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    margin-top:
+        2.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.15em;
+}
+
+
+.belief-formula b {
+
+    width:
+        36px;
+
+    height:
+        36px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid rgba(14, 51, 35, 0.45);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--df-belief-green);
+
+    font-size:
+        13px;
+
+    font-weight:
+        400;
+}
+
+
+/* ============================================================
+   EXPERIENCE / PRODUCT
+============================================================ */
+
+.beliefs-screen--experience {
+
+    flex-direction:
+        column;
+
+    text-align:
+        center;
+}
+
+
+.belief-transition-label {
+
+    margin-bottom:
+        3rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.18em;
+
+    color:
+        var(--df-belief-muted);
+}
+
+
+.belief-experience-word,
+.belief-product-word {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4.5rem,
+            10vw,
+            10rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.76;
+
+    letter-spacing:
+        -0.08em;
+}
+
+
+.belief-experience-word {
+
+    color:
+        var(--df-belief-heading-muted);
+}
+
+
+.belief-product-word {
+
+    color:
+        var(--df-belief-dark);
+}
+
+
+.belief-product-word span {
+
+    color:
+        var(--df-belief-green);
+}
+
+
+.belief-transition-arrow {
+
+    margin:
+        1.8rem 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        17px;
+
+    color:
+        var(--df-belief-green);
+}
+
+
+/* ============================================================
+   PRINCIPLES
+============================================================ */
+
+.beliefs-screen--principles {
+
+    flex-direction:
+        column;
+
+    align-items:
+        stretch;
+
+    justify-content:
+        center;
+
+    padding-left:
+        clamp(2rem,
+            7vw,
+            8rem);
+
+    padding-right:
+        clamp(2rem,
+            7vw,
+            8rem);
+}
+
+
+.belief-principles-head {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    padding-bottom:
+        1rem;
+
+    border-bottom:
+        1px solid var(--df-belief-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-belief-muted);
+}
+
+
+.belief-principles-list {
+
+    width:
+        100%;
+}
+
+
+.belief-principle {
+
+    position:
+        relative;
+
+    min-height:
+        85px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        60px minmax(180px, 0.65fr) minmax(250px, 1fr) 40px;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+
+    border-bottom:
+        1px solid var(--df-belief-line);
+
+    transition:
+        background 0.35s ease,
+        padding-left 0.4s ease;
+}
+
+
+.belief-principle:hover {
+
+    padding-left:
+        15px;
+
+    background:
+        var(--df-belief-hover);
+}
+
+
+.belief-principle-number {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    color:
+        var(--df-belief-green);
+}
+
+
+.belief-principle h3 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(2rem,
+            3vw,
+            3.2rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.8;
+
+    letter-spacing:
+        -0.05em;
+}
+
+
+.belief-principle p {
+
+    max-width:
+        430px;
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.7;
+
+    color:
+        var(--df-belief-muted);
+}
+
+
+.belief-principle-arrow {
+
+    justify-self:
+        end;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    border:
+        1px solid var(--df-belief-line);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--df-belief-muted);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        color 0.35s ease;
+}
+
+
+.belief-principle:hover .belief-principle-arrow {
+
+    transform:
+        translate(3px,
+            -3px);
+
+    border-color:
+        rgba(14, 51, 35, 0.5);
+
+    color:
+        var(--df-belief-green);
+}
+
+
+/* ============================================================
+   FINAL
+============================================================ */
+
+.beliefs-screen--final {
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        center;
+
+    padding-left:
+        clamp(3rem,
+            10vw,
+            10rem);
+}
+
+
+.belief-final-label {
+
+    margin-bottom:
+        4rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.16em;
+
+    color:
+        var(--df-belief-muted);
+}
+
+
+.belief-final-text {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            9vw,
+            10rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.74;
+
+    letter-spacing:
+        -0.075em;
+}
+
+
+.belief-final-text span:first-child {
+
+    color:
+        var(--df-belief-heading-muted);
+}
+
+
+.belief-final-text strong {
+
+    padding-left:
+        clamp(2rem,
+            11vw,
+            12rem);
+
+    font-weight:
+        500;
+
+    color:
+        var(--df-belief-dark);
+}
+
+
+.belief-final-text span:last-child {
+
+    padding-left:
+        clamp(4rem,
+            20vw,
+            22rem);
+
+    color:
+        var(--df-belief-green);
+}
+
+
+.belief-final-meta {
+
+    position:
+        absolute;
+
+    right:
+        4rem;
+
+    bottom:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-belief-muted);
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1100px) {
+
+    .beliefs-top {
+
+        left:
+            2rem;
+
+        right:
+            2rem;
+    }
+
+
+    .belief-half {
+
+        padding-left:
+            3rem;
+
+        padding-right:
+            3rem;
+    }
+
+
+    .belief-principle {
+
+        grid-template-columns:
+            45px minmax(160px, 0.65fr) minmax(220px, 1fr) 35px;
+
+        gap:
+            15px;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .beliefs-section {
+
+        min-height:
+            100svh;
+    }
+
+
+    .beliefs-top {
+
+        left:
+            1.2rem;
+
+        right:
+            1.2rem;
+
+        top:
+            1.5rem;
+    }
+
+
+    .beliefs-meta {
+
+        display:
+            none;
+    }
+
+
+    .belief-screen {
+
+        padding:
+            6rem 1.2rem 3rem;
+    }
+
+
+    /* ========================================================
+       INTRO
+    ======================================================== */
+
+    .beliefs-screen--intro {
+
+        padding-left:
+            1.2rem;
+    }
+
+
+    .belief-main-heading {
+
+        font-size:
+            clamp(4rem,
+                19vw,
+                7rem);
+    }
+
+
+    .belief-heading-offset {
+
+        padding-left:
+            14vw;
+    }
+
+
+    /* ========================================================
+       SPLIT
+    ======================================================== */
+
+    .beliefs-screen--split {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr;
+
+        grid-template-rows:
+            1fr 1px 1fr;
+    }
+
+
+    .belief-half {
+
+        min-height:
+            0;
+
+        padding:
+            5rem 1.5rem 2rem;
+    }
+
+
+    .belief-half-label {
+
+        top:
+            2.5rem;
+    }
+
+
+    .belief-half--design .belief-half-label,
+
+    .belief-half--code .belief-half-label {
+
+        left:
+            1.5rem;
+
+        right:
+            auto;
+
+        text-align:
+            left;
+    }
+
+
+    .belief-half h3,
+    .belief-half--code h3 {
+
+        text-align:
+            left;
+
+        font-size:
+            clamp(3.5rem,
+                18vw,
+                6rem);
+    }
+
+
+    .belief-half--code h3 {
+
+        padding-left:
+            8vw;
+    }
+
+
+    .belief-half-words,
+    .belief-half--code .belief-half-words {
+
+        justify-content:
+            flex-start;
+
+        flex-wrap:
+            wrap;
+    }
+
+
+    .belief-center-line {
+
+        width:
+            70%;
+
+        height:
+            1px;
+
+        justify-self:
+            center;
+    }
+
+
+    /* ========================================================
+       MERGE
+    ======================================================== */
+
+    .beliefs-screen--merge h3 {
+
+        font-size:
+            clamp(3.5rem,
+                16vw,
+                6rem);
+    }
+
+
+    /* ========================================================
+       EXPERIENCE
+    ======================================================== */
+
+    .belief-experience-word,
+    .belief-product-word {
+
+        font-size:
+            clamp(3.5rem,
+                15vw,
+                6rem);
+    }
+
+
+    /* ========================================================
+       PRINCIPLES
+    ======================================================== */
+
+    .beliefs-screen--principles {
+
+        padding:
+            6rem 1.2rem 3rem;
+    }
+
+
+    .belief-principles-head {
+
+        flex-direction:
+            column;
+
+        gap:
+            7px;
+    }
+
+
+    .belief-principle {
+
+        min-height:
+            125px;
+
+        grid-template-columns:
+            32px 1fr 28px;
+
+        grid-template-rows:
+            auto auto;
+
+        gap:
+            10px;
+    }
+
+
+    .belief-principle-number {
+
+        grid-column:
+            1;
+
+        grid-row:
+            1;
+    }
+
+
+    .belief-principle h3 {
+
+        grid-column:
+            2;
+
+        grid-row:
+            1;
+
+        font-size:
+            2.2rem;
+    }
+
+
+    .belief-principle p {
+
+        grid-column:
+            2 / 4;
+
+        grid-row:
+            2;
+
+        font-size:
+            9px;
+    }
+
+
+    .belief-principle-arrow {
+
+        grid-column:
+            3;
+
+        grid-row:
+            1;
+    }
+
+
+    /* ========================================================
+       FINAL
+    ======================================================== */
+
+    .beliefs-screen--final {
+
+        padding-left:
+            1.2rem;
+    }
+
+
+    .belief-final-text {
+
+        font-size:
+            clamp(3.6rem,
+                16vw,
+                6rem);
+    }
+
+
+    .belief-final-text strong {
+
+        padding-left:
+            7vw;
+    }
+
+
+    .belief-final-text span:last-child {
+
+        padding-left:
+            14vw;
+    }
+
+
+    .belief-final-meta {
+
+        right:
+            1.2rem;
+    }
+
+
+    .belief-screen-number {
+
+        right:
+            1.2rem;
+
+        bottom:
+            1.5rem;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .beliefs-section *,
+    .beliefs-section *::before,
+    .beliefs-section *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+    }
+}

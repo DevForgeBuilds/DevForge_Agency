@@ -1,0 +1,906 @@
+/* ============================================================
+   DEVFORGE — PROJECT LIVE
+============================================================ */
+
+.project-live {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 90vh;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) minmax(320px, 0.55fr);
+
+    grid-template-rows:
+        auto 1fr auto;
+
+    column-gap:
+        clamp(3rem, 8vw, 9rem);
+
+    overflow: hidden;
+
+    padding:
+        1.2rem clamp(1.2rem, 5vw, 5rem) 2rem;
+
+    background:
+        var(--df-studio-ink);
+
+    color:
+        var(--df-ivory);
+}
+
+
+/* ============================================================
+   BACKGROUND
+============================================================ */
+
+.project-live__grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.4;
+
+    background:
+
+        linear-gradient(var(--df-studio-dark-line) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            var(--df-studio-dark-line) 1px,
+            transparent 1px);
+
+    background-size:
+        90px 90px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+}
+
+
+.project-live__glow {
+
+    position: absolute;
+
+    width:
+        55vw;
+
+    height:
+        55vw;
+
+    right:
+        -20vw;
+
+    top:
+        15%;
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+
+    background:
+        radial-gradient(circle,
+            var(--df-studio-dark-glow),
+            transparent 68%);
+
+    filter:
+        blur(40px);
+
+    opacity:
+        0.85;
+}
+
+
+/* ============================================================
+   META
+============================================================ */
+
+.project-live__meta {
+
+    position: relative;
+
+    z-index: 3;
+
+    grid-column:
+        1 / -1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom:
+        1rem;
+
+    border-bottom:
+        1px solid var(--df-studio-dark-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+.project-live__index {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        0.7rem;
+}
+
+
+.project-live__dot {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-studio-lime);
+
+    box-shadow:
+        0 0 12px var(--df-studio-dot-glow);
+}
+
+
+/* ============================================================
+   MAIN
+============================================================ */
+
+.project-live__main {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    align-self:
+        center;
+
+    max-width:
+        850px;
+
+    padding:
+        6rem 0;
+}
+
+
+.project-live__eyebrow {
+
+    margin-bottom:
+        1.8rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+.project-live__title {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(5rem,
+            10vw,
+            11rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.75;
+
+    letter-spacing:
+        -0.085em;
+
+    color:
+        var(--df-ivory);
+}
+
+
+.project-live__title span {
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+.project-live__description {
+
+    max-width:
+        520px;
+
+    margin:
+        3rem 0 0;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        0.95rem;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-studio-dark-soft);
+}
+
+
+/* ============================================================
+   ACTIONS
+============================================================ */
+
+.project-live__actions {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        0.8rem;
+
+    margin-top:
+        2.5rem;
+}
+
+
+.project-live__button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        3rem;
+
+    min-width:
+        200px;
+
+    padding:
+        1rem;
+
+    border:
+        1px solid var(--df-studio-dark-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.12em;
+
+    text-decoration:
+        none;
+
+    transition:
+        transform 0.4s var(--df-ease),
+        background 0.4s ease,
+        border-color 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.project-live__button--primary {
+
+    border-color:
+        var(--df-studio-lime);
+
+    background:
+        var(--df-studio-lime);
+
+    color:
+        var(--df-studio-ink);
+}
+
+
+.project-live__button--secondary {
+
+    background:
+        transparent;
+
+    color:
+        var(--df-ivory);
+}
+
+
+.project-live__button:hover {
+
+    transform:
+        translateY(-4px);
+}
+
+
+.project-live__button--primary:hover {
+
+    background:
+        var(--df-ivory);
+
+    border-color:
+        var(--df-ivory);
+}
+
+
+.project-live__button--secondary:hover {
+
+    background:
+        var(--df-studio-dark-hover);
+
+    border-color:
+        var(--df-studio-lime);
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+.project-live__button-arrow {
+
+    font-size:
+        1rem;
+
+    transition:
+        transform 0.4s var(--df-ease);
+}
+
+
+.project-live__button:hover .project-live__button-arrow {
+
+    transform:
+        translate(4px, -4px);
+}
+
+
+/* ============================================================
+   STATUS CARD
+============================================================ */
+
+.project-live__status {
+
+    position:
+        relative;
+
+    z-index:
+        4;
+
+    align-self:
+        center;
+
+    width:
+        100%;
+
+    max-width:
+        480px;
+
+    margin:
+        0 auto;
+
+    border:
+        1px solid var(--df-studio-dark-line);
+
+    background:
+        var(--df-studio-dark-card);
+
+    box-shadow:
+        0 35px 100px var(--df-studio-overlay-shadow);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+}
+
+
+.project-live__status-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        1rem;
+
+    border-bottom:
+        1px solid var(--df-studio-dark-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        0.13em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+.project-live__status-live {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        0.5rem;
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+.project-live__status-live i {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-studio-lime);
+
+    box-shadow:
+        0 0 12px var(--df-studio-dot-glow);
+
+    animation:
+        project-live-pulse 1.8s ease-in-out infinite;
+}
+
+
+@keyframes project-live-pulse {
+
+    0%,
+    100% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        opacity:
+            0.4;
+
+        transform:
+            scale(0.7);
+
+    }
+
+}
+
+
+/* ============================================================
+   STATUS BODY
+============================================================ */
+
+.project-live__status-body {
+
+    padding:
+        1.5rem;
+}
+
+
+.project-live__status-title {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        0.5rem;
+
+    padding-bottom:
+        2rem;
+
+    border-bottom:
+        1px solid var(--df-studio-dark-line);
+}
+
+
+.project-live__status-title span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+.project-live__status-title strong {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        2rem;
+
+    line-height:
+        0.9;
+
+    letter-spacing:
+        -0.04em;
+
+    color:
+        var(--df-ivory);
+}
+
+
+.project-live__status-line {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        8px 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        1rem;
+
+    padding:
+        1rem 0;
+
+    border-bottom:
+        1px solid var(--df-studio-dark-line);
+}
+
+
+.project-live__status-line:last-child {
+
+    border-bottom:
+        0;
+
+    padding-bottom:
+        0;
+}
+
+
+.project-live__status-line>span {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-studio-lime);
+}
+
+
+.project-live__status-line div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1rem;
+}
+
+
+.project-live__status-line div span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        0.1em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+.project-live__status-line div strong {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        7px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        0.08em;
+
+    color:
+        var(--df-ivory);
+
+    text-align:
+        right;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.project-live__footer {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    grid-column:
+        1 / -1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    padding-top:
+        1rem;
+
+    border-top:
+        1px solid var(--df-studio-dark-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+.project-live__footer span:nth-child(2) {
+
+    text-align:
+        center;
+
+    color:
+        var(--df-ivory);
+}
+
+
+.project-live__footer span:last-child {
+
+    text-align:
+        right;
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .project-live {
+
+        min-height:
+            auto;
+
+        grid-template-columns:
+            1fr;
+
+        grid-template-rows:
+            auto auto auto auto;
+
+        row-gap:
+            2rem;
+
+        padding:
+            1rem 1.2rem 2rem;
+    }
+
+
+    .project-live__main {
+
+        padding:
+            5rem 0 2rem;
+    }
+
+
+    .project-live__status {
+
+        margin:
+            0;
+
+        max-width:
+            650px;
+    }
+
+
+    .project-live__footer {
+
+        grid-column:
+            1;
+
+        margin-top:
+            3rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .project-live__meta>span:last-child {
+
+        display:
+            none;
+    }
+
+
+    .project-live__title {
+
+        font-size:
+            clamp(4rem,
+                19vw,
+                7rem);
+    }
+
+
+    .project-live__description {
+
+        font-size:
+            0.88rem;
+    }
+
+
+    .project-live__actions {
+
+        flex-direction:
+            column;
+    }
+
+
+    .project-live__button {
+
+        width:
+            100%;
+
+        min-width:
+            0;
+    }
+
+
+    .project-live__status-line div {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            0.35rem;
+    }
+
+
+    .project-live__status-line div strong {
+
+        text-align:
+            left;
+    }
+
+
+    .project-live__footer {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            1rem;
+    }
+
+
+    .project-live__footer span:nth-child(2),
+    .project-live__footer span:last-child {
+
+        text-align:
+            left;
+    }
+
+}

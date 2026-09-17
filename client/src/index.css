@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+
+:root {
+  /* Brand palette */
+  --df-ivory: #f6f2e8;
+  --df-ivory-2: #efe8d8;
+  --df-cream: #e9e1cd;
+  --df-charcoal: #070d09;
+  --df-charcoal-2: #0c150e;
+  --df-forest: #0e3323;
+  --df-forest-2: #164430;
+  --df-lime: #b7f34a;
+  --df-lime-2: #9fd331;
+  --df-orange: #ff7a29;
+  --df-orange-deep: #e2540c;
+  --df-ink: #12180f;
+  --df-ink-soft: rgba(18, 24, 15, 0.62);
+  --df-line: rgba(18, 24, 15, 0.12);
+
+  /* ========================================================
+   NAVBAR THEME TOKENS
+======================================================== */
+
+  --df-nav-bg:
+    var(--df-forest);
+
+  --df-nav-bg-dark:
+    var(--df-charcoal);
+
+  --df-nav-text:
+    var(--df-ivory);
+
+  --df-nav-muted:
+    rgba(246, 242, 232, 0.68);
+
+  --df-nav-accent:
+    var(--df-lime);
+
+  --df-nav-accent-deep:
+    var(--df-lime-2);
+
+  --df-nav-border:
+    rgba(246, 242, 232, 0.28);
+
+  --df-nav-border-soft:
+    rgba(246, 242, 232, 0.16);
+
+  --df-nav-shadow:
+    rgba(7, 13, 9, 0.14);
+
+  /* ========================================================
+   HERO — SEMANTIC THEME TOKENS
+======================================================== */
+
+  --df-bg:
+    var(--df-ivory);
+
+  --df-text:
+    var(--df-ink);
+
+  --df-text-muted:
+    var(--df-ink-soft);
+
+  --df-text-faint:
+    rgba(18, 24, 15, 0.42);
+
+  --df-surface:
+    var(--df-forest);
+
+  --df-surface-soft:
+    var(--df-forest-2);
+
+  --df-dark:
+    var(--df-charcoal);
+
+  --df-light-text:
+    var(--df-ivory);
+
+  --df-light-text-muted:
+    rgba(246, 242, 232, 0.58);
+
+  --df-accent:
+    var(--df-lime);
+
+  --df-accent-deep:
+    var(--df-lime-2);
+
+  --df-accent-soft:
+    rgba(183, 243, 74, 0.18);
+
+  --df-accent-glow:
+    rgba(183, 243, 74, 0.35);
+
+  --df-grid-line:
+    rgba(18, 24, 15, 0.07);
+
+  --df-cursor-strong:
+    rgba(183, 243, 74, 0.22);
+
+  --df-cursor-medium:
+    rgba(183, 243, 74, 0.13);
+
+  --df-cursor-soft:
+    rgba(183, 243, 74, 0.07);
+
+  --df-cursor-faint:
+    rgba(183, 243, 74, 0.03);
+
+  --df-cursor-ring:
+    rgba(183, 243, 74, 0.35);
+
+  --df-ring:
+    rgba(18, 24, 15, 0.16);
+
+  --df-ripple:
+    var(--df-lime);
+
+  --df-blueprint-grid:
+    rgba(14, 51, 35, 0.10);
+
+  --df-blueprint-border:
+    rgba(14, 51, 35, 0.20);
+
+  --df-blueprint-glow:
+    rgba(183, 243, 74, 0.25);
+
+  --df-blueprint-segment:
+    var(--df-forest);
+
+  --df-blueprint-detail:
+    rgba(14, 51, 35, 0.55);
+
+  --df-blueprint-fragment:
+    rgba(22, 68, 48, 0.65);
+
+  --df-blueprint-target:
+    var(--df-lime-2);
+
+  --df-blueprint-card:
+    rgba(246, 242, 232, 0.78);
+
+  --df-blueprint-hover:
+    var(--df-lime-2);
+
+  /* ========================================================
+   THE FORGE THEME TOKENS
+======================================================== */
+
+  --df-forge-bg:
+    var(--df-charcoal);
+
+  --df-forge-bg-2:
+    var(--df-charcoal-2);
+
+  --df-forge-text:
+    var(--df-ivory);
+
+  --df-forge-soft:
+    rgba(246, 242, 232, 0.58);
+
+  --df-forge-muted:
+    rgba(246, 242, 232, 0.28);
+
+  --df-forge-line:
+    rgba(246, 242, 232, 0.10);
+
+  --df-forge-line-soft:
+    rgba(246, 242, 232, 0.055);
+
+  --df-forge-accent:
+    var(--df-lime);
+
+  --df-forge-green:
+    var(--df-forest);
+
+  /* ========================================================
+   THE FORGE EFFECTS
+======================================================== */
+
+  --df-forge-glow:
+    rgba(183, 243, 74, 0.055);
+
+  --df-forge-green-glow:
+    rgba(14, 51, 35, 0.12);
+
+  --df-forge-grid:
+    rgba(246, 242, 232, 0.028);
+
+  --df-forge-rail:
+    rgba(246, 242, 232, 0.14);
+
+  --df-forge-accent-soft:
+    rgba(183, 243, 74, 0.18);
+
+  --df-forge-accent-faint:
+    rgba(183, 243, 74, 0.06);
+
+  --df-forge-card-grid:
+    rgba(246, 242, 232, 0.07);
+
+  --df-forge-number:
+    rgba(246, 242, 232, 0.025);
+
+  /* ========================================================
+   SERVICES — SEMANTIC THEME TOKENS
+======================================================== */
+
+  --df-services-bg:
+    var(--df-charcoal);
+
+  --df-services-bg-soft:
+    var(--df-charcoal-2);
+
+  --df-services-ink:
+    var(--df-ivory);
+
+  --df-services-muted:
+    rgba(246, 242, 232, 0.48);
+
+  --df-services-soft:
+    rgba(246, 242, 232, 0.68);
+
+  --df-services-line:
+    rgba(246, 242, 232, 0.13);
+
+  --df-services-green:
+    var(--df-forest);
+
+  --df-services-green-2:
+    var(--df-forest-2);
+
+  --df-services-lime:
+    var(--df-lime);
+
+  --df-services-lime-2:
+    var(--df-lime-2);
+
+
+  /* ========================================================
+   SERVICES EFFECTS
+======================================================== */
+
+  --df-services-glow:
+    rgba(183, 243, 74, 0.055);
+
+  --df-services-grid:
+    rgba(246, 242, 232, 0.035);
+
+  --df-services-status-glow:
+    rgba(183, 243, 74, 0.55);
+
+  --df-services-arrow-border:
+    rgba(246, 242, 232, 0.18);
+
+  --df-services-arrow-border-hover:
+    rgba(183, 243, 74, 0.50);
+
+  --df-services-meta:
+    rgba(246, 242, 232, 0.25);
+
+
+  /* ========================================================
+   SERVICES PREVIEW
+======================================================== */
+
+  --df-preview-bg:
+    var(--df-lime);
+
+  --df-preview-ink:
+    var(--df-charcoal);
+
+  --df-preview-paper:
+    var(--df-ivory);
+
+  --df-preview-green:
+    var(--df-forest);
+
+  --df-preview-green-2:
+    var(--df-forest-2);
+
+  --df-preview-lime:
+    var(--df-lime);
+
+  --df-preview-line:
+    rgba(18, 24, 15, 0.13);
+
+  --df-preview-soft-line:
+    rgba(18, 24, 15, 0.08);
+
+  --df-preview-muted:
+    rgba(18, 24, 15, 0.42);
+
+  --df-preview-white:
+    var(--df-ivory);
+
+  --df-preview-shadow:
+    rgba(0, 0, 0, 0.38);
+
+  /* ========================================================
+   SERVICE DETAIL — SEMANTIC THEME TOKENS
+======================================================== */
+
+  --df-detail-bg:
+    var(--df-charcoal);
+
+  --df-detail-bg-2:
+    var(--df-charcoal-2);
+
+  --df-detail-cream:
+    var(--df-ivory);
+
+  --df-detail-ink:
+    var(--df-ink);
+
+  --df-detail-muted:
+    rgba(246, 242, 232, 0.48);
+
+  --df-detail-line:
+    rgba(246, 242, 232, 0.13);
+
+  --df-detail-green:
+    var(--df-forest);
+
+  --df-detail-green-2:
+    var(--df-forest-2);
+
+  --df-detail-lime:
+    var(--df-lime);
+
+  --df-detail-lime-2:
+    var(--df-lime-2);
+
+  --df-detail-glow:
+    rgba(183, 243, 74, 0.08);
+
+  --df-detail-paper-line:
+    rgba(18, 24, 15, 0.06);
+
+  --df-detail-dark-shadow:
+    rgba(0, 0, 0, 0.20);
+  /* ========================================================
+   SELECTED WORK — SEMANTIC THEME TOKENS
+======================================================== */
+
+  --df-work-bg:
+    var(--df-charcoal);
+
+  --df-work-bg-soft:
+    var(--df-charcoal-2);
+
+  --df-work-cream:
+    var(--df-ivory);
+
+  --df-work-ink:
+    var(--df-ink);
+
+  --df-work-muted:
+    rgba(246, 242, 232, 0.48);
+
+  --df-work-line:
+    rgba(246, 242, 232, 0.13);
+
+  --df-work-green:
+    var(--df-forest);
+
+  --df-work-green-2:
+    var(--df-forest-2);
+
+  --df-work-lime:
+    var(--df-lime);
+
+  --df-work-lime-2:
+    var(--df-lime-2);
+
+
+  /* ========================================================
+   SELECTED WORK EFFECTS
+======================================================== */
+
+  --df-work-grid:
+    rgba(246, 242, 232, 0.035);
+
+  --df-work-glow:
+    rgba(183, 243, 74, 0.065);
+
+  --df-work-status-glow:
+    rgba(183, 243, 74, 0.5);
+
+  --df-work-progress-bg:
+    rgba(246, 242, 232, 0.15);
+
+  --df-work-browser-bg:
+    rgba(246, 242, 232, 0.92);
+
+  --df-work-paper:
+    var(--df-ivory-2);
+
+  --df-work-paper-2:
+    #ece8dc;
+
+  --df-work-paper-line:
+    rgba(18, 24, 15, 0.06);
+
+  --df-work-paper-line-soft:
+    rgba(18, 24, 15, 0.08);
+
+  --df-work-paper-ink:
+    var(--df-charcoal);
+
+  --df-work-shadow:
+    rgba(0, 0, 0, 0.30);
+
+  /* ========================================================
+   RAW → FORGED — SEMANTIC THEME TOKENS
+======================================================== */
+
+  --df-raw-bg:
+    var(--df-charcoal);
+
+  --df-raw-bg-2:
+    var(--df-charcoal-2);
+
+  --df-raw-cream:
+    var(--df-ivory);
+
+  --df-raw-muted:
+    rgba(246, 242, 232, 0.48);
+
+  --df-raw-dark-muted:
+    rgba(18, 24, 15, 0.50);
+
+  --df-raw-line:
+    rgba(246, 242, 232, 0.13);
+
+  --df-raw-grid:
+    rgba(246, 242, 232, 0.035);
+
+  --df-raw-green:
+    var(--df-forest);
+
+  --df-raw-green-2:
+    var(--df-forest-2);
+
+  --df-raw-lime:
+    var(--df-lime);
+
+  --df-raw-lime-2:
+    var(--df-lime-2);
+
+  --df-raw-glow:
+    rgba(183, 243, 74, 0.055);
+
+  --df-raw-shadow:
+    rgba(0, 0, 0, 0.30);
+  /* ========================================================
+   PRELOADER — SEMANTIC THEME TOKENS
+======================================================== */
+
+  --df-preloader-bg:
+    var(--df-charcoal);
+
+  --df-preloader-cream:
+    var(--df-ivory);
+
+  --df-preloader-green:
+    var(--df-forest);
+
+  --df-preloader-green-2:
+    var(--df-forest-2);
+
+  --df-preloader-lime:
+    var(--df-lime);
+
+  --df-preloader-muted:
+    rgba(246, 242, 232, 0.48);
+
+  --df-preloader-grid:
+    rgba(246, 242, 232, 0.035);
+
+  --df-preloader-line:
+    rgba(246, 242, 232, 0.12);
+
+  --df-preloader-glow:
+    rgba(183, 243, 74, 0.08);
+
+  --df-preloader-vignette:
+    rgba(0, 0, 0, 0.50);
+
+  --df-preloader-shadow:
+    rgba(0, 0, 0, 0.45);
+
+  --df-preloader-exit:
+    var(--df-ivory);
+
+  /* ========================================================
+   BELIEFS — SEMANTIC THEME TOKENS
+======================================================== */
+
+  --df-belief-bg:
+    var(--df-lime);
+
+  --df-belief-dark:
+    var(--df-ink);
+
+  --df-belief-green:
+    var(--df-forest);
+
+  --df-belief-muted:
+    rgba(18, 24, 15, 0.55);
+
+  --df-belief-line:
+    rgba(18, 24, 15, 0.16);
+
+  --df-belief-grid:
+    rgba(18, 24, 15, 0.055);
+
+  --df-belief-glow:
+    rgba(14, 51, 35, 0.09);
+
+  --df-belief-soft:
+    rgba(14, 51, 35, 0.08);
+
+  --df-belief-hover:
+    rgba(14, 51, 35, 0.045);
+
+  --df-belief-heading-muted:
+    rgba(18, 24, 15, 0.48);
+
+  --df-belief-heading-soft:
+    rgba(18, 24, 15, 0.72);
+
+  --df-belief-heading-offset:
+    rgba(18, 24, 15, 0.76);
+
+  --df-belief-shadow:
+    rgba(14, 51, 35, 0.25);
+
+  /* ========================================================
+   CONTACT — SEMANTIC THEME TOKENS
+======================================================== */
+
+  --df-contact-bg:
+    var(--df-forest);
+
+  --df-contact-cream:
+    var(--df-ivory);
+
+  --df-contact-lime:
+    var(--df-lime);
+
+  --df-contact-green:
+    var(--df-charcoal);
+
+  --df-contact-dark:
+    var(--df-charcoal);
+
+  --df-contact-muted:
+    rgba(246, 242, 232, 0.52);
+
+  --df-contact-line:
+    rgba(246, 242, 232, 0.14);
+
+  --df-contact-grid:
+    rgba(246, 242, 232, 0.035);
+
+  --df-contact-glow:
+    rgba(183, 243, 74, 0.07);
+
+  --df-contact-soft:
+    rgba(183, 243, 74, 0.18);
+
+  --df-contact-border:
+    rgba(183, 243, 74, 0.45);
+
+  --df-contact-placeholder:
+    rgba(246, 242, 232, 0.28);
+
+  --df-contact-faint:
+    rgba(246, 242, 232, 0.32);
+
+  /* ========================================================
+   FOOTER / FORGE TERMINAL — SEMANTIC THEME TOKENS
+======================================================== */
+
+  --df-footer-bg:
+    var(--df-charcoal);
+
+  --df-footer-panel:
+    var(--df-charcoal-2);
+
+  --df-footer-surface:
+    var(--df-forest);
+
+  --df-footer-surface-2:
+    var(--df-forest-2);
+
+  --df-footer-text:
+    var(--df-ivory);
+
+  --df-footer-muted:
+    rgba(246, 242, 232, 0.48);
+
+  --df-footer-faint:
+    rgba(246, 242, 232, 0.30);
+
+  --df-footer-line:
+    rgba(246, 242, 232, 0.13);
+
+  --df-footer-grid:
+    rgba(246, 242, 232, 0.025);
+
+  --df-footer-accent:
+    var(--df-lime);
+
+  --df-footer-accent-deep:
+    var(--df-lime-2);
+
+  --df-footer-accent-soft:
+    rgba(183, 243, 74, 0.035);
+
+  --df-footer-accent-border:
+    rgba(183, 243, 74, 0.55);
+
+  --df-footer-shadow:
+    rgba(0, 0, 0, 0.25);
+
+  /* ==========================================================
+   STUDIO
+========================================================== */
+
+  --df-studio-bg:
+    var(--df-ivory);
+
+  --df-studio-bg-2:
+    var(--df-ivory-2);
+
+  --df-studio-ink:
+    var(--df-charcoal);
+
+  --df-studio-soft:
+    rgba(8, 21, 19, 0.62);
+
+  --df-studio-muted:
+    rgba(8, 21, 19, 0.40);
+
+  --df-studio-faint:
+    rgba(8, 21, 19, 0.25);
+
+  --df-studio-green:
+    var(--df-forest);
+
+  --df-studio-green-2:
+    var(--df-forest-2);
+
+  --df-studio-lime:
+    var(--df-lime);
+
+  --df-studio-cyan:
+    var(--df-cyan);
+
+  --df-studio-line:
+    rgba(8, 21, 19, 0.13);
+
+  --df-studio-grid:
+    rgba(0, 70, 67, 0.065);
+
+  --df-studio-accent-glow:
+    rgba(184, 243, 74, 0.09);
+
+  --df-studio-green-glow:
+    rgba(0, 70, 67, 0.10);
+
+  --df-studio-cyan-glow:
+    rgba(22, 184, 176, 0.08);
+
+  --df-studio-dot-glow:
+    rgba(184, 243, 74, 0.55);
+
+  --df-studio-green-border:
+    rgba(0, 70, 67, 0.38);
+
+  --df-studio-card:
+    rgba(250, 250, 247, 0.55);
+
+  --df-studio-card-hover:
+    rgba(184, 243, 74, 0.08);
+
+  --df-studio-value-hover:
+    rgba(0, 70, 67, 0.045);
+
+  --df-font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --df-font-body: 'Inter', sans-serif;
+  --df-font-mono: 'JetBrains Mono', monospace;
+
+  --df-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html.lenis {
+  height: auto;
+}
+
+body {
+  background: var(--df-ivory);
+  color: var(--df-ink);
+  font-family: var(--df-font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--df-lime);
+  color: var(--df-charcoal);
+}
+
+.df-eyebrow {
+  font-family: var(--df-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--df-ink-soft);
+}
+
+.section-placeholder {
+  height: 40vh;
+  background: var(--df-ivory);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   DEVFORGE PRELOADER SCROLL LOCK
+============================================================ */
+
+html.df-preloader-active,
+body.df-preloader-active {
+
+  overflow: hidden !important;
+
+  height: 100%;
+
+  overscroll-behavior: none;
+}

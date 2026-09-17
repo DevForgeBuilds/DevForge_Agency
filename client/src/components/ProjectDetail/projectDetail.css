@@ -1,0 +1,406 @@
+/* ============================================================
+   DEVFORGE — PROJECT DETAIL
+   Base / Orchestrator
+============================================================ */
+
+.project-detail {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        var(--df-ivory);
+
+    color:
+        var(--df-charcoal);
+}
+
+
+/* ============================================================
+   TEMPORARY HERO PLACEHOLDER
+   This will be replaced by ProjectHero.
+============================================================ */
+
+.project-detail__hero-placeholder {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-height: 100vh;
+
+    padding:
+        8rem clamp(1.5rem, 6vw, 7rem);
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+}
+
+
+.project-detail__hero-placeholder>span {
+
+    margin-bottom: 2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    letter-spacing:
+        0.16em;
+
+    color:
+        var(--df-forest);
+}
+
+
+.project-detail__hero-placeholder h1 {
+
+    margin: 0;
+
+    max-width: 1200px;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(5rem, 14vw, 14rem);
+
+    font-weight: 700;
+
+    line-height: 0.78;
+
+    letter-spacing:
+        -0.085em;
+
+    color:
+        var(--df-charcoal);
+}
+
+
+.project-detail__hero-placeholder p {
+
+    width:
+        min(500px, 100%);
+
+    margin:
+        4rem 0 0 auto;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.7;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+/* ============================================================
+   NOT FOUND
+============================================================ */
+
+.project-detail--not-found {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    min-height:
+        100vh;
+
+    padding:
+        2rem;
+}
+
+
+.project-detail__not-found {
+
+    width:
+        min(700px, 100%);
+
+    text-align:
+        center;
+}
+
+
+.project-detail__not-found>span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.16em;
+
+    color:
+        var(--df-forest);
+}
+
+
+.project-detail__not-found h1 {
+
+    margin:
+        2rem 0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem, 10vw, 9rem);
+
+    line-height:
+        0.8;
+
+    letter-spacing:
+        -0.08em;
+
+    color:
+        var(--df-charcoal);
+}
+
+
+.project-detail__not-found p {
+
+    max-width:
+        420px;
+
+    margin:
+        0 auto 2rem;
+
+    font-family:
+        var(--df-font-body);
+
+    line-height:
+        1.6;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+.project-detail__not-found a {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        0.7rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.12em;
+
+    text-decoration:
+        none;
+
+    color:
+        var(--df-forest);
+
+    transition:
+        gap 0.35s var(--df-ease);
+}
+
+
+.project-detail__not-found a:hover {
+
+    gap:
+        1rem;
+}
+
+
+.project-detail__not-found a span {
+
+    font-size:
+        1rem;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .project-detail__hero-placeholder {
+
+        min-height:
+            85vh;
+
+        padding:
+            7rem 1.2rem 4rem;
+    }
+
+
+    .project-detail__hero-placeholder h1 {
+
+        font-size:
+            clamp(4rem, 20vw, 7rem);
+    }
+
+
+    .project-detail__hero-placeholder p {
+
+        margin:
+            3rem 0 0;
+
+        font-size:
+            0.9rem;
+    }
+
+}
+
+/* =========================================================
+   PROJECT DETAIL — BACK NAVIGATION
+========================================================= */
+
+main.project-detail>.project-detail__back {
+    position: relative !important;
+    z-index: 100 !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 24px 5vw 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+main.project-detail>.project-detail__back>button {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+
+    gap: 10px !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    outline: none !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+
+    color: var(--df-charcoal) !important;
+
+    font-family: var(--df-font-mono) !important;
+    font-size: 9px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+
+    cursor: pointer !important;
+
+    opacity: 0.72 !important;
+
+    box-shadow: none !important;
+
+    transition:
+        opacity 0.3s var(--df-ease),
+        transform 0.3s var(--df-ease) !important;
+}
+
+main.project-detail>.project-detail__back>button>span:first-child {
+    display: inline-flex !important;
+    align-items: center !important;
+
+    font-family: var(--df-font-body) !important;
+    font-size: 17px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+
+    letter-spacing: 0 !important;
+
+    transform: translateX(0) !important;
+
+    transition:
+        transform 0.3s var(--df-ease) !important;
+}
+
+main.project-detail>.project-detail__back>button>span:last-child {
+    display: inline-block !important;
+
+    font-family: var(--df-font-mono) !important;
+    font-size: 9px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+
+    letter-spacing: 0.16em !important;
+}
+
+main.project-detail>.project-detail__back>button:hover {
+    opacity: 1 !important;
+}
+
+main.project-detail>.project-detail__back>button:hover>span:first-child {
+    transform: translateX(-5px) !important;
+}
+
+main.project-detail>.project-detail__back>button:focus-visible {
+    outline: 1px solid var(--df-forest) !important;
+    outline-offset: 6px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    main.project-detail>.project-detail__back {
+        padding: 18px 20px 0 !important;
+    }
+
+    main.project-detail>.project-detail__back>button {
+        font-size: 8px !important;
+        letter-spacing: 0.14em !important;
+    }
+
+    main.project-detail>.project-detail__back>button>span:first-child {
+        font-size: 15px !important;
+    }
+
+    main.project-detail>.project-detail__back>button>span:last-child {
+        font-size: 8px !important;
+    }
+}

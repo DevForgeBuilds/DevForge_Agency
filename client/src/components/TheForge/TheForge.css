@@ -1,0 +1,1709 @@
+/* ============================================================
+   DEVFORGE — THE FORGE
+   Premium Editorial Process Section
+   Theme-driven / Global Tokens
+============================================================ */
+
+
+/* ============================================================
+   SECTION
+============================================================ */
+
+.forge-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    padding:
+        8rem clamp(1.5rem, 5vw, 6rem) 5rem;
+
+    background:
+        radial-gradient(circle at 78% 16%,
+            var(--df-forge-glow),
+            transparent 25%),
+
+        radial-gradient(circle at 12% 72%,
+            var(--df-forge-green-glow),
+            transparent 28%),
+
+        var(--df-forge-bg);
+
+    color:
+        var(--df-forge-text);
+
+    isolation: isolate;
+}
+
+
+/* ============================================================
+   TECH GRID
+============================================================ */
+
+.forge-section::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -3;
+
+    background-image:
+
+        linear-gradient(var(--df-forge-grid) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            var(--df-forge-grid) 1px,
+            transparent 1px);
+
+    background-size:
+        64px 64px;
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   AMBIENT
+============================================================ */
+
+.forge-section__ambient {
+
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    right: -200px;
+    top: 35%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            var(--df-forge-accent-faint),
+            transparent 68%);
+
+    filter:
+        blur(15px);
+
+    z-index: -2;
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.forge-header {
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+}
+
+
+/* ============================================================
+   HEADER META
+============================================================ */
+
+.forge-header__meta {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom:
+        1.3rem;
+
+    border-bottom:
+        1px solid var(--df-forge-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Original: 8px
+       Increased for readability.
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-forge-soft);
+}
+
+
+.forge-header__index {
+
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        9px;
+}
+
+
+.forge-header__dot {
+
+    width: 5px;
+    height: 5px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        var(--df-forge-accent);
+
+    box-shadow:
+        0 0 14px var(--df-accent-glow);
+}
+
+
+.forge-header__location {
+
+    opacity:
+        0.4;
+}
+
+
+/* ============================================================
+   HEADER MAIN
+============================================================ */
+
+.forge-header__main {
+
+    display: grid;
+
+    grid-template-columns:
+        170px 1fr;
+
+    gap:
+        2rem;
+
+    padding-top:
+        5rem;
+}
+
+
+.forge-header__label {
+
+    padding-top:
+        0.7rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Original: 8px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-forge-accent);
+}
+
+
+/* ============================================================
+   HEADER TITLE
+============================================================ */
+
+.forge-header__title {
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(5rem,
+            10vw,
+            10rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.76;
+
+    letter-spacing:
+        -0.075em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.forge-header__title span:first-child {
+
+    color:
+        var(--df-forge-text);
+}
+
+
+.forge-header__title-accent {
+
+    padding-left:
+        11%;
+
+    color:
+        var(--df-forge-accent);
+}
+
+
+.forge-header__title span:last-child {
+
+    padding-left:
+        23%;
+}
+
+
+/* ============================================================
+   HEADER BOTTOM
+============================================================ */
+
+.forge-header__bottom {
+
+    display: grid;
+
+    grid-template-columns:
+        170px 1fr;
+
+    gap:
+        2rem;
+
+    margin-top:
+        3rem;
+
+    padding-bottom:
+        5rem;
+}
+
+
+.forge-header__bottom p {
+
+    grid-column:
+        2;
+
+    max-width:
+        490px;
+
+    margin:
+        0;
+
+    padding-left:
+        18px;
+
+    border-left:
+        1px solid var(--df-forge-accent-soft);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-forge-soft);
+}
+
+
+.forge-header__code {
+
+    grid-column:
+        2;
+
+    display: flex;
+
+    gap:
+        2rem;
+
+    margin-top:
+        1.8rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Original: 7px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.5;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-forge-muted);
+}
+
+
+/* ============================================================
+   PROCESS
+============================================================ */
+
+.forge-process {
+
+    position: relative;
+
+    max-width:
+        1200px;
+
+    margin:
+        0 auto;
+
+    padding:
+        8rem 0 12rem;
+}
+
+
+/* ============================================================
+   RAIL
+============================================================ */
+
+.forge-process__rail {
+
+    position: absolute;
+
+    left:
+        50%;
+
+    top:
+        0;
+
+    bottom:
+        0;
+
+    width:
+        1px;
+
+    transform:
+        translateX(-50%);
+
+    pointer-events:
+        none;
+}
+
+
+.forge-process__rail-base {
+
+    position: absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(to bottom,
+            transparent,
+            var(--df-forge-rail) 10%,
+            var(--df-forge-rail) 90%,
+            transparent);
+}
+
+
+.forge-process__rail-progress {
+
+    position: absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        1px;
+
+    height:
+        100%;
+
+    transform:
+        scaleY(0);
+
+    transform-origin:
+        top center;
+
+    background:
+        var(--df-forge-accent);
+
+    box-shadow:
+
+        0 0 12px var(--df-accent-glow),
+
+        0 0 30px var(--df-forge-accent-soft);
+}
+
+
+/* ============================================================
+   STAGE
+============================================================ */
+
+.forge-stage {
+
+    position: relative;
+
+    min-height:
+        650px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 90px 1fr;
+
+    align-items:
+        center;
+
+    opacity:
+        0;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+/* ============================================================
+   STAGE NUMBER
+============================================================ */
+
+.forge-stage__number {
+
+    position: absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    transform:
+        translate(-50%,
+            -50%);
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(15rem,
+            25vw,
+            27rem);
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.1em;
+
+    color:
+        var(--df-forge-number);
+
+    pointer-events:
+        none;
+
+    user-select:
+        none;
+}
+
+
+/* ============================================================
+   NODE
+============================================================ */
+
+.forge-stage__node {
+
+    position: absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    z-index:
+        5;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    transform:
+        translate(-50%,
+            -50%);
+
+    border:
+        1px solid var(--df-forge-accent-soft);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-forge-bg);
+
+    box-shadow:
+
+        0 0 0 8px var(--df-forge-accent-faint),
+
+        0 0 30px var(--df-forge-accent-soft);
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+.forge-stage__node::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset:
+        -10px;
+
+    border:
+        1px solid var(--df-forge-accent-faint);
+
+    border-radius:
+        50%;
+}
+
+
+.forge-stage__node::after {
+
+    content: '';
+
+    position: absolute;
+
+    inset:
+        -20px;
+
+    border:
+        1px solid var(--df-forge-forge-accent-faint);
+
+    border-radius:
+        50%;
+}
+
+
+.forge-stage__node span {
+
+    width:
+        9px;
+
+    height:
+        9px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-forge-accent);
+
+    box-shadow:
+        0 0 15px var(--df-accent-glow);
+}
+
+
+/* ============================================================
+   STAGE CONTENT
+============================================================ */
+
+.forge-stage__content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        min(420px,
+            100%);
+
+    opacity:
+        1;
+}
+
+
+/* ============================================================
+   ODD = LEFT
+============================================================ */
+
+.forge-stage:nth-child(odd) .forge-stage__content {
+
+    grid-column:
+        1;
+
+    justify-self:
+        end;
+
+    text-align:
+        right;
+
+    padding-right:
+        70px;
+}
+
+
+/* ============================================================
+   EVEN = RIGHT
+============================================================ */
+
+.forge-stage:nth-child(even) .forge-stage__content {
+
+    grid-column:
+        3;
+
+    justify-self:
+        start;
+
+    padding-left:
+        70px;
+}
+
+
+/* ============================================================
+   TOPLINE
+============================================================ */
+
+.forge-stage__topline {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        1rem;
+
+    margin-bottom:
+        1.1rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Original: 7px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.13em;
+}
+
+
+.forge-stage:nth-child(odd) .forge-stage__topline {
+
+    justify-content:
+        flex-end;
+}
+
+
+.forge-stage__tag {
+
+    color:
+        var(--df-forge-accent);
+}
+
+
+.forge-stage__meta {
+
+    color:
+        var(--df-forge-muted);
+}
+
+
+/* ============================================================
+   TITLE
+============================================================ */
+
+.forge-stage h3 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4.5rem,
+            7vw,
+            7rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.8;
+
+    letter-spacing:
+        -0.075em;
+
+    color:
+        var(--df-forge-text);
+}
+
+
+.forge-stage h3 span {
+
+    color:
+        var(--df-forge-accent);
+}
+
+
+/* ============================================================
+   DESCRIPTION
+============================================================ */
+
+.forge-stage__content p {
+
+    max-width:
+        330px;
+
+    margin:
+        1.5rem 0 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Original: 9px
+    */
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-forge-soft);
+}
+
+
+.forge-stage:nth-child(odd) .forge-stage__content p {
+
+    margin-left:
+        auto;
+}
+
+
+/* ============================================================
+   STAGE FOOTER
+============================================================ */
+
+.forge-stage__footer {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Original: 7px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.1em;
+
+    color:
+        var(--df-forge-muted);
+}
+
+
+.forge-stage:nth-child(odd) .forge-stage__footer {
+
+    justify-content:
+        flex-end;
+}
+
+
+.forge-stage__footer i {
+
+    width:
+        35px;
+
+    height:
+        1px;
+
+    background:
+        var(--df-forge-accent);
+}
+
+
+/* ============================================================
+   VISUAL
+============================================================ */
+
+.forge-stage__visual {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    width:
+        250px;
+
+    height:
+        250px;
+
+    transform:
+        translateY(-50%);
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+}
+
+
+/* ============================================================
+   ODD VISUAL — RIGHT
+============================================================ */
+
+.forge-stage:nth-child(odd) .forge-stage__visual {
+
+    right:
+        -20px;
+}
+
+
+/* ============================================================
+   EVEN VISUAL — LEFT
+============================================================ */
+
+.forge-stage:nth-child(even) .forge-stage__visual {
+
+    left:
+        -20px;
+}
+
+
+/* ============================================================
+   VISUAL GRID
+============================================================ */
+
+.forge-stage__visual-grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background-image:
+
+        linear-gradient(var(--df-forge-card-grid) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            var(--df-forge-card-grid) 1px,
+            transparent 1px);
+
+    background-size:
+        25px 25px;
+
+    mask-image:
+        radial-gradient(circle,
+            black,
+            transparent 70%);
+
+    -webkit-mask-image:
+        radial-gradient(circle,
+            black,
+            transparent 70%);
+}
+
+
+/* ============================================================
+   VISUAL RING
+============================================================ */
+
+.forge-stage__visual-ring {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        125px;
+
+    height:
+        125px;
+
+    transform:
+        translate(-50%,
+            -50%);
+
+    border:
+        1px solid var(--df-forge-accent-faint);
+
+    border-radius:
+        50%;
+
+    box-shadow:
+        0 0 50px var(--df-accent-faint);
+}
+
+
+/* ============================================================
+   VISUAL CROSS
+============================================================ */
+
+.forge-stage__visual-cross {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    background:
+        var(--df-forge-accent-faint);
+}
+
+
+.forge-stage__visual-cross--h {
+
+    width:
+        180px;
+
+    height:
+        1px;
+
+    transform:
+        translate(-50%,
+            -50%);
+}
+
+
+.forge-stage__visual-cross--v {
+
+    width:
+        1px;
+
+    height:
+        180px;
+
+    transform:
+        translate(-50%,
+            -50%);
+}
+
+
+/* ============================================================
+   VISUAL POINT
+============================================================ */
+
+.forge-stage__visual-point {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    transform:
+        translate(-50%,
+            -50%);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-forge-accent);
+
+    box-shadow:
+        0 0 20px var(--df-accent-glow);
+}
+
+
+/* ============================================================
+   HOVER
+============================================================ */
+
+.forge-stage:hover .forge-stage__visual-ring {
+
+    transform:
+        translate(-50%,
+            -50%) scale(1.12);
+
+    border-color:
+        var(--df-accent-soft);
+
+    transition:
+        0.6s var(--df-ease);
+}
+
+
+.forge-stage:hover .forge-stage__node {
+
+    box-shadow:
+
+        0 0 0 12px var(--df-forge-accent-faint),
+
+        0 0 40px var(--df-accent-soft);
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.forge-footer {
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    padding-top:
+        1.5rem;
+
+    border-top:
+        1px solid var(--df-forge-line);
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 2fr 1fr;
+
+    align-items:
+        end;
+
+    gap:
+        2rem;
+
+    opacity:
+        0;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+.forge-footer__label {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        5px;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Original: 7px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-forge-muted);
+}
+
+
+.forge-footer__statement {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        1.6rem;
+
+    line-height:
+        0.88;
+
+    letter-spacing:
+        -0.045em;
+}
+
+
+.forge-footer__statement strong {
+
+    color:
+        var(--df-forge-accent);
+
+    font-weight:
+        500;
+}
+
+
+.forge-footer__next {
+
+    display:
+        flex;
+
+    justify-content:
+        flex-end;
+
+    gap:
+        15px;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Original: 7px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-forge-muted);
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1000px) {
+
+    .forge-section {
+
+        padding-left:
+            2rem;
+
+        padding-right:
+            2rem;
+    }
+
+
+    .forge-header__main,
+    .forge-header__bottom {
+
+        grid-template-columns:
+            120px 1fr;
+    }
+
+
+    .forge-stage {
+
+        min-height:
+            580px;
+    }
+
+
+    .forge-stage__visual {
+
+        width:
+            190px;
+
+        height:
+            190px;
+    }
+
+
+    .forge-stage__content {
+
+        width:
+            330px;
+    }
+
+
+    .forge-stage:nth-child(odd) .forge-stage__content {
+
+        padding-right:
+            55px;
+    }
+
+
+    .forge-stage:nth-child(even) .forge-stage__content {
+
+        padding-left:
+            55px;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .forge-section {
+
+        padding:
+            5rem 1.2rem 4rem;
+    }
+
+
+    /* --------------------------------------------------------
+       HEADER
+    -------------------------------------------------------- */
+
+    .forge-header__location {
+
+        display:
+            none;
+    }
+
+
+    .forge-header__main {
+
+        display:
+            block;
+
+        padding-top:
+            3.5rem;
+    }
+
+
+    .forge-header__label {
+
+        margin-bottom:
+            2rem;
+    }
+
+
+    .forge-header__title {
+
+        font-size:
+            clamp(3.7rem,
+                17vw,
+                6rem);
+
+        line-height:
+            0.8;
+    }
+
+
+    .forge-header__title-accent {
+
+        padding-left:
+            5%;
+    }
+
+
+    .forge-header__title span:last-child {
+
+        padding-left:
+            10%;
+    }
+
+
+    .forge-header__bottom {
+
+        display:
+            block;
+
+        margin-top:
+            2.5rem;
+
+        padding-bottom:
+            2rem;
+    }
+
+
+    .forge-header__bottom p {
+
+        max-width:
+            330px;
+
+        margin-left:
+            5%;
+
+        font-size:
+            12px;
+    }
+
+
+    .forge-header__code {
+
+        margin-left:
+            5%;
+
+        font-size:
+            10px;
+    }
+
+
+    /* --------------------------------------------------------
+       PROCESS
+    -------------------------------------------------------- */
+
+    .forge-process {
+
+        padding:
+            5rem 0 6rem;
+    }
+
+
+    /* --------------------------------------------------------
+       RAIL
+    -------------------------------------------------------- */
+
+    .forge-process__rail {
+
+        left:
+            22px;
+
+        transform:
+            translateX(-50%);
+    }
+
+
+    /* --------------------------------------------------------
+       STAGE
+    -------------------------------------------------------- */
+
+    .forge-stage {
+
+        min-height:
+            560px;
+
+        display:
+            block;
+
+        padding-left:
+            60px;
+    }
+
+
+    /* --------------------------------------------------------
+       NUMBER
+    -------------------------------------------------------- */
+
+    .forge-stage__number {
+
+        left:
+            62px;
+
+        top:
+            50%;
+
+        transform:
+            translateY(-50%);
+
+        font-size:
+            11rem;
+
+        color:
+            var(--df-forge-number);
+    }
+
+
+    /* --------------------------------------------------------
+       NODE
+    -------------------------------------------------------- */
+
+    .forge-stage__node {
+
+        left:
+            22px;
+
+        top:
+            50%;
+
+        width:
+            34px;
+
+        height:
+            34px;
+
+        transform:
+            translate(-50%,
+                -50%);
+    }
+
+
+    /* --------------------------------------------------------
+       CONTENT
+    -------------------------------------------------------- */
+
+    .forge-stage:nth-child(odd) .forge-stage__content,
+
+    .forge-stage:nth-child(even) .forge-stage__content {
+
+        width:
+            100%;
+
+        padding:
+            0;
+
+        text-align:
+            left;
+
+        transform:
+            translateY(-50%);
+    }
+
+
+    .forge-stage__topline {
+
+        justify-content:
+            flex-start !important;
+
+        flex-wrap:
+            wrap;
+
+        font-size:
+            10px;
+    }
+
+
+    .forge-stage h3 {
+
+        font-size:
+            clamp(4rem,
+                17vw,
+                6rem);
+    }
+
+
+    .forge-stage__content p {
+
+        max-width:
+            280px;
+
+        margin-left:
+            0 !important;
+
+        font-size:
+            12px;
+    }
+
+
+    .forge-stage__footer {
+
+        justify-content:
+            flex-start !important;
+
+        font-size:
+            10px;
+    }
+
+
+    /* --------------------------------------------------------
+       VISUAL
+    -------------------------------------------------------- */
+
+    .forge-stage__visual {
+
+        display:
+            none;
+    }
+
+
+    /* --------------------------------------------------------
+       FOOTER
+    -------------------------------------------------------- */
+
+    .forge-footer {
+
+        display:
+            block;
+    }
+
+
+    .forge-footer__statement {
+
+        margin:
+            2rem 0;
+    }
+
+
+    .forge-footer__next {
+
+        justify-content:
+            flex-start;
+
+        font-size:
+            10px;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 420px) {
+
+    .forge-header__title {
+
+        font-size:
+            3.45rem;
+    }
+
+
+    .forge-stage {
+
+        min-height:
+            500px;
+
+        padding-left:
+            55px;
+    }
+
+
+    .forge-process__rail {
+
+        left:
+            18px;
+    }
+
+
+    .forge-stage__node {
+
+        left:
+            18px;
+    }
+
+
+    .forge-stage h3 {
+
+        font-size:
+            3.7rem;
+    }
+
+
+    .forge-stage__number {
+
+        left:
+            55px;
+
+        font-size:
+            9rem;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .forge-section *,
+    .forge-section *::before,
+    .forge-section *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+}

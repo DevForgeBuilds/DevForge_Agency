@@ -1,0 +1,3570 @@
+/* ============================================================
+   DEVFORGE — THE STUDIO
+   Editorial / Awwwards Style
+   Theme-driven / Global Tokens
+============================================================ */
+
+
+/* ============================================================
+   SECTION
+============================================================ */
+
+.studio-section {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(circle at 88% 18%,
+            var(--df-studio-accent-glow),
+            transparent 24%),
+
+        radial-gradient(circle at 8% 75%,
+            var(--df-studio-green-glow),
+            transparent 30%),
+
+        var(--df-studio-bg);
+
+    color:
+        var(--df-studio-ink);
+
+    isolation: isolate;
+}
+
+
+/* ============================================================
+   TECHNICAL GRID
+============================================================ */
+
+.studio-section::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    background-image:
+
+        linear-gradient(var(--df-studio-grid) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            var(--df-studio-grid) 1px,
+            transparent 1px);
+
+    background-size:
+        72px 72px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            black 0%,
+            black 65%,
+            transparent 100%);
+
+    -webkit-mask-image:
+        linear-gradient(to bottom,
+            black 0%,
+            black 65%,
+            transparent 100%);
+
+    pointer-events:
+        none;
+}
+
+
+/* ============================================================
+   COMMON CONTENT WIDTH
+============================================================ */
+
+.studio-section__meta,
+.studio-section__statement,
+.studio-identity,
+.studio-belief,
+.studio-values,
+.studio-manifesto {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        min(calc(100% - 8rem),
+            1440px);
+
+    margin-left:
+        auto;
+
+    margin-right:
+        auto;
+}
+
+
+/* ============================================================
+   TOP META
+============================================================ */
+
+.studio-section__meta {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding-top:
+        7rem;
+
+    padding-bottom:
+        1.4rem;
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 8px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+.studio-section__index {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+}
+
+
+.studio-section__dot {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-studio-green);
+
+    box-shadow:
+        0 0 10px var(--df-studio-dot-glow);
+}
+
+
+.studio-section__location {
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+/* ============================================================
+   MAIN STATEMENT
+============================================================ */
+
+.studio-section__statement {
+
+    padding-top:
+        7rem;
+
+    padding-bottom:
+        9rem;
+}
+
+
+.studio-section__eyebrow {
+
+    margin-bottom:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 9px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.16em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   BIG TYPOGRAPHY
+============================================================ */
+
+.studio-section__title {
+
+    margin:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(5.5rem,
+            12vw,
+            12rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.77;
+
+    letter-spacing:
+        -0.085em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.studio-word {
+
+    display:
+        block;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+.studio-word--small {
+
+    font-size:
+        0.42em;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.055em;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+.studio-word--lime {
+
+    padding-left:
+        9%;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-word--offset {
+
+    padding-left:
+        22%;
+
+    color:
+        var(--df-studio-ink);
+}
+
+
+.studio-word--offset span {
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+/* ============================================================
+   INTRO
+============================================================ */
+
+.studio-section__intro {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        18px;
+
+    max-width:
+        480px;
+
+    margin:
+        4rem 0 0 22%;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 10px
+    */
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+.studio-section__intro p {
+
+    margin:
+        0;
+}
+
+
+.studio-section__intro-line {
+
+    flex:
+        0 0 45px;
+
+    height:
+        1px;
+
+    margin-top:
+        8px;
+
+    background:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   IDENTITY SECTION
+============================================================ */
+
+.studio-identity {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        180px 1fr;
+
+    gap:
+        3rem;
+
+    padding:
+        5rem 0 7rem;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-identity__label {
+
+    padding-top:
+        8px;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 8px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-identity__content {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 70px 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        2rem;
+}
+
+
+.studio-identity__block {
+
+    position:
+        relative;
+
+    min-height:
+        240px;
+
+    padding:
+        1.7rem;
+
+    border:
+        1px solid var(--df-studio-line);
+
+    background:
+        var(--df-studio-card);
+
+    transition:
+        transform 0.5s var(--df-ease),
+        border-color 0.4s ease,
+        background 0.4s ease;
+}
+
+
+.studio-identity__block:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--df-studio-green-border);
+
+    background:
+        var(--df-studio-card-hover);
+}
+
+
+.studio-identity__number {
+
+    display:
+        block;
+
+    margin-bottom:
+        4rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 8px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-identity__block h3 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            7vw,
+            7rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.75;
+
+    letter-spacing:
+        -0.07em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-identity__block p {
+
+    margin:
+        1rem 0 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 8px
+    */
+
+    font-size:
+        11px;
+
+    line-height:
+        1.5;
+
+    letter-spacing:
+        0.13em;
+
+    color:
+        var(--df-studio-ink);
+}
+
+
+.studio-identity__details {
+
+    display:
+        block;
+
+    margin-top:
+        2.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 7px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.5;
+
+    letter-spacing:
+        0.1em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-identity__plus {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    justify-self:
+        center;
+
+    border:
+        1px solid var(--df-studio-line);
+
+    border-radius:
+        50%;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        1.6rem;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   BELIEF
+============================================================ */
+
+.studio-belief {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        180px 1fr;
+
+    gap:
+        3rem;
+
+    padding:
+        8rem 0;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-belief__side {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        space-between;
+
+    min-height:
+        300px;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 8px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.5;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-belief__main {
+
+    max-width:
+        950px;
+}
+
+
+.studio-belief__main h3 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            8vw,
+            8rem);
+
+    font-weight:
+        600;
+
+    line-height:
+        0.82;
+
+    letter-spacing:
+        -0.075em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.studio-belief__main h3 span {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-belief__main p {
+
+    max-width:
+        480px;
+
+    margin:
+        3rem 0 0 10%;
+
+    padding-left:
+        18px;
+
+    border-left:
+        1px solid var(--df-studio-green);
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 10px
+    */
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+/* ============================================================
+   VALUES
+============================================================ */
+
+.studio-values {
+
+    padding:
+        6rem 0 8rem;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-values__header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 8px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+/* ============================================================
+   VALUE LIST
+============================================================ */
+
+.studio-values__list {
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-value {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        90px minmax(180px, 0.8fr) 1fr 50px;
+
+    align-items:
+        center;
+
+    gap:
+        2rem;
+
+    min-height:
+        115px;
+
+    padding:
+        1.2rem 0;
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    transition:
+        padding 0.45s var(--df-ease),
+        background 0.45s ease;
+}
+
+
+.studio-value:hover {
+
+    padding-left:
+        20px;
+
+    padding-right:
+        20px;
+
+    background:
+        var(--df-studio-value-hover);
+}
+
+
+.studio-value__number {
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 8px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-value h4 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(2.3rem,
+            4vw,
+            4rem);
+
+    font-weight:
+        600;
+
+    line-height:
+        0.85;
+
+    letter-spacing:
+        -0.055em;
+
+    color:
+        var(--df-studio-ink);
+}
+
+
+.studio-value p {
+
+    max-width:
+        320px;
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 9px
+    */
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+.studio-value__arrow {
+
+    justify-self:
+        end;
+
+    font-size:
+        1.4rem;
+
+    color:
+        var(--df-studio-green);
+
+    transition:
+        transform 0.4s var(--df-ease);
+}
+
+
+.studio-value:hover .studio-value__arrow {
+
+    transform:
+        translate(5px,
+            -5px);
+}
+
+
+/* ============================================================
+   FINAL MANIFESTO
+============================================================ */
+
+.studio-manifesto {
+
+    padding:
+        10rem 0 6rem;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-manifesto__small {
+
+    display:
+        block;
+
+    margin-bottom:
+        3rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 8px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.16em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-manifesto h3 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(5rem,
+            11vw,
+            11rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.76;
+
+    letter-spacing:
+        -0.085em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.studio-manifesto h3 span {
+
+    padding-left:
+        12%;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-manifesto__footer {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    margin-top:
+        5rem;
+
+    padding-top:
+        1.4rem;
+
+    border-top:
+        1px solid var(--df-studio-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    /*
+       Previous: 7px
+    */
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-manifesto__footer span:last-child {
+
+    color:
+        var(--df-studio-green);
+
+    font-size:
+        14px;
+}
+
+
+/* ============================================================
+   LARGE DESKTOP
+============================================================ */
+
+@media (min-width: 1600px) {
+
+    .studio-section__meta,
+    .studio-section__statement,
+    .studio-identity,
+    .studio-belief,
+    .studio-values,
+    .studio-manifesto {
+
+        width:
+            min(calc(100% - 10rem),
+                1550px);
+    }
+
+
+    .studio-section__title {
+
+        font-size:
+            12rem;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1000px) {
+
+    .studio-section__meta,
+    .studio-section__statement,
+    .studio-identity,
+    .studio-belief,
+    .studio-values,
+    .studio-manifesto {
+
+        width:
+            calc(100% - 4rem);
+    }
+
+
+    .studio-section__statement {
+
+        padding-top:
+            5rem;
+    }
+
+
+    .studio-section__title {
+
+        font-size:
+            clamp(4.5rem,
+                11vw,
+                8rem);
+    }
+
+
+    .studio-identity,
+    .studio-belief {
+
+        grid-template-columns:
+            120px 1fr;
+    }
+
+
+    .studio-identity__content {
+
+        grid-template-columns:
+            1fr 45px 1fr;
+
+        gap:
+            1rem;
+    }
+
+
+    .studio-identity__block {
+
+        min-height:
+            210px;
+    }
+
+
+    .studio-value {
+
+        grid-template-columns:
+            60px minmax(150px, 0.8fr) 1fr 40px;
+
+        gap:
+            1rem;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .studio-section {
+
+        overflow:
+            hidden;
+    }
+
+
+    .studio-section__meta,
+    .studio-section__statement,
+    .studio-identity,
+    .studio-belief,
+    .studio-values,
+    .studio-manifesto {
+
+        width:
+            calc(100% - 2.4rem);
+    }
+
+
+    /* --------------------------------------------------------
+       META
+    -------------------------------------------------------- */
+
+    .studio-section__meta {
+
+        padding-top:
+            5rem;
+    }
+
+
+    .studio-section__location {
+
+        display:
+            none;
+    }
+
+
+    /* --------------------------------------------------------
+       MAIN STATEMENT
+    -------------------------------------------------------- */
+
+    .studio-section__statement {
+
+        padding-top:
+            4rem;
+
+        padding-bottom:
+            5rem;
+    }
+
+
+    .studio-section__eyebrow {
+
+        margin-bottom:
+            1.5rem;
+    }
+
+
+    .studio-section__title {
+
+        font-size:
+            clamp(3.6rem,
+                16vw,
+                6rem);
+
+        line-height:
+            0.8;
+    }
+
+
+    .studio-word--small {
+
+        font-size:
+            0.42em;
+    }
+
+
+    .studio-word--lime {
+
+        padding-left:
+            4%;
+    }
+
+
+    .studio-word--offset {
+
+        padding-left:
+            10%;
+    }
+
+
+    .studio-section__intro {
+
+        margin:
+            2.5rem 0 0 5%;
+
+        /*
+           Previous: 8px
+        */
+
+        font-size:
+            11px;
+
+        line-height:
+            1.75;
+    }
+
+
+    /* --------------------------------------------------------
+       IDENTITY
+    -------------------------------------------------------- */
+
+    .studio-identity {
+
+        display:
+            block;
+
+        padding:
+            4rem 0 5rem;
+    }
+
+
+    .studio-identity__label {
+
+        margin-bottom:
+            2rem;
+    }
+
+
+    .studio-identity__content {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            1rem;
+    }
+
+
+    .studio-identity__plus {
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        margin:
+            0.3rem auto;
+    }
+
+
+    .studio-identity__block {
+
+        min-height:
+            190px;
+
+        padding:
+            1.3rem;
+    }
+
+
+    .studio-identity__number {
+
+        margin-bottom:
+            2.5rem;
+    }
+
+
+    .studio-identity__block h3 {
+
+        font-size:
+            4.5rem;
+    }
+
+
+    .studio-identity__block p {
+
+        font-size:
+            10px;
+    }
+
+
+    .studio-identity__details {
+
+        font-size:
+            10px;
+    }
+
+
+    /* --------------------------------------------------------
+       BELIEF
+    -------------------------------------------------------- */
+
+    .studio-belief {
+
+        display:
+            block;
+
+        padding:
+            5rem 0;
+    }
+
+
+    .studio-belief__side {
+
+        min-height:
+            auto;
+
+        flex-direction:
+            row;
+
+        margin-bottom:
+            2.5rem;
+    }
+
+
+    .studio-belief__main h3 {
+
+        font-size:
+            clamp(3.3rem,
+                15vw,
+                5rem);
+    }
+
+
+    .studio-belief__main p {
+
+        margin:
+            2.5rem 0 0 5%;
+
+        font-size:
+            11px;
+    }
+
+
+    /* --------------------------------------------------------
+       VALUES
+    -------------------------------------------------------- */
+
+    .studio-values {
+
+        padding:
+            4rem 0 5rem;
+    }
+
+
+    .studio-values__header {
+
+        font-size:
+            10px;
+    }
+
+
+    .studio-value {
+
+        grid-template-columns:
+            35px 1fr 25px;
+
+        gap:
+            0.8rem;
+
+        min-height:
+            100px;
+    }
+
+
+    .studio-value:hover {
+
+        padding-left:
+            10px;
+
+        padding-right:
+            10px;
+    }
+
+
+    .studio-value h4 {
+
+        font-size:
+            2.1rem;
+    }
+
+
+    .studio-value p {
+
+        display:
+            none;
+    }
+
+
+    /* --------------------------------------------------------
+       MANIFESTO
+    -------------------------------------------------------- */
+
+    .studio-manifesto {
+
+        padding:
+            6rem 0 4rem;
+    }
+
+
+    .studio-manifesto h3 {
+
+        font-size:
+            clamp(3.8rem,
+                16vw,
+                6rem);
+    }
+
+
+    .studio-manifesto h3 span {
+
+        padding-left:
+            6%;
+    }
+
+
+    .studio-manifesto__footer {
+
+        gap:
+            1rem;
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        margin-top:
+            3rem;
+
+        font-size:
+            10px;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 420px) {
+
+    .studio-section__title {
+
+        font-size:
+            3.35rem;
+    }
+
+
+    .studio-identity__block h3 {
+
+        font-size:
+            4rem;
+    }
+
+
+    .studio-belief__main h3 {
+
+        font-size:
+            3rem;
+    }
+
+
+    .studio-manifesto h3 {
+
+        font-size:
+            3.4rem;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .studio-section *,
+    .studio-section *::before,
+    .studio-section *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+}
+
+/* ============================================================
+   COLLISION WRAPPER
+============================================================ */
+
+.studio-collision-wrap {
+    position: relative;
+    z-index: 2;
+
+    width: min(calc(100% - 8rem), 1440px);
+
+    margin:
+        0 auto 8rem;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-collision-meta {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        1rem 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-collision-meta span:last-child {
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   BELIEF EYEBROW
+============================================================ */
+
+.studio-belief__eyebrow {
+    margin-bottom:
+        1.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   VALUE TITLE
+============================================================ */
+
+.studio-value__title {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    min-width:
+        0;
+}
+
+
+.studio-value__mobile-arrow {
+    display:
+        none;
+
+    font-size:
+        1.2rem;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   MANIFESTO LINES
+============================================================ */
+
+.studio-manifesto__line {
+    display:
+        block;
+}
+
+
+.studio-manifesto__line--accent {
+    color:
+        var(--df-studio-green);
+}
+
+@media (max-width: 700px) {
+
+    .studio-collision-wrap {
+        width:
+            calc(100% - 2.4rem);
+
+        margin-bottom:
+            4rem;
+    }
+
+
+    .studio-collision-meta {
+        font-size:
+            9px;
+    }
+
+
+    .studio-collision-meta span:last-child {
+        font-size:
+            9px;
+    }
+
+
+    .studio-belief__eyebrow {
+        margin-bottom:
+            1rem;
+    }
+
+
+    .studio-value__mobile-arrow {
+        display:
+            block;
+    }
+
+
+    .studio-value__arrow {
+        display:
+            none;
+    }
+
+
+    .studio-value__title {
+        gap:
+            0.5rem;
+    }
+
+
+    .studio-value h4 {
+        font-size:
+            clamp(1.8rem,
+                9vw,
+                2.5rem);
+    }
+
+
+    .studio-manifesto__line {
+        white-space:
+            nowrap;
+    }
+}
+
+/* ============================================================
+   STUDIO — EDITORIAL SPLIT
+============================================================ */
+
+.studio-statement {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(calc(100% - 8rem), 1440px);
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) minmax(320px, 0.42fr);
+
+    gap:
+        5rem;
+
+    padding:
+        7rem 0 9rem;
+}
+
+
+/* ============================================================
+   LEFT SIDE
+============================================================ */
+
+.studio-statement__left {
+
+    min-width:
+        0;
+}
+
+
+/* ============================================================
+   DOSSIER
+============================================================ */
+
+.studio-dossier {
+
+    position:
+        relative;
+
+    align-self:
+        center;
+
+    min-height:
+        470px;
+
+    border:
+        1px solid var(--df-studio-line);
+
+    background:
+        linear-gradient(145deg,
+            var(--df-studio-card),
+            transparent);
+
+    overflow:
+        hidden;
+
+    transition:
+        border-color 0.5s ease,
+        transform 0.6s var(--df-ease);
+}
+
+
+.studio-dossier:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--df-studio-green-border);
+}
+
+
+/* ============================================================
+   DOSSIER TOP
+============================================================ */
+
+.studio-dossier__top {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        1rem 1.2rem;
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+/* ============================================================
+   DOSSIER VISUAL
+============================================================ */
+
+.studio-dossier__visual {
+
+    position:
+        relative;
+
+    min-height:
+        300px;
+
+    overflow:
+        hidden;
+
+    background:
+
+        linear-gradient(var(--df-studio-grid) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            var(--df-studio-grid) 1px,
+            transparent 1px);
+
+    background-size:
+        36px 36px;
+}
+
+
+.studio-dossier__visual::before {
+
+    content: '';
+
+    position:
+        absolute;
+
+    inset:
+        20%;
+
+    border:
+        1px solid var(--df-studio-line);
+
+    border-radius:
+        50%;
+
+    opacity:
+        0.55;
+}
+
+
+.studio-dossier__visual::after {
+
+    content: '';
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        0;
+
+    width:
+        1px;
+
+    height:
+        100%;
+
+    background:
+        var(--df-studio-line);
+}
+
+
+/* ============================================================
+   DOSSIER CIRCLE
+============================================================ */
+
+.studio-dossier__circle {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        150px;
+
+    height:
+        150px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid var(--df-studio-green);
+
+    border-radius:
+        50%;
+
+    box-shadow:
+        0 0 60px var(--df-studio-accent-glow);
+
+    color:
+        var(--df-studio-green);
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        3rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -0.08em;
+
+    transition:
+        transform 0.7s var(--df-ease),
+        box-shadow 0.5s ease;
+}
+
+
+.studio-dossier:hover .studio-dossier__circle {
+
+    transform:
+        translate(-50%, -50%) rotate(12deg) scale(1.08);
+
+    box-shadow:
+        0 0 90px var(--df-studio-accent-glow);
+}
+
+
+/* ============================================================
+   CROSSHAIRS
+============================================================ */
+
+.studio-dossier__cross {
+
+    position:
+        absolute;
+
+    width:
+        12px;
+
+    height:
+        12px;
+
+    opacity:
+        0.65;
+}
+
+
+.studio-dossier__cross::before,
+.studio-dossier__cross::after {
+
+    content: '';
+
+    position:
+        absolute;
+
+    background:
+        var(--df-studio-green);
+}
+
+
+.studio-dossier__cross::before {
+
+    left:
+        50%;
+
+    top:
+        0;
+
+    width:
+        1px;
+
+    height:
+        100%;
+}
+
+
+.studio-dossier__cross::after {
+
+    left:
+        0;
+
+    top:
+        50%;
+
+    width:
+        100%;
+
+    height:
+        1px;
+}
+
+
+.studio-dossier__cross--one {
+
+    left:
+        18%;
+
+    top:
+        25%;
+}
+
+
+.studio-dossier__cross--two {
+
+    right:
+        15%;
+
+    bottom:
+        24%;
+}
+
+
+/* ============================================================
+   COORDINATES
+============================================================ */
+
+.studio-dossier__coordinate {
+
+    position:
+        absolute;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.1em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-dossier__coordinate--one {
+
+    left:
+        1.2rem;
+
+    bottom:
+        1.2rem;
+}
+
+
+.studio-dossier__coordinate--two {
+
+    right:
+        1.2rem;
+
+    top:
+        1.2rem;
+}
+
+
+/* ============================================================
+   DOSSIER BOTTOM
+============================================================ */
+
+.studio-dossier__bottom {
+
+    display:
+        flex;
+
+    align-items:
+        flex-end;
+
+    justify-content:
+        space-between;
+
+    padding:
+        1.3rem;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-dossier__label {
+
+    display:
+        block;
+
+    margin-bottom:
+        0.7rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-dossier__bottom strong {
+
+    display:
+        block;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        1.4rem;
+
+    line-height:
+        0.9;
+
+    letter-spacing:
+        -0.05em;
+
+    color:
+        var(--df-studio-ink);
+}
+
+
+.studio-dossier__arrow {
+
+    color:
+        var(--df-studio-green);
+
+    font-size:
+        1.5rem;
+
+    transition:
+        transform 0.4s var(--df-ease);
+}
+
+
+.studio-dossier:hover .studio-dossier__arrow {
+
+    transform:
+        translate(5px, 5px);
+}
+
+
+/* ============================================================
+   IDENTITY ACCENT
+============================================================ */
+
+.studio-identity__block--accent {
+
+    background:
+        linear-gradient(135deg,
+            var(--df-studio-card),
+            var(--df-studio-card-hover));
+}
+
+
+.studio-identity__block--accent h3 {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   COLLISION SECTION
+============================================================ */
+
+.studio-collision {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        min(calc(100% - 8rem), 1440px);
+
+    margin:
+        0 auto 8rem;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-collision__meta {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        1rem 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-collision__meta span:last-child {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   BELIEF EYEBROW
+============================================================ */
+
+.studio-belief__eyebrow {
+
+    margin-bottom:
+        1.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   MANIFESTO
+============================================================ */
+
+.studio-manifesto__line {
+
+    display:
+        block;
+}
+
+
+.studio-manifesto__line--accent {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 1000px) {
+
+    .studio-statement {
+
+        width:
+            calc(100% - 4rem);
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            4rem;
+
+        padding:
+            5rem 0 6rem;
+    }
+
+
+    .studio-dossier {
+
+        max-width:
+            600px;
+
+        width:
+            100%;
+
+        margin:
+            0 auto;
+    }
+
+
+    .studio-collision {
+
+        width:
+            calc(100% - 4rem);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .studio-statement {
+
+        width:
+            calc(100% - 2.4rem);
+
+        gap:
+            3rem;
+
+        padding:
+            4rem 0 5rem;
+    }
+
+
+    .studio-dossier {
+
+        min-height:
+            390px;
+    }
+
+
+    .studio-dossier__visual {
+
+        min-height:
+            250px;
+    }
+
+
+    .studio-dossier__circle {
+
+        width:
+            120px;
+
+        height:
+            120px;
+
+        font-size:
+            2.3rem;
+    }
+
+
+    .studio-collision {
+
+        width:
+            calc(100% - 2.4rem);
+
+        margin-bottom:
+            4rem;
+    }
+
+
+    .studio-collision__meta {
+
+        font-size:
+            8px;
+    }
+}
+
+/* ============================================================
+   DEVFORGE STUDIO — TWO WORLDS
+============================================================ */
+
+.studio-two-worlds {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   INTRO
+============================================================ */
+
+.studio-two-worlds__intro {
+    position: relative;
+    z-index: 2;
+
+    width: min(calc(100% - 8rem), 1440px);
+
+    margin: 0 auto;
+
+    padding:
+        8rem 0 7rem;
+}
+
+
+.studio-two-worlds__eyebrow {
+    display: block;
+
+    margin-bottom: 2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 10px;
+
+    letter-spacing: 0.16em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-two-worlds__title {
+    margin: 0;
+
+    max-width: 1100px;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(5rem, 11vw, 11rem);
+
+    font-weight: 700;
+
+    line-height: 0.78;
+
+    letter-spacing: -0.075em;
+
+    color:
+        var(--df-studio-ink);
+}
+
+
+.studio-two-worlds__title span {
+    display: block;
+}
+
+
+.studio-two-worlds__title-accent {
+    padding-left:
+        clamp(2rem, 10vw, 12rem);
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-two-worlds__description {
+    width:
+        min(420px, 100%);
+
+    margin:
+        4rem 0 0 auto;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.7;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+/* ============================================================
+   WORLDS
+============================================================ */
+
+.studio-worlds {
+    position: relative;
+
+    z-index: 3;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) 90px minmax(0, 1fr);
+
+    width:
+        min(calc(100% - 8rem), 1440px);
+
+    min-height:
+        600px;
+
+    margin:
+        0 auto;
+
+    border-top:
+        1px solid var(--df-studio-line);
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+}
+
+
+/* ============================================================
+   WORLD
+============================================================ */
+
+.studio-world {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding:
+        1.5rem;
+
+    overflow: hidden;
+
+    transition:
+        background 0.6s var(--df-ease),
+        transform 0.7s var(--df-ease);
+}
+
+
+
+.studio-world--dev {
+    border-right:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-world--forge {
+    border-left:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-world--dev .studio-world__symbol {
+    color: #14512f;
+}
+
+
+.studio-world--forge .studio-world__symbol {
+    color: #a3bd2e;
+}
+
+
+.studio-world::before {
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    background:
+        radial-gradient(circle at 50% 50%,
+            var(--df-studio-accent-glow),
+            transparent 55%);
+
+    transition:
+        opacity 0.7s ease;
+
+    pointer-events: none;
+}
+
+
+.studio-world:hover::before {
+    opacity: 1;
+}
+
+
+.studio-world:hover {
+    background:
+        var(--df-studio-card-hover);
+}
+
+
+/* ============================================================
+   WORLD HEADER
+============================================================ */
+
+.studio-world__header {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        45px 1fr auto;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    padding-bottom:
+        1rem;
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 9px;
+
+    letter-spacing: 0.12em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-world__index {
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-world__status {
+    color:
+        var(--df-studio-ink);
+}
+
+
+/* ============================================================
+   WORLD MAIN
+============================================================ */
+
+.studio-world__main {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    flex: 1;
+
+    padding:
+        4rem 1rem;
+}
+
+
+.studio-world__symbol {
+    display: grid;
+
+    place-items: center;
+
+    flex: 0 0 auto;
+
+    width:
+        clamp(110px, 13vw, 180px);
+
+    aspect-ratio: 1;
+
+    border:
+        1px solid var(--df-studio-line);
+
+    border-radius: 50%;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem, 8vw, 8rem);
+
+    font-weight: 700;
+
+    letter-spacing: -0.1em;
+
+    color:
+        var(--df-studio-ink);
+
+    transition:
+        transform 0.8s var(--df-ease),
+        border-color 0.5s ease,
+        color 0.5s ease;
+}
+
+
+.studio-world--dev:hover .studio-world__symbol {
+    transform:
+        rotate(-8deg) scale(1.08);
+
+    border-color:
+        var(--df-studio-green);
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-world--forge:hover .studio-world__symbol {
+    transform:
+        rotate(8deg) scale(1.08);
+
+    border-color:
+        var(--df-studio-lime);
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-world__content h3 {
+    margin: 0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(3rem, 6vw, 6rem);
+
+    line-height: 0.8;
+
+    letter-spacing: -0.08em;
+
+    color:
+        var(--df-studio-ink);
+}
+
+
+.studio-world--forge .studio-world__content h3 {
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-world__content p {
+    margin:
+        1rem 0 0;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        0.9rem;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+/* ============================================================
+   WORLD GRID
+============================================================ */
+
+.studio-world__grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-world__grid div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.45rem;
+
+    padding:
+        1rem;
+
+    border-right:
+        1px solid var(--df-studio-line);
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-world__grid div:nth-child(even) {
+    border-right: 0;
+}
+
+
+.studio-world__grid span {
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-world__grid strong {
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        0.75rem;
+
+    letter-spacing:
+        0.04em;
+
+    color:
+        var(--df-studio-ink);
+}
+
+
+/* ============================================================
+   WORLD FOOTER
+============================================================ */
+
+.studio-world__footer {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top:
+        1rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-world__footer span:last-child {
+    color:
+        var(--df-studio-green);
+
+    font-size:
+        1rem;
+}
+
+
+/* ============================================================
+   CENTER COLLISION MARKER
+============================================================ */
+
+.studio-worlds__center {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+    overflow: hidden;
+}
+
+
+.studio-worlds__line {
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    width: 1px;
+
+    height: 100%;
+
+    background:
+        var(--df-studio-line);
+}
+
+
+.studio-worlds__plus {
+    position: relative;
+    z-index: 3;
+
+    display: grid;
+
+    place-items: center;
+
+    width: 42px;
+
+    height: 42px;
+
+    border:
+        1px solid var(--df-studio-green);
+
+    border-radius: 50%;
+
+    background:
+        var(--df-studio-bg);
+
+    color:
+        var(--df-studio-green);
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        1.5rem;
+}
+
+
+.studio-worlds__center>span {
+    position: relative;
+    z-index: 3;
+
+    padding:
+        0.35rem 0.25rem;
+
+    writing-mode:
+        vertical-rl;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+
+    background:
+        var(--df-studio-bg);
+}
+
+
+/* ============================================================
+   COLLISION
+============================================================ */
+
+.studio-two-worlds__collision {
+    position: relative;
+
+    width:
+        min(calc(100% - 8rem), 1440px);
+
+    margin:
+        9rem auto 0;
+
+    padding-bottom:
+        8rem;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-two-worlds__collision-meta {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding:
+        1rem 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-two-worlds__collision-meta span:last-child {
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-two-worlds__collision-title {
+    display: flex;
+
+    align-items: baseline;
+
+    flex-wrap: wrap;
+
+    gap:
+        0 1.5rem;
+
+    padding:
+        4rem 0 2rem;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(3.5rem, 8vw, 8rem);
+
+    font-weight: 700;
+
+    line-height: 0.82;
+
+    letter-spacing: -0.08em;
+
+    color:
+        var(--df-studio-ink);
+}
+
+
+.studio-two-worlds__collision-title span {
+    display: block;
+}
+
+
+.studio-two-worlds__collision-accent {
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   RESULT
+============================================================ */
+
+.studio-two-worlds__result {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top:
+        2rem;
+
+    padding:
+        1.2rem 0;
+
+    border-top:
+        1px solid var(--df-studio-line);
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-two-worlds__result span {
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-two-worlds__result strong {
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(1.5rem, 3vw, 3rem);
+
+    letter-spacing:
+        -0.05em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   FINAL METHOD
+============================================================ */
+
+.studio-two-worlds__final {
+    position: relative;
+
+    width:
+        min(calc(100% - 8rem), 1440px);
+
+    margin:
+        0 auto;
+
+    padding:
+        7rem 0;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.studio-two-worlds__final>span {
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.studio-two-worlds__final h3 {
+    display: flex;
+
+    flex-direction: column;
+
+    margin:
+        3rem 0 0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem, 10vw, 10rem);
+
+    line-height:
+        0.78;
+
+    letter-spacing:
+        -0.08em;
+
+    color:
+        var(--df-studio-ink);
+}
+
+
+.studio-two-worlds__final h3 span:nth-child(2) {
+    padding-left:
+        clamp(2rem, 12vw, 14rem);
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.studio-two-worlds__final-accent {
+    padding-left:
+        clamp(5rem, 25vw, 30rem);
+
+    color:
+        var(--df-studio-ink) !important;
+}
+
+
+.studio-two-worlds__final p {
+    max-width:
+        280px;
+
+    margin:
+        4rem 0 0 auto;
+
+    font-family:
+        var(--df-font-body);
+
+    line-height:
+        1.6;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .studio-two-worlds__intro,
+    .studio-worlds,
+    .studio-two-worlds__collision,
+    .studio-two-worlds__final {
+        width:
+            calc(100% - 3rem);
+    }
+
+
+    .studio-worlds {
+        grid-template-columns:
+            1fr;
+
+        min-height:
+            auto;
+    }
+
+
+    .studio-world--dev {
+        border-right: 0;
+
+        border-bottom:
+            1px solid var(--df-studio-line);
+    }
+
+
+    .studio-world--forge {
+        border-left: 0;
+    }
+
+
+    .studio-worlds__center {
+        display: none;
+    }
+
+
+    .studio-world {
+        min-height:
+            520px;
+    }
+
+
+    .studio-two-worlds__collision {
+        margin-top:
+            6rem;
+    }
+
+
+    .studio-two-worlds__final {
+        padding:
+            5rem 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .studio-two-worlds__intro {
+        padding:
+            5rem 0 4rem;
+    }
+
+
+    .studio-two-worlds__title {
+        font-size:
+            clamp(3.7rem, 17vw, 6rem);
+    }
+
+
+    .studio-two-worlds__title-accent {
+        padding-left:
+            1.5rem;
+    }
+
+
+    .studio-two-worlds__description {
+        margin-top:
+            3rem;
+
+        font-size:
+            0.9rem;
+    }
+
+
+    .studio-world {
+        min-height:
+            430px;
+
+        padding:
+            1rem;
+    }
+
+
+    .studio-world__main {
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        justify-content:
+            center;
+
+        padding:
+            3rem 0;
+    }
+
+
+    .studio-world__symbol {
+        width:
+            100px;
+
+        font-size:
+            4rem;
+    }
+
+
+    .studio-world__content h3 {
+        font-size:
+            3.5rem;
+    }
+
+
+    .studio-two-worlds__collision-title {
+        font-size:
+            clamp(3rem, 14vw, 5rem);
+
+        gap:
+            0.4rem;
+    }
+
+
+    .studio-two-worlds__result {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            0.7rem;
+    }
+
+
+    .studio-two-worlds__final h3 {
+        font-size:
+            clamp(3.7rem, 16vw, 6rem);
+    }
+
+
+    .studio-two-worlds__final h3 span:nth-child(2) {
+        padding-left:
+            1.5rem;
+    }
+
+
+    .studio-two-worlds__final-accent {
+        padding-left:
+            3rem;
+    }
+
+
+    .studio-two-worlds__final p {
+        margin-left:
+            0;
+    }
+}
+
+/* ============================================================
+   DEV / FORGE — EXTRA POLISH
+============================================================ */
+
+/* 1. Circle letters + subtle tint + hover glow */
+.studio-world--dev .studio-world__symbol {
+    color: #14512f;
+    background: rgba(20, 81, 47, 0.04);
+    transition:
+        transform 0.8s var(--df-ease),
+        border-color 0.5s ease,
+        color 0.5s ease,
+        background 0.5s ease;
+}
+
+.studio-world--dev:hover .studio-world__symbol {
+    background: rgba(20, 81, 47, 0.09);
+}
+
+.studio-world--forge .studio-world__symbol {
+    color: #a3bd2e;
+    background: rgba(163, 189, 46, 0.05);
+    transition:
+        transform 0.8s var(--df-ease),
+        border-color 0.5s ease,
+        color 0.5s ease,
+        background 0.5s ease;
+}
+
+.studio-world--forge:hover .studio-world__symbol {
+    background: rgba(163, 189, 46, 0.11);
+}
+
+
+/* 2. "+" collision marker — hover animation */
+.studio-worlds__plus {
+    transition:
+        transform 0.6s ease,
+        border-color 0.4s ease,
+        color 0.4s ease;
+}
+
+.studio-worlds__center:hover .studio-worlds__plus {
+    transform: rotate(90deg) scale(1.15);
+    border-color: #a3bd2e;
+    color: #14512f;
+}
+
+
+/* 3. Grid numbers (01, 02, 03, 04) — small colored dot accent */
+.studio-world__grid span {
+    position: relative;
+    padding-left: 12px;
+}
+
+.studio-world__grid span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.6;
+}
+
+.studio-world--dev .studio-world__grid span {
+    color: #14512f;
+}
+
+.studio-world--forge .studio-world__grid span {
+    color: #a3bd2e;
+}
+
+
+/* 4. Footer arrow — slide on hover */
+.studio-world__footer span:last-child {
+    display: inline-block;
+    transition: transform 0.35s ease;
+}
+
+.studio-world:hover .studio-world__footer span:last-child {
+    transform: translateX(6px);
+}

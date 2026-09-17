@@ -1,0 +1,909 @@
+/* ============================================================
+   DEVFORGE — RAW → FORGED
+   Theme-driven / Global Tokens
+============================================================ */
+
+
+/* ============================================================
+   MAIN
+============================================================ */
+
+.raw-forged {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        100vh;
+
+    min-height:
+        700px;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--df-raw-bg);
+
+    color:
+        var(--df-raw-cream);
+
+    isolation:
+        isolate;
+}
+
+
+/* ============================================================
+   GRID
+============================================================ */
+
+.raw-forged__grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        0;
+
+    pointer-events:
+        none;
+
+    background-image:
+
+        linear-gradient(var(--df-raw-grid) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            var(--df-raw-grid) 1px,
+            transparent 1px);
+
+    background-size:
+        72px 72px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 12%,
+            black 88%,
+            transparent);
+
+    -webkit-mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 12%,
+            black 88%,
+            transparent);
+}
+
+
+/* ============================================================
+   GLOW
+============================================================ */
+
+.raw-forged__glow {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    top:
+        50%;
+
+    width:
+        550px;
+
+    height:
+        550px;
+
+    transform:
+        translate(-50%,
+            -50%);
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(circle,
+            var(--df-raw-glow),
+            transparent 68%);
+
+    filter:
+        blur(25px);
+
+    pointer-events:
+        none;
+
+    z-index:
+        1;
+}
+
+
+/* ============================================================
+   TOP
+============================================================ */
+
+.raw-forged__top {
+
+    position:
+        absolute;
+
+    left:
+        4rem;
+
+    right:
+        4rem;
+
+    top:
+        2rem;
+
+    z-index:
+        30;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding-bottom:
+        1.2rem;
+
+    border-bottom:
+        1px solid var(--df-raw-line);
+}
+
+
+.raw-forged__index,
+.raw-forged__meta {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-raw-muted);
+}
+
+
+.raw-forged__index {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+}
+
+
+.raw-forged__index span {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-raw-lime);
+
+    box-shadow:
+        0 0 14px rgba(183, 243, 74, 0.55);
+}
+
+
+/* ============================================================
+   STAGE
+============================================================ */
+
+.raw-forged__stage {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        5;
+}
+
+
+/* ============================================================
+   SCREEN
+============================================================ */
+
+.raw-screen {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    padding:
+        8rem 4rem 4rem;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    pointer-events:
+        none;
+}
+
+
+/* ============================================================
+   NUMBER
+============================================================ */
+
+.raw-screen__number {
+
+    position:
+        absolute;
+
+    right:
+        4rem;
+
+    bottom:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-raw-muted);
+}
+
+
+/* ============================================================
+   RAW IDEA
+============================================================ */
+
+.raw-screen--idea {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+
+.raw-screen__label {
+
+    position:
+        absolute;
+
+    left:
+        4rem;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%) rotate(-90deg);
+
+    transform-origin:
+        center;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.18em;
+
+    color:
+        var(--df-raw-muted);
+}
+
+
+.raw-screen__content {
+
+    text-align:
+        center;
+}
+
+
+.raw-screen__small {
+
+    display:
+        block;
+
+    margin-bottom:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.6;
+
+    letter-spacing:
+        0.17em;
+
+    color:
+        var(--df-raw-muted);
+}
+
+
+.raw-screen--idea h2 {
+
+    margin:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(6rem,
+            15vw,
+            15rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.68;
+
+    letter-spacing:
+        -0.09em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.raw-screen--idea h2 span {
+
+    padding-left:
+        clamp(4rem,
+            10vw,
+            12rem);
+
+    color:
+        var(--df-raw-lime);
+}
+
+
+/* ============================================================
+   PROCESS
+============================================================ */
+
+.raw-screen--process {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+}
+
+
+.raw-process__top {
+
+    margin-bottom:
+        3rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.18em;
+
+    color:
+        var(--df-raw-muted);
+}
+
+
+.raw-process__word {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(6rem,
+            15vw,
+            15rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.7;
+
+    letter-spacing:
+        -0.09em;
+
+    text-transform:
+        uppercase;
+
+    color:
+        var(--df-raw-cream);
+}
+
+
+.raw-process__line {
+
+    position:
+        relative;
+
+    width:
+        min(300px,
+            35vw);
+
+    height:
+        1px;
+
+    margin:
+        3rem auto 2rem;
+
+    background:
+        var(--df-raw-line);
+}
+
+
+.raw-process__line span {
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        0;
+
+    width:
+        100%;
+
+    height:
+        1px;
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left center;
+
+    background:
+        var(--df-raw-lime);
+}
+
+
+.raw-process__description {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.8;
+
+    letter-spacing:
+        0.04em;
+
+    color:
+        var(--df-raw-muted);
+}
+
+
+/* ============================================================
+   FORGED
+============================================================ */
+
+.raw-screen--forged {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--df-raw-lime);
+
+    color:
+        var(--df-raw-bg);
+}
+
+
+.forged__label {
+
+    position:
+        absolute;
+
+    left:
+        4rem;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%) rotate(-90deg);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.18em;
+
+    color:
+        var(--df-raw-dark-muted);
+}
+
+
+.forged__content {
+
+    text-align:
+        center;
+}
+
+
+.forged__eyebrow {
+
+    display:
+        block;
+
+    margin-bottom:
+        1.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.18em;
+
+    color:
+        var(--df-raw-dark-muted);
+}
+
+
+.forged__arrow {
+
+    margin-bottom:
+        1.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        18px;
+
+    color:
+        var(--df-raw-green);
+}
+
+
+.forged__content h2 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(6rem,
+            16vw,
+            16rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.68;
+
+    letter-spacing:
+        -0.09em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.forged__content h2 span {
+
+    color:
+        var(--df-raw-green);
+}
+
+
+.forged__content p {
+
+    margin:
+        2.5rem 0 0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.8;
+
+    letter-spacing:
+        0.16em;
+
+    color:
+        var(--df-raw-dark-muted);
+}
+
+
+.forged__content p strong {
+
+    color:
+        var(--df-raw-green);
+
+    font-weight:
+        500;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1100px) {
+
+    .raw-forged__top {
+
+        left:
+            2rem;
+
+        right:
+            2rem;
+    }
+
+
+    .raw-screen__label,
+    .forged__label {
+
+        left:
+            2rem;
+    }
+
+
+    .raw-screen {
+
+        padding-left:
+            2rem;
+
+        padding-right:
+            2rem;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .raw-forged {
+
+        min-height:
+            100svh;
+    }
+
+
+    .raw-forged__top {
+
+        left:
+            1.2rem;
+
+        right:
+            1.2rem;
+
+        top:
+            1.5rem;
+    }
+
+
+    .raw-forged__meta {
+
+        display:
+            none;
+    }
+
+
+    .raw-screen {
+
+        padding:
+            6rem 1.2rem 3rem;
+    }
+
+
+    /* IDEA */
+
+    .raw-screen--idea h2 {
+
+        font-size:
+            clamp(4.5rem,
+                20vw,
+                7rem);
+    }
+
+
+    .raw-screen--idea h2 span {
+
+        padding-left:
+            14vw;
+    }
+
+
+    .raw-screen__label,
+    .forged__label {
+
+        display:
+            none;
+    }
+
+
+    /* PROCESS */
+
+    .raw-process__word {
+
+        font-size:
+            clamp(4.5rem,
+                19vw,
+                7rem);
+    }
+
+
+    .raw-process__line {
+
+        width:
+            55vw;
+
+        margin:
+            2rem auto 1.5rem;
+    }
+
+
+    /* FORGED */
+
+    .forged__content h2 {
+
+        font-size:
+            clamp(4.8rem,
+                20vw,
+                7.5rem);
+    }
+
+
+    .forged__content p {
+
+        font-size:
+            9px;
+    }
+
+
+    .raw-screen__number {
+
+        right:
+            1.2rem;
+
+        bottom:
+            1.5rem;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .raw-forged *,
+    .raw-forged *::before,
+    .raw-forged *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+    }
+}

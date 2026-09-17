@@ -1,0 +1,1093 @@
+/* ============================================================
+   WEB / UI DESIGN SHOWCASE
+============================================================ */
+
+.webui-showcase {
+
+    --ui-bg: #f4f1e8;
+    --ui-dark: #101511;
+    --ui-green: #0f3d2b;
+    --ui-lime: #b7f34a;
+    --ui-muted: rgba(16, 21, 17, .45);
+    --ui-line: rgba(16, 21, 17, .14);
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding:
+        8rem clamp(1.2rem, 6vw, 8rem) 7rem;
+
+    overflow: hidden;
+
+    background:
+        var(--ui-bg);
+
+    color:
+        var(--ui-dark);
+}
+
+
+/* ============================================================
+   BACKGROUND
+============================================================ */
+
+.webui-showcase::before {
+
+    content: '';
+
+    position: absolute;
+
+    width: 60vw;
+    height: 60vw;
+
+    left: 50%;
+    top: 45%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(15, 61, 43, .06),
+            transparent 65%);
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.webui-showcase__header {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 5rem;
+
+    z-index: 2;
+}
+
+
+.webui-showcase__eyebrow {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    color:
+        var(--ui-muted);
+}
+
+
+.webui-showcase__eyebrow span:first-child {
+
+    color:
+        var(--ui-green);
+}
+
+
+.webui-showcase__label {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .14em;
+
+    color:
+        var(--ui-muted);
+}
+
+
+/* ============================================================
+   STAGE
+============================================================ */
+
+.webui-showcase__stage {
+
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 3rem;
+
+    z-index: 2;
+}
+
+
+/* ============================================================
+   WIREFRAME
+============================================================ */
+
+.webui-wireframe {
+
+    position: relative;
+
+    width:
+        min(400px, 35vw);
+
+    aspect-ratio:
+        4 / 3;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--ui-line);
+
+    background:
+        #ebe7dc;
+}
+
+
+.webui-wireframe__top {
+
+    position: relative;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 12px;
+
+    border-bottom:
+        1px solid var(--ui-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .1em;
+
+    color:
+        var(--ui-muted);
+
+    z-index: 2;
+}
+
+
+.webui-wireframe__canvas {
+
+    position: absolute;
+
+    inset:
+        38px 0 0;
+
+    padding:
+        20px;
+
+    z-index: 2;
+}
+
+
+.wire-block {
+
+    position: absolute;
+
+    border:
+        1px solid rgba(16, 21, 17, .22);
+
+    background:
+        rgba(16, 21, 17, .035);
+}
+
+
+.wire-logo {
+
+    left: 20px;
+    top: 20px;
+
+    width: 35px;
+    height: 10px;
+}
+
+
+.wire-nav {
+
+    right: 20px;
+    top: 20px;
+
+    width: 110px;
+    height: 10px;
+}
+
+
+.wire-hero {
+
+    left: 20px;
+    right: 20px;
+    top: 55px;
+
+    height: 115px;
+}
+
+
+.wire-title {
+
+    left: 35px;
+    top: 78px;
+
+    width: 180px;
+    height: 35px;
+
+    background:
+        rgba(16, 21, 17, .1);
+}
+
+
+.wire-copy {
+
+    left: 35px;
+    top: 122px;
+
+    width: 130px;
+    height: 15px;
+}
+
+
+.wire-button {
+
+    left: 35px;
+    top: 148px;
+
+    width: 65px;
+    height: 18px;
+}
+
+
+.wire-image {
+
+    right: 35px;
+    top: 75px;
+
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+}
+
+
+.wire-card {
+
+    top: 195px;
+
+    width: 75px;
+    height: 45px;
+}
+
+
+.card-one {
+    left: 20px;
+}
+
+.card-two {
+    left: 110px;
+}
+
+.card-three {
+    left: 200px;
+}
+
+
+/* ============================================================
+   WIREFRAME GRID
+============================================================ */
+
+.webui-wireframe__grid {
+
+    position: absolute;
+
+    inset: 38px 0 0;
+
+    background-image:
+
+        linear-gradient(rgba(16, 21, 17, .08) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(16, 21, 17, .08) 1px,
+            transparent 1px);
+
+    background-size:
+        35px 35px;
+
+    opacity:
+        .5;
+
+    pointer-events:
+        none;
+}
+
+
+/* ============================================================
+   TRANSFORM
+============================================================ */
+
+.webui-showcase__transform {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    gap:
+        1rem;
+
+    color:
+        var(--ui-muted);
+}
+
+
+.webui-showcase__transform>span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        5px;
+
+    letter-spacing:
+        .15em;
+}
+
+
+.webui-showcase__transform>div {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        5px;
+}
+
+
+.webui-showcase__transform i {
+
+    width:
+        4px;
+
+    height:
+        4px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--ui-green);
+
+    opacity:
+        .3;
+}
+
+
+.webui-showcase__transform strong {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        30px;
+
+    font-weight:
+        400;
+
+    color:
+        var(--ui-green);
+}
+
+
+/* ============================================================
+   FINAL INTERFACE
+============================================================ */
+
+.webui-interface {
+
+    position: relative;
+
+    width:
+        min(620px, 48vw);
+
+    aspect-ratio:
+        16 / 10;
+
+    overflow: hidden;
+
+    background:
+        var(--ui-green);
+
+    color:
+        var(--ui-bg);
+
+    box-shadow:
+        0 35px 90px rgba(16, 21, 17, .22);
+}
+
+
+/* ============================================================
+   UI TOP
+============================================================ */
+
+.webui-interface__top {
+
+    position: relative;
+
+    height:
+        40px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        45px 1fr 50px;
+
+    align-items:
+        center;
+
+    padding:
+        0 14px;
+
+    border-bottom:
+        1px solid rgba(244, 241, 232, .15);
+
+    z-index:
+        3;
+}
+
+
+.webui-interface__logo {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        14px;
+
+    letter-spacing:
+        -.08em;
+
+    color:
+        var(--ui-lime);
+}
+
+
+.webui-interface__top nav {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        1.5rem;
+}
+
+
+.webui-interface__top nav span,
+.webui-interface__top small {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        5px;
+
+    letter-spacing:
+        .1em;
+
+    color:
+        rgba(244, 241, 232, .5);
+}
+
+
+.webui-interface__top small {
+
+    text-align:
+        right;
+}
+
+
+/* ============================================================
+   UI BODY
+============================================================ */
+
+.webui-interface__body {
+
+    position:
+        relative;
+
+    height:
+        calc(100% - 40px);
+
+    overflow:
+        hidden;
+}
+
+
+.webui-interface__grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background-image:
+
+        linear-gradient(rgba(244, 241, 232, .07) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(244, 241, 232, .07) 1px,
+            transparent 1px);
+
+    background-size:
+        40px 40px;
+}
+
+
+/* ============================================================
+   UI COPY
+============================================================ */
+
+.webui-interface__copy {
+
+    position:
+        absolute;
+
+    left:
+        7%;
+
+    top:
+        12%;
+
+    z-index:
+        3;
+}
+
+
+.webui-interface__copy>span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        5px;
+
+    letter-spacing:
+        .15em;
+
+    color:
+        rgba(244, 241, 232, .48);
+}
+
+
+.webui-interface__copy h3 {
+
+    margin:
+        1rem 0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(3.2rem,
+            5.5vw,
+            6rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        .7;
+
+    letter-spacing:
+        -.08em;
+}
+
+
+.webui-interface__copy h3 em {
+
+    color:
+        var(--ui-lime);
+
+    font-style:
+        normal;
+}
+
+
+.webui-interface__copy p {
+
+    max-width:
+        230px;
+
+    margin:
+        1.5rem 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        6px;
+
+    line-height:
+        1.8;
+
+    color:
+        rgba(244, 241, 232, .5);
+}
+
+
+.webui-interface__copy button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid rgba(244, 241, 232, .25);
+
+    background:
+        transparent;
+
+    color:
+        var(--ui-bg);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        5px;
+
+    letter-spacing:
+        .1em;
+}
+
+
+.webui-interface__copy button b {
+
+    color:
+        var(--ui-lime);
+
+    font-size:
+        12px;
+
+    font-weight:
+        400;
+}
+
+
+/* ============================================================
+   UI SHAPE
+============================================================ */
+
+.webui-interface__shape {
+
+    position:
+        absolute;
+
+    right:
+        -10%;
+
+    bottom:
+        -25%;
+
+    width:
+        52%;
+
+    aspect-ratio:
+        1;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid rgba(183, 243, 74, .4);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(183, 243, 74, .05);
+
+    z-index:
+        2;
+}
+
+
+.shape-inner {
+
+    width:
+        45%;
+
+    aspect-ratio:
+        1;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid rgba(183, 243, 74, .5);
+
+    border-radius:
+        50%;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        25px;
+
+    color:
+        var(--ui-lime);
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.webui-interface__status {
+
+    position:
+        absolute;
+
+    right:
+        5%;
+
+    bottom:
+        6%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        5px;
+
+    letter-spacing:
+        .1em;
+
+    z-index:
+        4;
+}
+
+
+.webui-interface__status::before {
+
+    content:
+        '';
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--ui-lime);
+
+    box-shadow:
+        0 0 12px var(--ui-lime);
+}
+
+
+.webui-interface__status strong {
+
+    color:
+        var(--ui-lime);
+}
+
+
+/* ============================================================
+   STATEMENT
+============================================================ */
+
+.webui-showcase__statement {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        1rem;
+
+    margin-top:
+        5rem;
+
+    z-index:
+        2;
+}
+
+
+.webui-showcase__statement>span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        .14em;
+
+    color:
+        var(--ui-muted);
+}
+
+
+.webui-showcase__statement strong {
+
+    max-width:
+        900px;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(3rem,
+            6vw,
+            7rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        .78;
+
+    letter-spacing:
+        -.07em;
+}
+
+
+.webui-showcase__statement em {
+
+    display:
+        block;
+
+    color:
+        var(--ui-green);
+
+    font-style:
+        normal;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 950px) {
+
+    .webui-showcase {
+
+        padding:
+            7rem 2rem 5rem;
+    }
+
+
+    .webui-showcase__stage {
+
+        gap:
+            1.5rem;
+    }
+
+
+    .webui-wireframe {
+
+        width:
+            38vw;
+    }
+
+
+    .webui-interface {
+
+        width:
+            50vw;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .webui-showcase {
+
+        min-height:
+            auto;
+
+        padding:
+            6rem 1.2rem 4rem;
+    }
+
+
+    .webui-showcase__header {
+
+        margin-bottom:
+            3rem;
+    }
+
+
+    .webui-showcase__label {
+
+        display:
+            none;
+    }
+
+
+    .webui-showcase__stage {
+
+        min-height:
+            650px;
+
+        flex-direction:
+            column;
+
+        gap:
+            2rem;
+    }
+
+
+    .webui-wireframe {
+
+        width:
+            92%;
+
+        max-width:
+            500px;
+    }
+
+
+    .webui-showcase__transform {
+
+        flex-direction:
+            row;
+    }
+
+
+    .webui-showcase__transform>div {
+
+        flex-direction:
+            row;
+    }
+
+
+    .webui-showcase__transform strong {
+
+        transform:
+            rotate(90deg);
+    }
+
+
+    .webui-interface {
+
+        width:
+            100%;
+
+        max-width:
+            520px;
+    }
+
+
+    .webui-interface__top nav {
+
+        gap:
+            .7rem;
+    }
+
+
+    .webui-interface__copy h3 {
+
+        font-size:
+            clamp(2.8rem,
+                13vw,
+                5rem);
+    }
+
+
+    .webui-showcase__statement {
+
+        margin-top:
+            3rem;
+    }
+
+
+    .webui-showcase__statement strong {
+
+        font-size:
+            clamp(2.8rem,
+                12vw,
+                5rem);
+    }
+}

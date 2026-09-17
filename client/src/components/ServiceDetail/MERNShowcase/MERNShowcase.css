@@ -1,0 +1,1002 @@
+/* ============================================================
+   MERN SHOWCASE
+============================================================ */
+
+.mern-showcase {
+
+    --mern-cream: #f4f1e8;
+    --mern-green: #0f3d2b;
+    --mern-lime: #b7f34a;
+    --mern-dark: #101511;
+    --mern-muted: rgba(16, 21, 17, .45);
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding:
+        8rem clamp(1.5rem, 6vw, 8rem) 7rem;
+
+    overflow: hidden;
+
+    background:
+        var(--mern-dark);
+
+    color:
+        var(--mern-cream);
+}
+
+
+/* ============================================================
+   GRID
+============================================================ */
+
+.mern-showcase::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .18;
+
+    background-image:
+        linear-gradient(rgba(244, 241, 232, .08) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(244, 241, 232, .08) 1px,
+            transparent 1px);
+
+    background-size:
+        80px 80px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent);
+}
+
+
+/* ============================================================
+   TOP META
+============================================================ */
+
+.mern-showcase__meta {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: grid;
+
+    grid-template-columns:
+        auto auto 1fr auto;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 4rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+
+    color:
+        rgba(244, 241, 232, .42);
+}
+
+
+.mern-showcase__number {
+
+    color:
+        var(--mern-lime);
+
+    font-weight: 600;
+}
+
+
+.mern-showcase__line {
+
+    height: 1px;
+
+    width: 100%;
+
+    background:
+        rgba(244, 241, 232, .16);
+}
+
+
+/* ============================================================
+   INTRO
+============================================================ */
+
+.mern-showcase__intro {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin-bottom: 5rem;
+}
+
+
+.mern-showcase__eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 1.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 8px;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+
+    color:
+        var(--mern-lime);
+}
+
+
+.mern-showcase__eyebrow i {
+
+    width: 7px;
+
+    height: 7px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background:
+        var(--mern-lime);
+
+    box-shadow:
+        0 0 18px rgba(183, 243, 74, .65);
+}
+
+
+.mern-showcase__title {
+
+    margin: 0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem, 8.5vw, 10rem);
+
+    font-weight: 500;
+
+    line-height: .78;
+
+    letter-spacing: -.075em;
+
+    text-transform: uppercase;
+}
+
+
+.mern-showcase__title span {
+
+    display: block;
+
+    color:
+        transparent;
+
+    -webkit-text-stroke:
+        1.5px var(--mern-cream);
+
+    opacity: .65;
+}
+
+
+.mern-showcase__intro p {
+
+    max-width: 430px;
+
+    margin:
+        2.5rem 0 0 auto;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 9px;
+
+    line-height: 1.75;
+
+    color:
+        rgba(244, 241, 232, .48);
+}
+
+
+/* ============================================================
+   SYSTEM STAGE
+============================================================ */
+
+.mern-showcase__stage {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ============================================================
+   SYSTEM FLOW
+============================================================ */
+
+.mern-flow {
+
+    position: relative;
+
+    width: min(1150px, 100%);
+
+    min-height: 430px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* ============================================================
+   CONNECTOR
+============================================================ */
+
+.mern-flow__connector {
+
+    position: absolute;
+
+    left: 8%;
+
+    right: 8%;
+
+    top: 50%;
+
+    height: 1px;
+
+    background:
+        rgba(244, 241, 232, .16);
+
+    transform:
+        translateY(-50%);
+
+    z-index: 0;
+}
+
+
+.mern-flow__connector::after {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left center;
+
+    background:
+        var(--mern-lime);
+
+    box-shadow:
+        0 0 14px rgba(183, 243, 74, .5);
+
+    transition:
+        transform 1.2s cubic-bezier(.16, 1, .3, 1);
+}
+
+
+.mern-showcase.is-active .mern-flow__connector::after {
+
+    transform:
+        scaleX(1);
+}
+
+
+/* ============================================================
+   DATA PACKET
+============================================================ */
+
+.mern-flow__packet {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 8%;
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        var(--mern-lime);
+
+    box-shadow:
+        0 0 18px rgba(183, 243, 74, .75);
+
+    transform:
+        translate(-50%, -50%);
+
+    opacity: 0;
+}
+
+
+.mern-showcase.is-active .mern-flow__packet {
+
+    opacity: 1;
+
+    animation:
+        mernPacket 4s cubic-bezier(.16, 1, .3, 1) infinite;
+}
+
+
+@keyframes mernPacket {
+
+    0% {
+        left: 8%;
+    }
+
+    100% {
+        left: 92%;
+    }
+}
+
+
+/* ============================================================
+   NODE
+============================================================ */
+
+.mern-node {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 260px;
+
+    padding: 1.5rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border:
+        1px solid rgba(244, 241, 232, .15);
+
+    background:
+        rgba(244, 241, 232, .025);
+
+    backdrop-filter:
+        blur(8px);
+
+    transition:
+        transform .7s cubic-bezier(.16, 1, .3, 1),
+        border-color .4s ease,
+        background .4s ease;
+}
+
+
+.mern-node:hover {
+
+    transform:
+        translateY(-12px);
+
+    border-color:
+        rgba(183, 243, 74, .55);
+
+    background:
+        rgba(183, 243, 74, .045);
+}
+
+
+.mern-node__number {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .15em;
+
+    color:
+        rgba(244, 241, 232, .35);
+}
+
+
+.mern-node__icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto;
+
+    border:
+        1px solid rgba(183, 243, 74, .3);
+
+    border-radius: 50%;
+
+    color:
+        var(--mern-lime);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 10px;
+
+    letter-spacing: .08em;
+
+    box-shadow:
+        inset 0 0 30px rgba(183, 243, 74, .035);
+}
+
+
+.mern-node__name {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size: 1.8rem;
+
+    letter-spacing: -.04em;
+
+    text-transform: uppercase;
+}
+
+
+.mern-node__role {
+
+    margin-top: .4rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .13em;
+
+    color:
+        rgba(244, 241, 232, .38);
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   NODE ACTIVE
+============================================================ */
+
+.mern-node.is-active {
+
+    border-color:
+        var(--mern-lime);
+
+    background:
+        rgba(183, 243, 74, .06);
+
+    transform:
+        translateY(-8px);
+}
+
+
+.mern-node.is-active .mern-node__icon {
+
+    background:
+        var(--mern-lime);
+
+    color:
+        var(--mern-dark);
+
+    box-shadow:
+        0 0 35px rgba(183, 243, 74, .18);
+}
+
+
+/* ============================================================
+   REQUEST / RESPONSE LABELS
+============================================================ */
+
+.mern-flow__label {
+
+    position: absolute;
+
+    top: calc(50% - 36px);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .15em;
+
+    color:
+        rgba(244, 241, 232, .32);
+
+    text-transform: uppercase;
+
+    opacity: 0;
+
+    transition:
+        opacity .6s ease;
+}
+
+
+.mern-showcase.is-active .mern-flow__label {
+
+    opacity: 1;
+}
+
+
+.mern-flow__label--request {
+
+    left: 27%;
+}
+
+
+.mern-flow__label--response {
+
+    right: 12%;
+}
+
+
+/* ============================================================
+   BOTTOM SYSTEM INFO
+============================================================ */
+
+.mern-showcase__bottom {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: end;
+
+    gap: 30px;
+
+    margin-top: 4rem;
+}
+
+
+.mern-showcase__bottom-label {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    line-height: 1.7;
+
+    letter-spacing: .14em;
+
+    color:
+        rgba(244, 241, 232, .38);
+
+    text-transform: uppercase;
+}
+
+
+.mern-showcase__bottom-label strong {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color:
+        var(--mern-cream);
+
+    font-weight: 500;
+}
+
+
+.mern-showcase__status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .13em;
+
+    color:
+        var(--mern-lime);
+}
+
+
+.mern-showcase__status i {
+
+    width: 6px;
+
+    height: 6px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    background:
+        var(--mern-lime);
+
+    box-shadow:
+        0 0 12px rgba(183, 243, 74, .7);
+}
+
+
+.mern-showcase__counter {
+
+    text-align: right;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .13em;
+
+    color:
+        rgba(244, 241, 232, .35);
+}
+
+
+.mern-showcase__counter strong {
+
+    color:
+        var(--mern-cream);
+
+    font-weight: 500;
+}
+
+
+/* ============================================================
+   STATEMENT
+============================================================ */
+
+.mern-showcase__statement {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 7rem;
+
+    padding-top: 2rem;
+
+    border-top:
+        1px solid rgba(244, 241, 232, .12);
+}
+
+
+.mern-showcase__statement span {
+
+    display: block;
+
+    margin-bottom: 1.8rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .15em;
+
+    color:
+        rgba(244, 241, 232, .32);
+
+    text-transform: uppercase;
+}
+
+
+.mern-showcase__statement strong {
+
+    display: block;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(3rem, 6vw, 7rem);
+
+    font-weight: 500;
+
+    line-height: .82;
+
+    letter-spacing: -.065em;
+
+    text-transform: uppercase;
+}
+
+
+.mern-showcase__statement em {
+
+    color:
+        var(--mern-lime);
+
+    font-style: normal;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.mern-showcase__footer {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 5rem;
+
+    padding-top: 1.5rem;
+
+    border-top:
+        1px solid rgba(244, 241, 232, .1);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .14em;
+
+    color:
+        rgba(244, 241, 232, .3);
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1100px) {
+
+    .mern-flow {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .mern-flow__connector {
+
+        display: none;
+
+    }
+
+
+    .mern-flow__packet,
+    .mern-flow__label {
+
+        display: none;
+
+    }
+
+
+    .mern-node:nth-of-type(4),
+    .mern-node:nth-of-type(5) {
+
+        margin-top: 15px;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .mern-showcase {
+
+        min-height: 100svh;
+
+        padding:
+            6rem 1.2rem 5rem;
+
+    }
+
+
+    .mern-showcase__meta {
+
+        grid-template-columns:
+            auto auto 1fr;
+
+    }
+
+
+    .mern-showcase__meta span:last-child {
+
+        display: none;
+
+    }
+
+
+    .mern-showcase__title {
+
+        font-size:
+            clamp(3.5rem, 15vw, 6rem);
+
+    }
+
+
+    .mern-showcase__intro p {
+
+        margin-left: 0;
+
+        margin-top: 2rem;
+
+    }
+
+
+    .mern-showcase__stage {
+
+        min-height: auto;
+
+    }
+
+
+    .mern-flow {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+
+    .mern-node {
+
+        width: 100%;
+
+        min-height: 180px;
+
+    }
+
+
+    .mern-node__icon {
+
+        width: 55px;
+
+        height: 55px;
+
+        margin: 1.5rem auto;
+
+    }
+
+
+    .mern-showcase__bottom {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .mern-showcase__status {
+
+        grid-column: 1 / -1;
+
+        grid-row: 1;
+
+    }
+
+
+    .mern-showcase__counter {
+
+        text-align: right;
+
+    }
+
+
+    .mern-showcase__statement {
+
+        margin-top: 5rem;
+
+    }
+
+
+    .mern-showcase__footer {
+
+        margin-top: 4rem;
+
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .mern-flow__packet {
+
+        animation: none !important;
+
+    }
+
+
+    .mern-flow__connector::after {
+
+        transform: scaleX(1);
+
+    }
+
+
+    .mern-node {
+
+        transition: none;
+
+    }
+
+}

@@ -1,0 +1,923 @@
+/* =========================================================
+   DEVFORGE
+   CINEMATIC AWWWARDS PRELOADER
+   ========================================================= */
+
+.df-loader {
+    --bg: #0d110d;
+    --cream: #f2eee3;
+    --lime: #c7f36b;
+    --muted: rgba(242, 238, 227, 0.42);
+    --line: rgba(242, 238, 227, 0.13);
+
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100svh;
+
+    z-index: 99999;
+
+    overflow: hidden;
+
+    background: var(--bg);
+    color: var(--cream);
+
+    isolation: isolate;
+
+    font-family:
+        var(--df-font-mono),
+        'IBM Plex Mono',
+        monospace;
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.df-loader__bg {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(ellipse at 50% 42%,
+            rgba(71, 86, 54, 0.18),
+            transparent 48%),
+        linear-gradient(135deg,
+            #0a0e0a,
+            #10150f 50%,
+            #090c09);
+
+    z-index: -5;
+}
+
+
+.df-loader__grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(242, 238, 227, 0.035) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(242, 238, 227, 0.035) 1px,
+            transparent 1px);
+
+    background-size: 90px 90px;
+
+    opacity: 0.65;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent);
+
+    z-index: -4;
+}
+
+
+.df-loader__grain {
+    position: absolute;
+    inset: -50%;
+
+    pointer-events: none;
+
+    opacity: 0.055;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.8'/%3E%3C/svg%3E");
+
+    animation: grainMove 0.25s steps(2) infinite;
+
+    z-index: 40;
+}
+
+
+@keyframes grainMove {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(2%, -1%);
+    }
+
+    50% {
+        transform: translate(-1%, 2%);
+    }
+
+    75% {
+        transform: translate(1%, 1%);
+    }
+
+    100% {
+        transform: translate(-2%, -1%);
+    }
+
+}
+
+
+/* =========================================================
+   TOP
+   ========================================================= */
+
+.df-loader__top {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 28px 38px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: start;
+
+    font-size: 9px;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    z-index: 5;
+}
+
+
+.df-loader__brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.df-loader__mark {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--line);
+
+    font-size: 8px;
+
+    letter-spacing: 0;
+}
+
+
+.df-loader__center-label {
+    text-align: center;
+
+    line-height: 1.45;
+
+    color: var(--muted);
+}
+
+
+.df-loader__year {
+    justify-self: end;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.df-loader__main {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: min(1050px,
+            calc(100% - 90px));
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.df-loader__eyebrow {
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 40px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.22em;
+
+    color: var(--muted);
+
+    opacity: 0;
+
+    animation:
+        eyebrowIn 0.8s 0.1s cubic-bezier(0.16,
+            1,
+            0.3,
+            1) forwards;
+}
+
+
+@keyframes eyebrowIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.df-loader__tagline {
+    margin-bottom: 15px;
+
+    font-family:
+        var(--df-font-display),
+        Inter,
+        sans-serif;
+
+    font-size: clamp(18px,
+            2vw,
+            28px);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+}
+
+
+.df-loader__tagline-line {
+    width: fit-content;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform: translateY(110%);
+
+    animation:
+        taglineReveal 1s cubic-bezier(0.16,
+            1,
+            0.3,
+            1) forwards;
+}
+
+
+.df-loader__tagline-line:nth-child(1) {
+    animation-delay: 0.28s;
+}
+
+
+.df-loader__tagline-line:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+
+@keyframes taglineReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(110%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   FORGE
+   ========================================================= */
+
+.df-loader__forge {
+    overflow: hidden;
+
+    width: 100%;
+
+    line-height: 0.75;
+}
+
+
+.df-loader__forge-mask {
+    overflow: hidden;
+}
+
+
+.df-loader__forge span {
+    display: block;
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        serif;
+
+    font-size: clamp(105px,
+            18vw,
+            275px);
+
+    font-weight: 400;
+
+    letter-spacing: -0.085em;
+
+    color: var(--cream);
+
+    transform:
+        translateY(115%) scale(1.05);
+
+    transform-origin: center bottom;
+
+    animation:
+        forgeReveal 1.45s 0.7s cubic-bezier(0.16,
+            1,
+            0.3,
+            1) forwards;
+}
+
+
+@keyframes forgeReveal {
+
+    0% {
+        transform:
+            translateY(115%) scale(1.05);
+
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(0) scale(1);
+
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   STATEMENT
+   ========================================================= */
+
+.df-loader__statement {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-top: 27px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.3em;
+
+    color: var(--muted);
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+    animation:
+        statementIn 0.8s 1.55s cubic-bezier(0.16,
+            1,
+            0.3,
+            1) forwards;
+}
+
+
+@keyframes statementIn {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.df-loader__statement .arrow {
+    color: var(--lime);
+
+    font-size: 12px;
+
+    letter-spacing: 0;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.df-loader__loading {
+    margin-top: 72px;
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    animation:
+        loadingIn 0.9s 1.65s cubic-bezier(0.16,
+            1,
+            0.3,
+            1) forwards;
+}
+
+
+@keyframes loadingIn {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.df-loader__status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 14px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.2em;
+
+    color: var(--muted);
+}
+
+
+.status-dot {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--lime);
+
+    box-shadow:
+        0 0 0 4px rgba(199, 243, 107, 0.055);
+
+    animation:
+        statusPulse 1.4s ease-in-out infinite;
+}
+
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.df-loader__progress {
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+}
+
+
+.progress-track {
+    position: relative;
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--line);
+
+    overflow: hidden;
+}
+
+
+.progress-fill {
+    height: 100%;
+
+    background: var(--lime);
+
+    transition:
+        width 0.15s linear;
+}
+
+
+.progress-number {
+    width: 38px;
+
+    text-align: right;
+
+    font-size: 9px;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.df-loader__meta {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 17px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.28em;
+
+    color: rgba(242,
+            238,
+            227,
+            0.25);
+}
+
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.df-loader__bottom {
+    position: absolute;
+
+    left: 38px;
+    right: 38px;
+    bottom: 28px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    align-items: end;
+
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+
+    color: var(--muted);
+
+    z-index: 5;
+}
+
+
+.bottom-copy {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.5;
+}
+
+
+.bottom-line {
+    justify-self: center;
+
+    width: 42px;
+
+    height: 1px;
+
+    background: var(--line);
+}
+
+
+.bottom-location {
+    justify-self: end;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.bottom-location span {
+    color: var(--lime);
+}
+
+
+/* =========================================================
+   CINEMATIC EXIT
+   ========================================================= */
+
+.df-loader__curtain {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 50%;
+
+    background: var(--bg);
+
+    z-index: 30;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.df-loader__curtain--left {
+    left: 0;
+
+    transform: translateX(0);
+}
+
+
+.df-loader__curtain--right {
+    right: 0;
+
+    transform: translateX(0);
+}
+
+
+/* activate only during exit */
+
+.df-loader--exit .df-loader__curtain {
+    opacity: 1;
+}
+
+
+.df-loader--exit .df-loader__curtain--left {
+    animation:
+        curtainLeft 0.9s cubic-bezier(0.76,
+            0,
+            0.24,
+            1) forwards;
+}
+
+
+.df-loader--exit .df-loader__curtain--right {
+    animation:
+        curtainRight 0.9s cubic-bezier(0.76,
+            0,
+            0.24,
+            1) 0.03s forwards;
+}
+
+
+@keyframes curtainLeft {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+
+@keyframes curtainRight {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+
+}
+
+
+/* =========================================================
+   CONTENT EXIT
+   ========================================================= */
+
+.df-loader--exit .df-loader__main {
+
+    animation:
+        loaderContentExit 0.55s cubic-bezier(0.76,
+            0,
+            0.24,
+            1) forwards;
+}
+
+
+.df-loader--exit .df-loader__top,
+
+.df-loader--exit .df-loader__bottom {
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+@keyframes loaderContentExit {
+
+    from {
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%) scale(1);
+    }
+
+    to {
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%) scale(0.96);
+    }
+
+}
+
+
+/* =========================================================
+   BODY LOCK
+   ========================================================= */
+
+body.preloader-active {
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .df-loader__top {
+        padding: 24px;
+    }
+
+    .df-loader__bottom {
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+    }
+
+    .df-loader__main {
+        width:
+            calc(100% - 48px);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .df-loader__top {
+        grid-template-columns:
+            1fr auto;
+
+        padding: 20px;
+    }
+
+    .df-loader__center-label {
+        display: none;
+    }
+
+    .df-loader__main {
+        width:
+            calc(100% - 40px);
+    }
+
+    .df-loader__eyebrow {
+        margin-bottom: 28px;
+    }
+
+    .df-loader__tagline {
+        font-size: 17px;
+    }
+
+    .df-loader__forge span {
+        font-size:
+            clamp(74px,
+                24vw,
+                145px);
+    }
+
+    .df-loader__statement {
+        gap: 6px;
+
+        margin-top: 20px;
+
+        font-size: 6px;
+
+        letter-spacing: 0.16em;
+    }
+
+    .df-loader__loading {
+        margin-top: 52px;
+    }
+
+    .df-loader__status {
+        font-size: 7px;
+    }
+
+    .df-loader__meta {
+        font-size: 6px;
+    }
+
+    .df-loader__bottom {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .bottom-line {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL HEIGHT
+   ========================================================= */
+
+@media (max-height: 650px) {
+
+    .df-loader__main {
+        transform:
+            translate(-50%, -48%) scale(0.82);
+    }
+
+    .df-loader__loading {
+        margin-top: 45px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .df-loader *,
+    .df-loader *::before,
+    .df-loader *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-delay:
+            0ms !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+
+}

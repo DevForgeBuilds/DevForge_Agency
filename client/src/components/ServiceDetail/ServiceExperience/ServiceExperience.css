@@ -1,0 +1,1036 @@
+/* ============================================================
+   SERVICE EXPERIENCE
+============================================================ */
+
+.service-experience {
+
+    --experience-dark: #101511;
+    --experience-green: #0f3d2b;
+    --experience-cream: #f4f1e8;
+    --experience-lime: #b7f34a;
+    --experience-muted:
+        rgba(244, 241, 232, .4);
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding:
+        7rem clamp(1.2rem, 6vw, 8rem) 4rem;
+
+    overflow: hidden;
+
+    background:
+        var(--experience-dark);
+
+    color:
+        var(--experience-cream);
+}
+
+
+/* ============================================================
+   BACKGROUND
+============================================================ */
+
+.service-experience::before {
+
+    content: '';
+
+    position: absolute;
+
+    width: 60vw;
+    height: 60vw;
+
+    top: 10%;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(183, 243, 74, .07),
+            transparent 65%);
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.service-experience__header {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    z-index: 3;
+}
+
+
+.service-experience__eyebrow {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    color:
+        var(--experience-muted);
+}
+
+
+.service-experience__eyebrow span:first-child {
+
+    color:
+        var(--experience-lime);
+}
+
+
+.service-experience__counter {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 12px;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .14em;
+
+    color:
+        var(--experience-muted);
+}
+
+
+.service-experience__counter strong {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color:
+        var(--experience-lime);
+}
+
+
+/* ============================================================
+   STAGE
+============================================================ */
+
+.service-experience__stage {
+
+    position: relative;
+
+    min-height:
+        68vh;
+
+    margin-top:
+        3rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2rem;
+
+    z-index: 2;
+}
+
+
+/* ============================================================
+   CODE PANEL
+============================================================ */
+
+.experience-code {
+
+    position: relative;
+
+    width:
+        min(390px, 32vw);
+
+    min-height:
+        390px;
+
+    padding:
+        1.2rem;
+
+    border:
+        1px solid rgba(244, 241, 232, .13);
+
+    background:
+        rgba(244, 241, 232, .025);
+
+    backdrop-filter:
+        blur(10px);
+
+    z-index: 3;
+}
+
+
+.experience-code__top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom:
+        1rem;
+
+    border-bottom:
+        1px solid rgba(244, 241, 232, .1);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .13em;
+
+    color:
+        var(--experience-muted);
+}
+
+
+.experience-code__top span:last-child {
+
+    color:
+        var(--experience-lime);
+}
+
+
+/* ============================================================
+   CODE BODY
+============================================================ */
+
+.experience-code__body {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding:
+        2rem 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        clamp(7px,
+            .65vw,
+            10px);
+
+    line-height: 1.4;
+}
+
+
+.code-line {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    white-space: nowrap;
+}
+
+
+.code-line i {
+
+    width: 20px;
+
+    font-style: normal;
+
+    color:
+        rgba(244, 241, 232, .18);
+}
+
+
+.code-line b {
+
+    color:
+        rgba(244, 241, 232, .65);
+
+    font-weight: 400;
+}
+
+
+.code-line em {
+
+    color:
+        var(--experience-lime);
+
+    font-style: normal;
+}
+
+
+.code-line strong {
+
+    color:
+        #d8a8ff;
+
+    font-weight: 400;
+}
+
+
+.code-indent {
+
+    padding-left:
+        28px;
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.experience-code__status {
+
+    position: absolute;
+
+    left: 1.2rem;
+    right: 1.2rem;
+
+    bottom: 1.2rem;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .12em;
+
+    color:
+        var(--experience-muted);
+}
+
+
+.status-dot {
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+        var(--experience-lime);
+
+    box-shadow:
+        0 0 12px rgba(183, 243, 74, .8);
+}
+
+
+/* ============================================================
+   CONNECTOR
+============================================================ */
+
+.experience-connector {
+
+    position: relative;
+
+    width: 90px;
+
+    height: 1px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        rgba(183, 243, 74, .2);
+
+    z-index: 2;
+}
+
+
+.experience-connector span {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        var(--experience-lime);
+
+    box-shadow:
+        0 0 15px rgba(183, 243, 74, .6);
+}
+
+
+.experience-connector i {
+
+    position: absolute;
+
+    left: 0;
+
+    width: 0;
+
+    height: 1px;
+
+    background:
+        var(--experience-lime);
+}
+
+
+/* ============================================================
+   BROWSER
+============================================================ */
+
+.experience-browser {
+
+    position: relative;
+
+    width:
+        min(620px, 47vw);
+
+    min-height:
+        430px;
+
+    overflow: hidden;
+
+    background:
+        var(--experience-cream);
+
+    color:
+        var(--experience-dark);
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, .35);
+
+    z-index: 3;
+}
+
+
+/* ============================================================
+   BROWSER TOP
+============================================================ */
+
+.experience-browser__top {
+
+    height: 38px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 2fr 1fr;
+
+    align-items: center;
+
+    padding:
+        0 14px;
+
+    border-bottom:
+        1px solid rgba(16, 21, 17, .12);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+}
+
+
+.browser-dots {
+
+    display: flex;
+
+    gap: 5px;
+}
+
+
+.browser-dots span {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(16, 21, 17, .2);
+}
+
+
+.browser-dots span:first-child {
+
+    background:
+        var(--experience-green);
+}
+
+
+.browser-address {
+
+    padding:
+        6px 12px;
+
+    border:
+        1px solid rgba(16, 21, 17, .1);
+
+    text-align: center;
+
+    color:
+        rgba(16, 21, 17, .4);
+}
+
+
+.browser-status {
+
+    text-align: right;
+
+    color:
+        var(--experience-green);
+}
+
+
+/* ============================================================
+   BROWSER BODY
+============================================================ */
+
+.experience-browser__body {
+
+    position: relative;
+
+    min-height:
+        392px;
+
+    padding:
+        1.2rem;
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   BUILT NAV
+============================================================ */
+
+.built-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .1em;
+}
+
+
+.built-nav strong {
+
+    margin-right: auto;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size: 20px;
+
+    letter-spacing:
+        -.08em;
+
+    color:
+        var(--experience-green);
+}
+
+
+.built-nav span {
+
+    color:
+        rgba(16, 21, 17, .45);
+}
+
+
+/* ============================================================
+   BUILT HERO
+============================================================ */
+
+.built-hero {
+
+    position: relative;
+
+    height:
+        290px;
+
+    margin-top:
+        1.5rem;
+
+    padding:
+        3rem;
+
+    overflow: hidden;
+
+    background:
+        var(--experience-green);
+
+    color:
+        var(--experience-cream);
+}
+
+
+.built-hero>span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .14em;
+
+    color:
+        rgba(244, 241, 232, .5);
+}
+
+
+.built-hero h3 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin:
+        1.2rem 0 0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            6vw,
+            6rem);
+
+    font-weight: 500;
+
+    line-height: .75;
+
+    letter-spacing:
+        -.08em;
+}
+
+
+.built-hero h3 br+* {
+    color:
+        var(--experience-lime);
+}
+
+
+/* ============================================================
+   CIRCLE
+============================================================ */
+
+.built-hero__circle {
+
+    position: absolute;
+
+    right:
+        8%;
+
+    bottom:
+        -15%;
+
+    width:
+        210px;
+
+    aspect-ratio: 1;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid rgba(183, 243, 74, .5);
+
+    border-radius: 50%;
+
+    background:
+        rgba(183, 243, 74, .08);
+
+    font-family:
+        var(--df-font-display);
+
+    font-size: 40px;
+
+    color:
+        var(--experience-lime);
+}
+
+
+/* ============================================================
+   BROWSER FOOTER
+============================================================ */
+
+.built-footer {
+
+    position: absolute;
+
+    left: 1.2rem;
+    right: 1.2rem;
+
+    bottom: 1rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 5px;
+
+    letter-spacing: .12em;
+
+    color:
+        rgba(16, 21, 17, .4);
+}
+
+
+/* ============================================================
+   BOTTOM
+============================================================ */
+
+.service-experience__bottom {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 2rem;
+
+    margin-top:
+        1rem;
+
+    z-index: 3;
+}
+
+
+.service-experience__bottom>div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.service-experience__bottom span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .14em;
+
+    color:
+        var(--experience-muted);
+}
+
+
+.service-experience__bottom strong {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing:
+        -.04em;
+}
+
+
+.bottom-arrow {
+
+    width: 50px;
+    height: 50px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid rgba(183, 243, 74, .3);
+
+    border-radius: 50%;
+
+    color:
+        var(--experience-lime);
+
+    font-size: 20px;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .service-experience {
+
+        padding:
+            7rem 2rem 4rem;
+    }
+
+
+    .service-experience__stage {
+
+        gap: 1rem;
+    }
+
+
+    .experience-code {
+
+        width:
+            40vw;
+
+        min-height:
+            340px;
+    }
+
+
+    .experience-browser {
+
+        width:
+            50vw;
+
+        min-height:
+            380px;
+    }
+
+
+    .built-hero {
+
+        height:
+            250px;
+
+        padding:
+            2rem;
+    }
+
+
+    .built-hero h3 {
+
+        font-size:
+            3.5rem;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 650px) {
+
+    .service-experience {
+
+        min-height:
+            auto;
+
+        padding:
+            6rem 1.2rem 4rem;
+    }
+
+
+    .service-experience__stage {
+
+        min-height:
+            auto;
+
+        margin-top:
+            3rem;
+
+        flex-direction:
+            column;
+
+        gap: 1rem;
+    }
+
+
+    .experience-code {
+
+        width:
+            100%;
+
+        min-height:
+            300px;
+    }
+
+
+    .experience-browser {
+
+        width:
+            100%;
+
+        min-height:
+            360px;
+    }
+
+
+    .experience-connector {
+
+        width:
+            1px;
+
+        height:
+            45px;
+
+        flex-direction:
+            column;
+    }
+
+
+    .experience-connector i {
+
+        width: 1px;
+
+        height: 0;
+    }
+
+
+    .experience-browser__body {
+
+        min-height:
+            322px;
+    }
+
+
+    .built-hero {
+
+        height:
+            220px;
+
+        padding:
+            2rem;
+    }
+
+
+    .built-hero h3 {
+
+        font-size:
+            clamp(3rem,
+                13vw,
+                4.5rem);
+    }
+
+
+    .built-hero__circle {
+
+        width:
+            130px;
+
+        font-size:
+            25px;
+    }
+
+
+    .built-nav {
+
+        gap:
+            .7rem;
+    }
+
+
+    .built-nav span {
+
+        display:
+            none;
+    }
+
+
+    .service-experience__bottom {
+
+        justify-content:
+            flex-start;
+
+        gap:
+            1rem;
+
+        margin-top:
+            2rem;
+    }
+
+
+    .service-experience__bottom strong {
+
+        font-size:
+            20px;
+    }
+
+
+    .bottom-arrow {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        font-size:
+            15px;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .service-experience * {
+
+        scroll-behavior:
+            auto !important;
+    }
+}

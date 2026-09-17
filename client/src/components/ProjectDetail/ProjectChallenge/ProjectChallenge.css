@@ -1,0 +1,558 @@
+/* ============================================================
+   DEVFORGE — PROJECT CHALLENGE
+============================================================ */
+
+.project-challenge {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    padding:
+        1.2rem clamp(1.2rem, 5vw, 5rem) 2rem;
+
+    background:
+        var(--df-studio-ink);
+
+    color:
+        var(--df-ivory);
+}
+
+
+/* ============================================================
+   BACKGROUND GRID
+============================================================ */
+
+.project-challenge__grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.45;
+
+    background:
+
+        linear-gradient(var(--df-studio-dark-line) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            var(--df-studio-dark-line) 1px,
+            transparent 1px);
+
+    background-size:
+        80px 80px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+}
+
+
+/* ============================================================
+   GLOW
+============================================================ */
+
+.project-challenge__orb {
+
+    position: absolute;
+
+    width:
+        50vw;
+
+    height:
+        50vw;
+
+    right:
+        -18vw;
+
+    top:
+        8%;
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+
+    background:
+        radial-gradient(circle,
+            var(--df-studio-dark-glow),
+            transparent 68%);
+
+    filter:
+        blur(35px);
+
+    opacity:
+        0.8;
+}
+
+
+/* ============================================================
+   META
+============================================================ */
+
+.project-challenge__meta {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom:
+        1rem;
+
+    border-bottom:
+        1px solid var(--df-studio-dark-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+.project-challenge__index {
+
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        0.7rem;
+}
+
+
+.project-challenge__dot {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-studio-lime);
+
+    box-shadow:
+        0 0 12px var(--df-studio-dot-glow);
+}
+
+
+/* ============================================================
+   MAIN
+============================================================ */
+
+.project-challenge__main {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: grid;
+
+    grid-template-columns:
+        100px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap:
+        clamp(2rem, 5vw, 6rem);
+
+    width:
+        min(1500px, 100%);
+
+    margin:
+        auto;
+}
+
+
+/* ============================================================
+   NUMBER
+============================================================ */
+
+.project-challenge__number {
+
+    align-self:
+        start;
+
+    padding-top:
+        0.7rem;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(3rem, 5vw, 5rem);
+
+    line-height:
+        0.8;
+
+    letter-spacing:
+        -0.08em;
+
+    color:
+        var(--df-studio-dark-muted);
+
+    writing-mode:
+        vertical-rl;
+
+    transform:
+        rotate(180deg);
+}
+
+
+/* ============================================================
+   CONTENT
+============================================================ */
+
+.project-challenge__content {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(400px, 1fr) minmax(280px, 0.6fr);
+
+    align-items:
+        end;
+
+    gap:
+        clamp(3rem, 8vw, 10rem);
+}
+
+
+.project-challenge__eyebrow {
+
+    margin-bottom:
+        1.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+.project-challenge__title {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            8vw,
+            9rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.78;
+
+    letter-spacing:
+        -0.075em;
+
+    color:
+        var(--df-ivory);
+}
+
+
+.project-challenge__title span {
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+/* ============================================================
+   COPY
+============================================================ */
+
+.project-challenge__copy {
+
+    padding-bottom:
+        0.5rem;
+}
+
+
+.project-challenge__copy p {
+
+    max-width:
+        500px;
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-studio-dark-soft);
+}
+
+
+/* ============================================================
+   RULE
+============================================================ */
+
+.project-challenge__rule {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        0.8rem;
+
+    margin-top:
+        2.5rem;
+
+    padding-top:
+        1rem;
+
+    border-top:
+        1px solid var(--df-studio-dark-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        0.13em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+.project-challenge__rule span:first-child {
+
+    width:
+        28px;
+
+    height:
+        1px;
+
+    background:
+        var(--df-studio-lime);
+}
+
+
+/* ============================================================
+   BOTTOM
+============================================================ */
+
+.project-challenge__bottom {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    align-items:
+        end;
+
+    gap:
+        2rem;
+
+    padding-top:
+        1.2rem;
+
+    border-top:
+        1px solid var(--df-studio-dark-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+.project-challenge__bottom span:nth-child(2) {
+
+    color:
+        var(--df-ivory);
+
+    line-height:
+        1.5;
+}
+
+
+.project-challenge__bottom span:last-child {
+
+    text-align:
+        right;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1000px) {
+
+    .project-challenge__content {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            3rem;
+    }
+
+
+    .project-challenge__main {
+
+        grid-template-columns:
+            70px minmax(0, 1fr);
+
+        gap:
+            2rem;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .project-challenge {
+
+        min-height:
+            auto;
+
+        padding:
+            1rem 1.2rem 2rem;
+    }
+
+
+    .project-challenge__meta>span:last-child {
+
+        display:
+            none;
+    }
+
+
+    .project-challenge__main {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            2rem;
+
+        padding:
+            5rem 0;
+    }
+
+
+    .project-challenge__number {
+
+        writing-mode:
+            horizontal-tb;
+
+        transform:
+            none;
+
+        font-size:
+            3rem;
+    }
+
+
+    .project-challenge__title {
+
+        font-size:
+            clamp(3.5rem,
+                17vw,
+                6rem);
+    }
+
+
+    .project-challenge__copy p {
+
+        font-size:
+            0.9rem;
+    }
+
+
+    .project-challenge__bottom {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            1rem;
+    }
+
+
+    .project-challenge__bottom span:last-child {
+
+        text-align:
+            left;
+    }
+
+}

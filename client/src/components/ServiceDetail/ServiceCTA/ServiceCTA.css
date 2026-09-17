@@ -1,0 +1,901 @@
+/* ============================================================
+   SERVICE CTA
+============================================================ */
+
+.service-cta {
+
+    --cta-bg: #0f3d2b;
+    --cta-lime: #b7f34a;
+    --cta-cream: #f4f1e8;
+    --cta-line: rgba(244, 241, 232, .16);
+    --cta-muted: rgba(244, 241, 232, .48);
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding:
+        2rem clamp(1.2rem, 6vw, 8rem) 2rem;
+
+    overflow: hidden;
+
+    background:
+        var(--cta-bg);
+
+    color:
+        var(--cta-cream);
+}
+
+
+/* ============================================================
+   AMBIENT GLOW
+============================================================ */
+
+.service-cta::before {
+
+    content: '';
+
+    position: absolute;
+
+    width: 65vw;
+    height: 65vw;
+
+    right: -25vw;
+    top: -25vw;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(183, 243, 74, .14),
+            transparent 65%);
+
+    pointer-events: none;
+}
+
+
+.service-cta::after {
+
+    content: '';
+
+    position: absolute;
+
+    width: 45vw;
+    height: 45vw;
+
+    left: -25vw;
+    bottom: -25vw;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(0, 0, 0, .12),
+            transparent 65%);
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   GRID
+============================================================ */
+
+.service-cta__grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(rgba(244, 241, 232, .055) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(244, 241, 232, .055) 1px,
+            transparent 1px);
+
+    background-size:
+        70px 70px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+
+    opacity:
+        .45;
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   TOP
+============================================================ */
+
+.service-cta__top {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom:
+        1.2rem;
+
+    border-bottom:
+        1px solid var(--cta-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        .14em;
+
+    color:
+        var(--cta-muted);
+
+    z-index:
+        3;
+}
+
+
+.service-cta__top span:first-child {
+
+    color:
+        var(--cta-lime);
+}
+
+
+/* ============================================================
+   MAIN
+============================================================ */
+
+.service-cta__main {
+
+    position: relative;
+
+    width:
+        min(1100px,
+            100%);
+
+    margin:
+        auto 0;
+
+    padding:
+        7rem 0;
+
+    z-index:
+        3;
+}
+
+
+/* ============================================================
+   EYEBROW
+============================================================ */
+
+.service-cta__eyebrow {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        2.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        .15em;
+
+    color:
+        var(--cta-muted);
+}
+
+
+.service-cta__eyebrow i {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--cta-lime);
+
+    box-shadow:
+        0 0 15px rgba(183, 243, 74, .7);
+
+    animation:
+        ctaPulse 1.8s ease-in-out infinite;
+}
+
+
+@keyframes ctaPulse {
+
+    50% {
+        opacity: .35;
+        transform: scale(.7);
+    }
+}
+
+
+/* ============================================================
+   TITLE
+============================================================ */
+
+.service-cta__title {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(5rem,
+            11vw,
+            13rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        .72;
+
+    letter-spacing:
+        -.09em;
+}
+
+
+.service-cta__title span {
+
+    display:
+        block;
+}
+
+
+.service-cta__title span:nth-child(2) {
+
+    margin-left:
+        8vw;
+
+    color:
+        var(--cta-cream);
+}
+
+
+.service-cta__title em {
+
+    margin-left:
+        16vw;
+
+    color:
+        var(--cta-lime);
+
+    font-style:
+        normal;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+============================================================ */
+
+.service-cta__description {
+
+    max-width:
+        360px;
+
+    margin:
+        3.5rem 0 0 8vw;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    line-height:
+        1.9;
+
+    color:
+        var(--cta-muted);
+}
+
+
+/* ============================================================
+   CTA BUTTON
+============================================================ */
+
+.service-cta__button {
+
+    position:
+        absolute;
+
+    right:
+        4vw;
+
+    bottom:
+        2rem;
+
+    width:
+        150px;
+
+    aspect-ratio:
+        1;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        .7rem;
+
+    border:
+        1px solid rgba(183, 243, 74, .55);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--cta-lime);
+
+    color:
+        var(--cta-bg);
+
+    text-decoration:
+        none;
+
+    transition:
+        transform .45s cubic-bezier(.16, 1, .3, 1),
+        box-shadow .45s;
+
+    box-shadow:
+        0 0 0 rgba(183, 243, 74, .2);
+
+    z-index:
+        5;
+}
+
+
+.service-cta__button:hover {
+
+    box-shadow:
+        0 0 60px rgba(183, 243, 74, .22);
+}
+
+
+.service-cta__button span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        6px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .12em;
+}
+
+
+.service-cta__button strong {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        28px;
+
+    font-weight:
+        400;
+
+    line-height:
+        1;
+
+    transition:
+        transform .4s;
+}
+
+
+.service-cta__button:hover strong {
+
+    transform:
+        rotate(45deg);
+}
+
+
+/* ============================================================
+   ORBIT
+============================================================ */
+
+.service-cta__orbit {
+
+    position:
+        absolute;
+
+    right:
+        5vw;
+
+    top:
+        25%;
+
+    width:
+        340px;
+
+    aspect-ratio:
+        1;
+
+    pointer-events:
+        none;
+
+    z-index:
+        1;
+}
+
+
+.service-cta__orbit-ring {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    border:
+        1px solid rgba(183, 243, 74, .15);
+
+    border-radius:
+        50%;
+}
+
+
+.ring-one {
+
+    animation:
+        ctaOrbitOne 18s linear infinite;
+}
+
+
+.ring-two {
+
+    inset:
+        15%;
+
+    border-style:
+        dashed;
+
+    animation:
+        ctaOrbitTwo 12s linear infinite reverse;
+}
+
+
+@keyframes ctaOrbitOne {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+@keyframes ctaOrbitTwo {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+/* ============================================================
+   CORE
+============================================================ */
+
+.service-cta__orbit-core {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+    top:
+        50%;
+
+    width:
+        80px;
+
+    aspect-ratio:
+        1;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    transform:
+        translate(-50%, -50%);
+
+    border:
+        1px solid rgba(183, 243, 74, .45);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(15, 61, 43, .8);
+
+    box-shadow:
+        0 0 50px rgba(183, 243, 74, .08);
+}
+
+
+.service-cta__orbit-core span {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        25px;
+
+    letter-spacing:
+        -.08em;
+
+    color:
+        var(--cta-lime);
+}
+
+
+/* ============================================================
+   BOTTOM PROCESS
+============================================================ */
+
+.service-cta__bottom {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        1rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        .15em;
+
+    color:
+        var(--cta-muted);
+
+    z-index:
+        3;
+}
+
+
+.service-cta__bottom i {
+
+    width:
+        40px;
+
+    height:
+        1px;
+
+    background:
+        var(--cta-line);
+}
+
+
+.service-cta__bottom span:last-child {
+
+    color:
+        var(--cta-lime);
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.service-cta__footer {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    padding-top:
+        1.2rem;
+
+    border-top:
+        1px solid var(--cta-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        .14em;
+
+    color:
+        var(--cta-muted);
+
+    z-index:
+        3;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .service-cta {
+
+        padding:
+            1.5rem 2rem;
+    }
+
+
+    .service-cta__main {
+
+        padding:
+            6rem 0;
+    }
+
+
+    .service-cta__orbit {
+
+        right:
+            -10vw;
+
+        width:
+            320px;
+
+        opacity:
+            .6;
+    }
+
+
+    .service-cta__button {
+
+        right:
+            2vw;
+
+        width:
+            130px;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 650px) {
+
+    .service-cta {
+
+        min-height:
+            100svh;
+
+        padding:
+            1.2rem;
+    }
+
+
+    .service-cta__top {
+
+        font-size:
+            5px;
+    }
+
+
+    .service-cta__top span:last-child {
+
+        display:
+            none;
+    }
+
+
+    .service-cta__main {
+
+        padding:
+            5rem 0 4rem;
+    }
+
+
+    .service-cta__eyebrow {
+
+        margin-bottom:
+            2rem;
+    }
+
+
+    .service-cta__title {
+
+        font-size:
+            clamp(4rem,
+                17vw,
+                7rem);
+
+        line-height:
+            .76;
+    }
+
+
+    .service-cta__title span:nth-child(2) {
+
+        margin-left:
+            4vw;
+    }
+
+
+    .service-cta__title em {
+
+        margin-left:
+            8vw;
+    }
+
+
+    .service-cta__description {
+
+        max-width:
+            250px;
+
+        margin:
+            2.5rem 0 0 4vw;
+    }
+
+
+    .service-cta__button {
+
+        position:
+            relative;
+
+        right:
+            auto;
+
+        bottom:
+            auto;
+
+        width:
+            110px;
+
+        margin:
+            3rem 0 0 auto;
+    }
+
+
+    .service-cta__orbit {
+
+        width:
+            240px;
+
+        right:
+            -80px;
+
+        top:
+            30%;
+
+        opacity:
+            .35;
+    }
+
+
+    .service-cta__orbit-core {
+
+        width:
+            60px;
+    }
+
+
+    .service-cta__bottom {
+
+        gap:
+            .6rem;
+
+        font-size:
+            5px;
+    }
+
+
+    .service-cta__bottom i {
+
+        width:
+            20px;
+    }
+
+
+    .service-cta__footer {
+
+        font-size:
+            5px;
+    }
+
+
+    .service-cta__footer span:nth-child(2) {
+
+        display:
+            none;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .service-cta__eyebrow i,
+    .ring-one,
+    .ring-two {
+
+        animation:
+            none;
+    }
+}

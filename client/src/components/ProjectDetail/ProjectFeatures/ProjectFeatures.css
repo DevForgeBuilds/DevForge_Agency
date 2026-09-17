@@ -1,0 +1,782 @@
+/* ============================================================
+   DEVFORGE — PROJECT FEATURES
+============================================================ */
+
+.project-features {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding:
+        1.2rem clamp(1.2rem, 5vw, 5rem) 7rem;
+
+    background:
+        var(--df-ivory);
+
+    color:
+        var(--df-charcoal);
+}
+
+
+/* ============================================================
+   META
+============================================================ */
+
+.project-features__meta {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom:
+        1rem;
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.project-features__index {
+
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        0.7rem;
+}
+
+
+.project-features__dot {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-studio-lime);
+
+    box-shadow:
+        0 0 10px var(--df-studio-dot-glow);
+}
+
+
+/* ============================================================
+   INTRO
+============================================================ */
+
+.project-features__intro {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) minmax(280px, 0.5fr);
+
+    align-items: end;
+
+    gap:
+        5rem;
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    padding:
+        7rem 0 5rem;
+}
+
+
+.project-features__eyebrow {
+
+    display:
+        block;
+
+    margin-bottom:
+        1.7rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.project-features__title {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4.5rem,
+            9vw,
+            10rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.76;
+
+    letter-spacing:
+        -0.08em;
+
+    color:
+        var(--df-charcoal);
+}
+
+
+.project-features__title span {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.project-features__intro>p {
+
+    max-width:
+        470px;
+
+    margin:
+        0;
+
+    padding-bottom:
+        0.3rem;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        0.95rem;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+/* ============================================================
+   LIST
+============================================================ */
+
+.project-features__list {
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+/* ============================================================
+   FEATURE
+============================================================ */
+
+.project-feature {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        90px minmax(260px, 1fr) minmax(260px, 0.8fr) 120px 50px;
+
+    align-items:
+        center;
+
+    gap:
+        1.5rem;
+
+    min-height:
+        170px;
+
+    padding:
+        1.5rem 0;
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    overflow:
+        hidden;
+}
+
+
+.project-feature::before {
+
+    content:
+        '';
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        var(--df-studio-card-hover);
+
+    transform:
+        translateX(-101%);
+
+    transition:
+        transform 0.65s var(--df-ease);
+
+    pointer-events:
+        none;
+}
+
+
+.project-feature:hover::before {
+
+    transform:
+        translateX(0);
+}
+
+
+/* ============================================================
+   NUMBER
+============================================================ */
+
+.project-feature__number {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+}
+
+
+.project-feature__number span {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        2rem;
+
+    font-weight:
+        600;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.06em;
+
+    color:
+        var(--df-studio-muted);
+
+    transition:
+        color 0.4s ease;
+}
+
+
+.project-feature:hover .project-feature__number span {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   TITLE
+============================================================ */
+
+.project-feature__title {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+}
+
+
+.project-feature__title h3 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(1.6rem,
+            2.5vw,
+            2.6rem);
+
+    font-weight:
+        600;
+
+    line-height:
+        0.9;
+
+    letter-spacing:
+        -0.045em;
+
+    color:
+        var(--df-charcoal);
+
+    transition:
+        transform 0.5s var(--df-ease),
+        color 0.4s ease;
+}
+
+
+.project-feature:hover .project-feature__title h3 {
+
+    color:
+        var(--df-studio-green);
+
+    transform:
+        translateX(10px);
+}
+
+
+/* ============================================================
+   DESCRIPTION
+============================================================ */
+
+.project-feature__description {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+}
+
+
+.project-feature__description p {
+
+    max-width:
+        400px;
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        0.78rem;
+
+    line-height:
+        1.7;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+/* ============================================================
+   FEATURE INDEX
+============================================================ */
+
+.project-feature__index {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        0.45rem;
+
+    font-family:
+        var(--df-font-mono);
+}
+
+
+.project-feature__index span {
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        0.13em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.project-feature__index strong {
+
+    font-size:
+        9px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        0.08em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   ARROW
+============================================================ */
+
+.project-feature__arrow {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        1.1rem;
+
+    text-align:
+        right;
+
+    color:
+        var(--df-studio-muted);
+
+    transition:
+        color 0.4s ease,
+        transform 0.45s var(--df-ease);
+}
+
+
+.project-feature:hover .project-feature__arrow {
+
+    color:
+        var(--df-studio-green);
+
+    transform:
+        translate(5px, -5px);
+}
+
+
+/* ============================================================
+   STATEMENT
+============================================================ */
+
+.project-features__statement {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    align-items:
+        end;
+
+    gap:
+        3rem;
+
+    max-width:
+        1500px;
+
+    margin:
+        6rem auto 0;
+
+    padding-top:
+        1.2rem;
+
+    border-top:
+        1px solid var(--df-studio-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.project-features__statement h3 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(1.8rem,
+            3vw,
+            3.2rem);
+
+    font-weight:
+        600;
+
+    line-height:
+        0.9;
+
+    letter-spacing:
+        -0.05em;
+
+    color:
+        var(--df-charcoal);
+}
+
+
+.project-features__statement h3 span {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.project-features__statement>span:last-child {
+
+    text-align:
+        right;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1000px) {
+
+    .project-feature {
+
+        grid-template-columns:
+            70px minmax(220px, 1fr) minmax(220px, 0.8fr) 40px;
+    }
+
+
+    .project-feature__index {
+
+        display:
+            none;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .project-features__intro {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            2.5rem;
+
+        padding:
+            5rem 0;
+    }
+
+
+    .project-feature {
+
+        grid-template-columns:
+            60px 1fr 40px;
+
+        gap:
+            1rem;
+
+        min-height:
+            150px;
+    }
+
+
+    .project-feature__description {
+
+        grid-column:
+            2 / -1;
+    }
+
+
+    .project-feature__description p {
+
+        max-width:
+            500px;
+    }
+
+
+    .project-feature__arrow {
+
+        grid-column:
+            3;
+
+        grid-row:
+            1;
+
+    }
+
+
+    .project-features__statement {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .project-features__statement h3 {
+
+        grid-column:
+            1 / -1;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .project-features {
+
+        padding:
+            1rem 1.2rem 5rem;
+    }
+
+
+    .project-features__meta>span:last-child {
+
+        display:
+            none;
+    }
+
+
+    .project-features__title {
+
+        font-size:
+            clamp(3.5rem,
+                18vw,
+                6rem);
+    }
+
+
+    .project-features__intro>p {
+
+        font-size:
+            0.88rem;
+    }
+
+
+    .project-feature {
+
+        grid-template-columns:
+            45px 1fr 30px;
+
+        min-height:
+            170px;
+
+        padding:
+            1.3rem 0;
+    }
+
+
+    .project-feature__number span {
+
+        font-size:
+            1.5rem;
+    }
+
+
+    .project-feature__title h3 {
+
+        font-size:
+            1.5rem;
+    }
+
+
+    .project-feature__description {
+
+        grid-column:
+            2 / -1;
+    }
+
+
+    .project-feature__arrow {
+
+        grid-column:
+            3;
+    }
+
+
+    .project-features__statement {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            2rem;
+    }
+
+
+    .project-features__statement h3 {
+
+        font-size:
+            2rem;
+    }
+
+
+    .project-features__statement>span:last-child {
+
+        text-align:
+            left;
+    }
+
+}

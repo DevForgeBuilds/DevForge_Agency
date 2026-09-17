@@ -1,0 +1,362 @@
+.digital-product-wrapper {
+    pointer-events: none !important;
+}
+
+/* =========================================================
+   DIGITAL OBJECT
+========================================================= */
+
+.digital-product {
+    width: 190px;
+
+    pointer-events: none;
+    user-select: none;
+
+    opacity: 0;
+
+    transform: scale(0.55);
+    transform-origin: center;
+
+    color: #111512;
+
+    font-family: var(--df-font-mono);
+}
+
+/* =========================================================
+   FRAME
+========================================================= */
+
+.digital-product__frame {
+    position: relative;
+
+    width: 100%;
+    height: 125px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid rgba(15, 61, 43, 0.22);
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.65),
+            rgba(246, 242, 232, 0.96));
+
+    box-shadow:
+        0 16px 32px rgba(17, 21, 18, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.7) inset;
+
+    clip-path: inset(0 12% 0 12% round 12px);
+}
+
+/* Fine blueprint grid */
+
+.digital-product__frame::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(15, 61, 43, 0.045) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(15, 61, 43, 0.045) 1px,
+            transparent 1px);
+
+    background-size: 14px 14px;
+
+    pointer-events: none;
+}
+
+/* Lime edge */
+
+.digital-product__frame::after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    border: 1px solid rgba(183, 243, 74, 0.35);
+
+    border-radius: inherit;
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.digital-product__top {
+    position: relative;
+    z-index: 2;
+
+    height: 25px;
+
+    padding: 0 9px;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(17, 21, 18, 0.1);
+}
+
+.digital-product__brand {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-right: auto;
+
+    font-size: 5px;
+    font-weight: 600;
+
+    letter-spacing: 0.13em;
+}
+
+.digital-product__mark {
+    width: 13px;
+    height: 13px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #0f3d2b;
+
+    color: #f6f2e8;
+
+    font-size: 5px;
+    font-weight: 700;
+}
+
+.digital-product__status {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+
+    font-size: 4px;
+
+    letter-spacing: 0.1em;
+
+    color: rgba(17, 21, 18, 0.45);
+}
+
+.digital-product__status i {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #b7f34a;
+
+    box-shadow: 0 0 5px rgba(183, 243, 74, 0.7);
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.digital-product__body {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+
+    padding: 10px 11px 6px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.digital-product__title {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 8px;
+}
+
+.digital-product__title small {
+    margin-bottom: 3px;
+
+    font-size: 4px;
+
+    letter-spacing: 0.15em;
+
+    color: rgba(17, 21, 18, 0.42);
+}
+
+.digital-product__title strong {
+    font-family: var(--df-font-display);
+
+    font-size: 15px;
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.045em;
+}
+
+.digital-product__title em {
+    color: #0f3d2b;
+
+    font-style: normal;
+}
+
+/* =========================================================
+   DIGITAL ROWS
+========================================================= */
+
+.digital-product__rows {
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid rgba(17, 21, 18, 0.12);
+}
+
+.digital-product__row {
+    height: 17px;
+
+    display: grid;
+
+    grid-template-columns:
+        16px 46px 1fr 32px;
+
+    align-items: center;
+
+    border-bottom: 1px solid rgba(17, 21, 18, 0.09);
+
+    font-size: 4.5px;
+}
+
+.digital-product__row>span {
+    color: #86a938;
+}
+
+.digital-product__row b {
+    font-size: 5px;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+}
+
+.digital-product__row i {
+    height: 1px;
+
+    margin: 0 5px;
+
+    background: rgba(15, 61, 43, 0.13);
+}
+
+.digital-product__row small {
+    font-size: 3.5px;
+
+    text-align: right;
+
+    color: rgba(17, 21, 18, 0.35);
+}
+
+/* =========================================================
+   MINI DIGITAL GRID
+========================================================= */
+
+.digital-product__mini-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 4px;
+
+    margin-top: 7px;
+}
+
+.digital-product__mini-grid span {
+    height: 7px;
+
+    border: 1px solid rgba(15, 61, 43, 0.1);
+
+    border-radius: 3px;
+
+    background: rgba(183, 243, 74, 0.08);
+}
+
+.digital-product__mini-grid span:first-child {
+    background: rgba(183, 243, 74, 0.45);
+
+    border-color: rgba(159, 211, 49, 0.35);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.digital-product__footer {
+    position: relative;
+    z-index: 2;
+
+    height: 19px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(17, 21, 18, 0.1);
+
+    font-size: 3.5px;
+
+    letter-spacing: 0.13em;
+
+    color: rgba(17, 21, 18, 0.35);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+    .digital-product {
+        width: 155px;
+    }
+
+    .digital-product__frame {
+        height: 105px;
+
+        border-radius: 9px;
+    }
+
+    .digital-product__body {
+        padding: 8px 8px 5px;
+    }
+
+    .digital-product__title strong {
+        font-size: 12px;
+    }
+
+    .digital-product__row {
+        height: 14px;
+
+        grid-template-columns:
+            13px 37px 1fr 25px;
+    }
+
+    .digital-product__top {
+        height: 21px;
+
+        padding: 0 7px;
+    }
+
+    .digital-product__footer {
+        height: 15px;
+    }
+}

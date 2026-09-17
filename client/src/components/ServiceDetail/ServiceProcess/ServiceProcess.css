@@ -1,0 +1,673 @@
+/* ============================================================
+   SERVICE PROCESS
+============================================================ */
+
+.service-process {
+    --process-bg: #f4f1e8;
+    --process-dark: #101511;
+    --process-green: #0f3d2b;
+    --process-lime: #b7f34a;
+    --process-muted: rgba(16, 21, 17, 0.42);
+    --process-line: rgba(16, 21, 17, 0.14);
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    padding:
+        8rem clamp(1.2rem, 6vw, 8rem) 4rem;
+
+    background:
+        var(--process-bg);
+
+    color:
+        var(--process-dark);
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.service-process__header {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        .8fr 2fr 1fr;
+
+    gap: 3rem;
+
+    align-items: end;
+
+    margin-bottom: 5rem;
+
+    z-index: 3;
+}
+
+
+.service-process__eyebrow {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    color:
+        var(--process-muted);
+}
+
+
+.service-process__eyebrow span:first-child {
+    color:
+        var(--process-green);
+}
+
+
+.service-process__heading {
+    display: flex;
+
+    flex-direction: column;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            8vw,
+            9rem);
+
+    font-weight: 500;
+
+    line-height: .78;
+
+    letter-spacing: -.075em;
+}
+
+
+.service-process__heading strong {
+    color:
+        var(--process-green);
+
+    font-weight: 500;
+}
+
+
+.service-process__header p {
+    max-width: 260px;
+
+    margin: 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 8px;
+
+    line-height: 1.8;
+
+    color:
+        var(--process-muted);
+}
+
+
+/* ============================================================
+   VIEWPORT
+============================================================ */
+
+.service-process__viewport {
+    position: relative;
+
+    width: 100%;
+
+    overflow: visible;
+}
+
+
+/* ============================================================
+   TRACK
+============================================================ */
+
+.service-process__track {
+    display: flex;
+
+    width: max-content;
+
+    gap: 2vw;
+
+    will-change:
+        transform;
+}
+
+
+/* ============================================================
+   STEP
+============================================================ */
+
+.process-step {
+    position: relative;
+
+    width:
+        clamp(520px,
+            58vw,
+            820px);
+
+    min-height:
+        58vh;
+
+    padding:
+        2rem;
+
+    display: grid;
+
+    grid-template-columns:
+        70px 1fr;
+
+    gap: 2rem;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid var(--process-line);
+
+    background:
+        rgba(255, 255, 255, .22);
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   NUMBER
+============================================================ */
+
+.process-step__number {
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 9px;
+
+    letter-spacing: .12em;
+
+    color:
+        var(--process-green);
+}
+
+
+/* ============================================================
+   CONTENT
+============================================================ */
+
+.process-step__content {
+    position: relative;
+
+    z-index: 3;
+
+    align-self: center;
+
+    max-width: 390px;
+}
+
+
+.process-step__kicker {
+    display: block;
+
+    margin-bottom: 1.5rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 7px;
+
+    letter-spacing: .16em;
+
+    color:
+        var(--process-green);
+}
+
+
+.process-step__content h3 {
+    margin: 0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            7vw,
+            8rem);
+
+    font-weight: 500;
+
+    line-height: .78;
+
+    letter-spacing: -.08em;
+}
+
+
+.process-step__content p {
+    max-width: 330px;
+
+    margin:
+        2.5rem 0 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 8px;
+
+    line-height: 1.8;
+
+    color:
+        var(--process-muted);
+}
+
+
+.process-step__detail {
+    display: block;
+
+    margin-top: 2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .14em;
+
+    color:
+        rgba(15, 61, 43, .55);
+}
+
+
+/* ============================================================
+   VISUAL
+============================================================ */
+
+.process-step__visual {
+    position: absolute;
+
+    right: 5%;
+    bottom: 5%;
+
+    width:
+        clamp(180px,
+            23vw,
+            320px);
+
+    aspect-ratio: 1;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid rgba(15, 61, 43, .12);
+
+    border-radius: 50%;
+}
+
+
+.process-step__visual-index {
+    position: absolute;
+
+    top: 12%;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .14em;
+
+    color:
+        var(--process-muted);
+}
+
+
+.process-step__visual-core {
+    position: relative;
+
+    width: 42%;
+
+    aspect-ratio: 1;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--process-green);
+
+    color:
+        var(--process-cream);
+
+    box-shadow:
+        0 0 0 20px rgba(15, 61, 43, .06);
+}
+
+
+.process-step__visual-core span {
+    position: absolute;
+
+    inset: 12px;
+
+    border:
+        1px dashed rgba(183, 243, 74, .4);
+
+    border-radius: 50%;
+}
+
+
+.process-step__visual-core strong {
+    position: relative;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(2rem,
+            4vw,
+            4rem);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color:
+        var(--process-lime);
+}
+
+
+/* ============================================================
+   RINGS
+============================================================ */
+
+.process-step__visual-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(15, 61, 43, .14);
+
+    pointer-events: none;
+}
+
+
+.ring-one {
+    inset: 14%;
+}
+
+
+.ring-two {
+    inset: 28%;
+
+    border-style:
+        dashed;
+}
+
+
+/* ============================================================
+   PROGRESS
+============================================================ */
+
+.service-process__progress {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 3rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .12em;
+
+    color:
+        var(--process-muted);
+
+    z-index: 3;
+}
+
+
+.service-process__progress-line {
+    position: relative;
+
+    width:
+        min(500px, 45vw);
+
+    height: 1px;
+
+    overflow: hidden;
+
+    background:
+        rgba(16, 21, 17, .14);
+}
+
+
+.service-process__progress-line i {
+    position: absolute;
+
+    inset:
+        0 auto 0 0;
+
+    width: 16.66%;
+
+    background:
+        var(--process-green);
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.service-process__footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 3rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size: 6px;
+
+    letter-spacing: .14em;
+
+    color:
+        var(--process-muted);
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .service-process {
+        padding:
+            7rem 2rem 4rem;
+    }
+
+
+    .service-process__header {
+        grid-template-columns:
+            1fr 1.5fr;
+
+        gap: 2rem;
+    }
+
+
+    .service-process__header p {
+        grid-column:
+            2;
+    }
+
+
+    .process-step {
+        width:
+            75vw;
+
+        min-height:
+            55vh;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+
+    .service-process {
+        min-height: auto;
+
+        padding:
+            6rem 1.2rem 3rem;
+    }
+
+
+    .service-process__header {
+        display: block;
+
+        margin-bottom: 3rem;
+    }
+
+
+    .service-process__eyebrow {
+        margin-bottom: 2rem;
+    }
+
+
+    .service-process__heading {
+        font-size:
+            clamp(3.7rem,
+                16vw,
+                6rem);
+    }
+
+
+    .service-process__header p {
+        margin-top: 2rem;
+
+        max-width: 300px;
+    }
+
+
+    /*
+    ============================================================
+    MOBILE BECOMES VERTICAL
+    ============================================================
+    */
+
+    .service-process__viewport {
+        overflow: visible;
+    }
+
+
+    .service-process__track {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 1rem;
+
+        transform: none !important;
+    }
+
+
+    .process-step {
+        width: 100%;
+
+        min-height:
+            500px;
+
+        grid-template-columns:
+            35px 1fr;
+
+        padding:
+            1.2rem;
+
+        gap: .8rem;
+    }
+
+
+    .process-step__content h3 {
+        font-size:
+            clamp(3.2rem,
+                14vw,
+                5rem);
+    }
+
+
+    .process-step__content p {
+        margin-top:
+            2rem;
+
+        max-width:
+            250px;
+    }
+
+
+    .process-step__visual {
+        width:
+            190px;
+
+        right:
+            -25px;
+
+        bottom:
+            20px;
+    }
+
+
+    .service-process__progress {
+        display: none;
+    }
+
+
+    .service-process__footer {
+        margin-top: 2rem;
+    }
+
+
+    .service-process__footer span:nth-child(2) {
+        display: none;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .service-process__track {
+        transform: none !important;
+    }
+}

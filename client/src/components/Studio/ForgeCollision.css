@@ -1,0 +1,1326 @@
+/* ============================================================
+   DEVFORGE — PREMIUM FORGE COLLISION
+============================================================ */
+
+.forge-collision {
+
+    --forge-bg: #07110e;
+    --forge-panel: #0b1916;
+    --forge-panel-2: #0e211c;
+
+    --forge-cream: #f4f0e6;
+
+    --forge-lime: #b8ff32;
+    --forge-cyan: #29e7e1;
+    --forge-purple: #a86cff;
+    --forge-orange: #ff9d35;
+
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    color: var(--forge-cream);
+
+    background:
+
+        radial-gradient(circle at 50% 45%,
+            rgba(184, 255, 50, 0.10),
+            transparent 22%),
+
+        radial-gradient(circle at 25% 60%,
+            rgba(41, 231, 225, 0.07),
+            transparent 25%),
+
+        radial-gradient(circle at 78% 40%,
+            rgba(168, 108, 255, 0.07),
+            transparent 25%),
+
+        var(--forge-bg);
+
+    isolation: isolate;
+}
+
+
+/* ============================================================
+   TECH GRID
+============================================================ */
+
+.forge-collision::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    background-image:
+
+        linear-gradient(rgba(180, 255, 210, 0.035) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(180, 255, 210, 0.035) 1px,
+            transparent 1px);
+
+    background-size:
+        72px 72px;
+
+    mask-image:
+        radial-gradient(ellipse at center,
+            black,
+            transparent 82%);
+
+    -webkit-mask-image:
+        radial-gradient(ellipse at center,
+            black,
+            transparent 82%);
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   META
+============================================================ */
+
+.forge-collision__meta {
+
+    position: relative;
+
+    z-index: 50;
+
+    width:
+        min(calc(100% - 7rem),
+            1450px);
+
+    margin: auto;
+
+    padding-top: 2.8rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-family:
+        var(--df-font-mono, monospace);
+
+    font-size: 10px;
+
+    letter-spacing: .15em;
+
+    color:
+        rgba(244, 240, 230, .48);
+}
+
+
+.forge-collision__meta span:first-child {
+
+    color:
+        var(--forge-lime);
+}
+
+
+.forge-collision__meta span:nth-child(2) {
+
+    color:
+        rgba(244, 240, 230, .32);
+}
+
+
+.forge-collision__meta span:last-child {
+
+    color:
+        var(--forge-cyan);
+}
+
+
+/* ============================================================
+   STAGE
+============================================================ */
+
+.forge-collision__stage {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 76vh;
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    perspective: 1400px;
+}
+
+
+/* ============================================================
+   DEV / FORGE
+============================================================ */
+
+.forge-collision__word {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    white-space: nowrap;
+
+    font-family:
+        var(--df-font-display, sans-serif);
+
+    font-size:
+        clamp(8rem,
+            18vw,
+            22rem);
+
+    font-weight: 800;
+
+    line-height: .7;
+
+    letter-spacing: -.1em;
+
+    will-change:
+        transform,
+        opacity;
+
+    z-index: 10;
+}
+
+
+.forge-collision__word--dev {
+
+    color:
+        var(--forge-cream);
+
+    text-shadow:
+        0 0 35px rgba(244, 240, 230, .08);
+}
+
+
+.forge-collision__word--forge {
+
+    color:
+        var(--forge-lime);
+
+    text-shadow:
+        0 0 45px rgba(184, 255, 50, .18);
+}
+
+
+/* ============================================================
+   MERGED
+============================================================ */
+
+.forge-collision__merged {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    white-space: nowrap;
+
+    font-family:
+        var(--df-font-display, sans-serif);
+
+    font-size:
+        clamp(6rem,
+            15vw,
+            18rem);
+
+    font-weight: 800;
+
+    letter-spacing: -.09em;
+
+    line-height: .72;
+
+    z-index: 15;
+
+    pointer-events: none;
+}
+
+
+.forge-collision__merged span:first-child {
+
+    color:
+        var(--forge-cream);
+}
+
+
+.forge-collision__merged span:last-child {
+
+    color:
+        var(--forge-lime);
+}
+
+
+/* ============================================================
+   IMPACT
+============================================================ */
+
+.forge-collision__impact {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 14px;
+    height: 14px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        var(--forge-lime);
+
+    box-shadow:
+
+        0 0 20px var(--forge-lime),
+
+        0 0 65px rgba(184, 255, 50, .8);
+
+    opacity: 0;
+
+    z-index: 30;
+}
+
+
+/* ============================================================
+   FLASH
+============================================================ */
+
+.forge-collision__flash {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 180px;
+    height: 180px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(255, 255, 255, .95),
+            rgba(184, 255, 50, .55) 18%,
+            rgba(41, 231, 225, .18) 42%,
+            transparent 72%);
+
+    opacity: 0;
+
+    z-index: 25;
+
+    pointer-events: none;
+
+    mix-blend-mode: screen;
+}
+
+
+/* ============================================================
+   SPARKS
+============================================================ */
+
+.forge-collision__sparks {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 35;
+
+    pointer-events: none;
+}
+
+
+.forge-spark {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 2px;
+    height: 42px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(to bottom,
+            var(--forge-lime),
+            var(--forge-cyan),
+            transparent);
+
+    box-shadow:
+        0 0 12px var(--forge-lime);
+
+    opacity: 0;
+}
+
+
+/* ============================================================
+   PRODUCT
+============================================================ */
+
+.forge-product {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width:
+        min(78vw,
+            1160px);
+
+    transform:
+        translate(-50%, -50%);
+
+    transform-style: preserve-3d;
+
+    z-index: 8;
+
+    will-change:
+        transform,
+        opacity;
+
+    filter:
+        drop-shadow(0 35px 55px rgba(0, 0, 0, .38));
+}
+
+
+/* ============================================================
+   PRODUCT GLOW
+============================================================ */
+
+.forge-product::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 5%;
+
+    border-radius: 25px;
+
+    background:
+
+        radial-gradient(circle at 20% 70%,
+            rgba(41, 231, 225, .13),
+            transparent 30%),
+
+        radial-gradient(circle at 75% 25%,
+            rgba(184, 255, 50, .12),
+            transparent 30%),
+
+        radial-gradient(circle at 50% 90%,
+            rgba(168, 108, 255, .10),
+            transparent 35%);
+
+    filter:
+        blur(35px);
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   SVG
+============================================================ */
+
+.forge-product__svg {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    overflow: visible;
+}
+
+
+/* ============================================================
+   SVG BASE
+============================================================ */
+
+.forge-wire {
+
+    fill: none;
+
+    stroke:
+        rgba(219, 239, 232, .46);
+
+    stroke-width: 1.25;
+
+    vector-effect:
+        non-scaling-stroke;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    filter:
+        drop-shadow(0 0 2px rgba(255, 255, 255, .08));
+}
+
+
+/* ============================================================
+   FRAME
+============================================================ */
+
+.forge-wire--frame {
+
+    stroke:
+        rgba(244, 240, 230, .75);
+
+    stroke-width: 1.8;
+
+    fill:
+        rgba(8, 19, 16, .78);
+
+    filter:
+
+        drop-shadow(0 0 7px rgba(184, 255, 50, .12));
+}
+
+
+/* ============================================================
+   LIME
+============================================================ */
+
+.forge-wire--lime {
+
+    stroke:
+        var(--forge-lime);
+
+    filter:
+
+        drop-shadow(0 0 5px rgba(184, 255, 50, .55));
+}
+
+
+/* ============================================================
+   CYAN
+============================================================ */
+
+.forge-wire--cyan {
+
+    stroke:
+        var(--forge-cyan);
+
+    filter:
+
+        drop-shadow(0 0 5px rgba(41, 231, 225, .5));
+}
+
+
+/* ============================================================
+   PURPLE
+============================================================ */
+
+.forge-wire--purple {
+
+    stroke:
+        var(--forge-purple);
+
+    filter:
+
+        drop-shadow(0 0 5px rgba(168, 108, 255, .5));
+}
+
+
+/* ============================================================
+   ORANGE
+============================================================ */
+
+.forge-wire--orange {
+
+    stroke:
+        var(--forge-orange);
+
+    filter:
+
+        drop-shadow(0 0 5px rgba(255, 157, 53, .5));
+}
+
+
+/* ============================================================
+   RED
+============================================================ */
+
+.forge-wire--red {
+
+    stroke:
+        #ff5364;
+
+    filter:
+        drop-shadow(0 0 4px rgba(255, 83, 100, .5));
+}
+
+
+/* ============================================================
+   ACCENT
+============================================================ */
+
+.forge-wire--accent {
+
+    stroke:
+        var(--forge-lime);
+}
+
+
+/* ============================================================
+   FLOATING MODULES
+============================================================ */
+
+.forge-product__floating {
+
+    position: absolute;
+
+    z-index: 20;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+.forge-product__floating--left {
+
+    left: -12%;
+
+    top: 42%;
+
+    transform:
+        rotate(-5deg);
+}
+
+
+.forge-product__floating--right {
+
+    right: -11%;
+
+    top: 27%;
+
+    transform:
+        rotate(5deg);
+}
+
+
+/* ============================================================
+   NODE PANEL
+============================================================ */
+
+.forge-floating-node {
+
+    position: relative;
+
+    width: 145px;
+
+    height: 175px;
+
+    padding: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border:
+        1px solid rgba(41, 231, 225, .45);
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(12, 35, 31, .95),
+            rgba(5, 17, 14, .9));
+
+    box-shadow:
+
+        0 0 35px rgba(41, 231, 225, .12),
+
+        inset 0 0 35px rgba(41, 231, 225, .04);
+}
+
+
+.forge-node-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(rgba(41, 231, 225, .08) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(41, 231, 225, .08) 1px,
+            transparent 1px);
+
+    background-size: 20px 20px;
+
+    border-radius: inherit;
+
+    mask-image:
+        linear-gradient(to bottom,
+            black,
+            transparent);
+}
+
+
+.forge-node-core {
+
+    position: relative;
+
+    width: 80px;
+
+    height: 80px;
+
+    margin: auto;
+
+    border:
+        1px solid var(--forge-cyan);
+
+    transform:
+        rotate(45deg);
+
+    box-shadow:
+        0 0 25px rgba(41, 231, 225, .25);
+}
+
+
+.forge-node-core span {
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        var(--forge-lime);
+
+    box-shadow:
+        0 0 9px var(--forge-lime);
+}
+
+
+.forge-node-core span:nth-child(1) {
+    top: -4px;
+    left: 50%;
+}
+
+.forge-node-core span:nth-child(2) {
+    right: -4px;
+    top: 50%;
+}
+
+.forge-node-core span:nth-child(3) {
+    bottom: -4px;
+    left: 50%;
+}
+
+.forge-node-core span:nth-child(4) {
+    left: -4px;
+    top: 50%;
+}
+
+.forge-node-core span:nth-child(5) {
+
+    left: 50%;
+    top: 50%;
+
+    background:
+        var(--forge-cyan);
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+.forge-floating-node small {
+
+    position: relative;
+
+    font-family:
+        var(--df-font-mono, monospace);
+
+    font-size: 8px;
+
+    letter-spacing: .14em;
+
+    color:
+        var(--forge-cyan);
+}
+
+
+/* ============================================================
+   CODE PANEL
+============================================================ */
+
+.forge-code-panel {
+
+    width: 190px;
+
+    padding: 14px;
+
+    border:
+        1px solid rgba(168, 108, 255, .55);
+
+    border-radius: 10px;
+
+    background:
+        rgba(8, 18, 16, .94);
+
+    box-shadow:
+
+        0 0 40px rgba(168, 108, 255, .12),
+
+        inset 0 0 25px rgba(168, 108, 255, .035);
+}
+
+
+.forge-code-panel__head {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap: 5px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .08);
+}
+
+
+.forge-code-panel__head span {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        var(--forge-lime);
+}
+
+
+.forge-code-panel__head b {
+
+    margin-left: auto;
+
+    font-family:
+        var(--df-font-mono, monospace);
+
+    font-size: 7px;
+
+    font-weight: 500;
+
+    letter-spacing: .1em;
+
+    color:
+        rgba(244, 240, 230, .6);
+}
+
+
+.forge-code-lines {
+
+    padding: 15px 0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap: 7px;
+}
+
+
+.forge-code-lines i {
+
+    display: block;
+
+    height: 4px;
+
+    border-radius: 4px;
+
+    background:
+        rgba(168, 108, 255, .5);
+}
+
+
+.forge-code-lines i:nth-child(1) {
+    width: 72%;
+    background: var(--forge-cyan);
+}
+
+.forge-code-lines i:nth-child(2) {
+    width: 90%;
+}
+
+.forge-code-lines i:nth-child(3) {
+    width: 52%;
+    background: var(--forge-lime);
+}
+
+.forge-code-lines i:nth-child(4) {
+    width: 78%;
+}
+
+.forge-code-lines i:nth-child(5) {
+    width: 64%;
+    background: var(--forge-orange);
+}
+
+.forge-code-lines i:nth-child(6) {
+    width: 85%;
+}
+
+.forge-code-lines i:nth-child(7) {
+    width: 43%;
+    background: var(--forge-purple);
+}
+
+.forge-code-lines i:nth-child(8) {
+    width: 67%;
+}
+
+
+.forge-code-status {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap: 7px;
+
+    font-family:
+        var(--df-font-mono, monospace);
+
+    font-size: 7px;
+
+    letter-spacing: .08em;
+
+    color:
+        var(--forge-lime);
+}
+
+
+.forge-code-status span {
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+        var(--forge-lime);
+
+    box-shadow:
+        0 0 8px var(--forge-lime);
+}
+
+
+/* ============================================================
+   PRODUCT TAG
+============================================================ */
+
+.forge-product__tag {
+
+    position: absolute;
+
+    top: 7%;
+
+    right: 6%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap: 7px;
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid rgba(184, 255, 50, .3);
+
+    border-radius: 20px;
+
+    background:
+        rgba(7, 17, 14, .78);
+
+    backdrop-filter:
+        blur(10px);
+
+    font-family:
+        var(--df-font-mono, monospace);
+
+    font-size: 8px;
+
+    letter-spacing: .12em;
+
+    color:
+        var(--forge-lime);
+}
+
+
+.forge-product__tag span {
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+        var(--forge-lime);
+
+    box-shadow:
+        0 0 8px var(--forge-lime);
+}
+
+
+/* ============================================================
+   LABEL
+============================================================ */
+
+.forge-collision__label {
+
+    position: absolute;
+
+    left: 50%;
+
+    top:
+        calc(50% + min(31vw,
+                330px));
+
+    transform:
+        translateX(-50%);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap: 14px;
+
+    white-space: nowrap;
+
+    font-family:
+        var(--df-font-mono, monospace);
+
+    font-size: 10px;
+
+    letter-spacing: .13em;
+
+    z-index: 50;
+}
+
+
+.forge-collision__label span {
+
+    color:
+        rgba(244, 240, 230, .45);
+}
+
+
+.forge-collision__label strong {
+
+    color:
+        var(--forge-lime);
+
+    font-weight: 500;
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.forge-collision__footer {
+
+    position: relative;
+
+    z-index: 50;
+
+    width:
+        min(calc(100% - 7rem),
+            1450px);
+
+    margin: auto;
+
+    padding:
+        1.4rem 0 2.5rem;
+
+    border-top:
+        1px solid rgba(244, 240, 230, .12);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    font-family:
+        var(--df-font-mono, monospace);
+
+    font-size: 9px;
+
+    letter-spacing: .13em;
+
+    color:
+        rgba(244, 240, 230, .42);
+}
+
+
+.forge-collision__footer span:last-child {
+
+    color:
+        var(--forge-cyan);
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1000px) {
+
+    .forge-collision__meta,
+    .forge-collision__footer {
+
+        width:
+            calc(100% - 4rem);
+    }
+
+
+    .forge-product {
+
+        width:
+            88vw;
+    }
+
+
+    .forge-product__floating--left {
+
+        left: -5%;
+    }
+
+
+    .forge-product__floating--right {
+
+        right: -5%;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .forge-collision__meta,
+    .forge-collision__footer {
+
+        width:
+            calc(100% - 2rem);
+    }
+
+
+    .forge-collision__meta {
+
+        padding-top: 1.8rem;
+    }
+
+
+    .forge-collision__meta span:nth-child(2) {
+
+        display: none;
+    }
+
+
+    .forge-collision__meta span:last-child {
+
+        font-size: 8px;
+    }
+
+
+    .forge-collision__stage {
+
+        height: 72svh;
+
+        min-height: 500px;
+    }
+
+
+    .forge-collision__word {
+
+        font-size:
+            clamp(4.5rem,
+                23vw,
+                8rem);
+    }
+
+
+    .forge-collision__merged {
+
+        font-size:
+            clamp(4rem,
+                16vw,
+                7rem);
+    }
+
+
+    .forge-product {
+
+        width:
+            94vw;
+    }
+
+
+    .forge-product__floating--left,
+    .forge-product__floating--right {
+
+        display: none;
+    }
+
+
+    .forge-product__tag {
+
+        top: 5%;
+
+        right: 5%;
+
+        font-size: 6px;
+
+        padding:
+            5px 7px;
+    }
+
+
+    .forge-collision__label {
+
+        top:
+            calc(50% + 31vw);
+
+        font-size: 8px;
+
+        gap: 8px;
+    }
+
+
+    .forge-collision__footer {
+
+        padding-bottom:
+            1.3rem;
+    }
+
+
+    .forge-collision__footer span:nth-child(2) {
+
+        display: none;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 420px) {
+
+    .forge-product {
+
+        width:
+            98vw;
+    }
+
+
+    .forge-collision__stage {
+
+        min-height:
+            460px;
+    }
+
+
+    .forge-collision__label {
+
+        font-size: 7px;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .forge-collision *,
+    .forge-collision *::before,
+    .forge-collision *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+    }
+}

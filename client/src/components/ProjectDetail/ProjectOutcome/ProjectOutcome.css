@@ -1,0 +1,680 @@
+/* ============================================================
+   DEVFORGE — PROJECT OUTCOME
+============================================================ */
+
+.project-outcome {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding:
+        1.2rem clamp(1.2rem, 5vw, 5rem) 7rem;
+
+    background:
+        var(--df-ivory);
+
+    color:
+        var(--df-charcoal);
+}
+
+
+/* ============================================================
+   META
+============================================================ */
+
+.project-outcome__meta {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom:
+        1rem;
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.project-outcome__index {
+
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        0.7rem;
+}
+
+
+.project-outcome__dot {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-studio-lime);
+
+    box-shadow:
+        0 0 10px var(--df-studio-dot-glow);
+}
+
+
+/* ============================================================
+   INTRO
+============================================================ */
+
+.project-outcome__intro {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) minmax(280px, 0.5fr);
+
+    align-items: end;
+
+    gap:
+        5rem;
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    padding:
+        7rem 0 6rem;
+}
+
+
+.project-outcome__eyebrow {
+
+    display:
+        block;
+
+    margin-bottom:
+        1.7rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.project-outcome__title {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4.5rem,
+            9vw,
+            10rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.76;
+
+    letter-spacing:
+        -0.08em;
+
+    color:
+        var(--df-charcoal);
+}
+
+
+.project-outcome__title span {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.project-outcome__intro>p {
+
+    max-width:
+        470px;
+
+    margin:
+        0;
+
+    padding-bottom:
+        0.3rem;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        0.95rem;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+/* ============================================================
+   RESULTS GRID
+============================================================ */
+
+.project-outcome__results {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(260px,
+                1fr));
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    border-top:
+        1px solid var(--df-studio-line);
+
+    border-left:
+        1px solid var(--df-studio-line);
+}
+
+
+/* ============================================================
+   RESULT CARD
+============================================================ */
+
+.project-result {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    min-height:
+        380px;
+
+    padding:
+        1.5rem;
+
+    border-right:
+        1px solid var(--df-studio-line);
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    overflow:
+        hidden;
+
+    transition:
+        background 0.5s ease,
+        transform 0.5s var(--df-ease);
+}
+
+
+.project-result::before {
+
+    content:
+        '';
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        var(--df-studio-card-hover);
+
+    transform:
+        translateY(101%);
+
+    transition:
+        transform 0.6s var(--df-ease);
+
+    pointer-events:
+        none;
+}
+
+
+.project-result:hover::before {
+
+    transform:
+        translateY(0);
+}
+
+
+/* ============================================================
+   CARD TOP
+============================================================ */
+
+.project-result__top {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding-bottom:
+        1rem;
+
+    border-bottom:
+        1px solid var(--df-studio-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        0.13em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+/* ============================================================
+   VALUE
+============================================================ */
+
+.project-result__value {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin-top:
+        3rem;
+}
+
+
+.project-result__value strong {
+
+    display:
+        block;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            7vw,
+            7rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.75;
+
+    letter-spacing:
+        -0.08em;
+
+    color:
+        var(--df-studio-green);
+
+    transition:
+        transform 0.5s var(--df-ease);
+}
+
+
+.project-result:hover .project-result__value strong {
+
+    transform:
+        translateX(8px);
+}
+
+
+/* ============================================================
+   CONTENT
+============================================================ */
+
+.project-result__content {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin-top:
+        auto;
+
+    padding-top:
+        3rem;
+
+    padding-right:
+        2rem;
+}
+
+
+.project-result__content h3 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        1.15rem;
+
+    font-weight:
+        600;
+
+    line-height:
+        0.95;
+
+    letter-spacing:
+        -0.035em;
+
+    color:
+        var(--df-charcoal);
+}
+
+
+.project-result__content p {
+
+    max-width:
+        330px;
+
+    margin:
+        0.8rem 0 0;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        0.75rem;
+
+    line-height:
+        1.65;
+
+    color:
+        var(--df-studio-soft);
+}
+
+
+/* ============================================================
+   ARROW
+============================================================ */
+
+.project-result__arrow {
+
+    position:
+        absolute;
+
+    z-index:
+        1;
+
+    right:
+        1.5rem;
+
+    bottom:
+        1.5rem;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        1.1rem;
+
+    color:
+        var(--df-studio-muted);
+
+    transition:
+        color 0.4s ease,
+        transform 0.45s var(--df-ease);
+}
+
+
+.project-result:hover .project-result__arrow {
+
+    color:
+        var(--df-studio-green);
+
+    transform:
+        translate(5px, -5px);
+}
+
+
+/* ============================================================
+   STATEMENT
+============================================================ */
+
+.project-outcome__statement {
+
+    max-width:
+        1500px;
+
+    margin:
+        7rem auto 0;
+
+    padding-top:
+        1.2rem;
+
+    border-top:
+        1px solid var(--df-studio-line);
+}
+
+
+.project-outcome__statement-meta {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-muted);
+}
+
+
+.project-outcome__statement-meta span:last-child {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+.project-outcome__statement h3 {
+
+    margin:
+        5rem 0 0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(3rem,
+            7vw,
+            8rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.8;
+
+    letter-spacing:
+        -0.075em;
+
+    color:
+        var(--df-charcoal);
+}
+
+
+.project-outcome__statement h3 span {
+
+    color:
+        var(--df-studio-green);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .project-outcome__intro {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            2.5rem;
+
+        padding:
+            5rem 0;
+    }
+
+
+    .project-outcome__results {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .project-outcome {
+
+        padding:
+            1rem 1.2rem 5rem;
+    }
+
+
+    .project-outcome__meta>span:last-child {
+
+        display:
+            none;
+    }
+
+
+    .project-outcome__title {
+
+        font-size:
+            clamp(3.5rem,
+                18vw,
+                6rem);
+    }
+
+
+    .project-outcome__intro>p {
+
+        font-size:
+            0.88rem;
+    }
+
+
+    .project-outcome__results {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .project-result {
+
+        min-height:
+            330px;
+    }
+
+
+    .project-result__value strong {
+
+        font-size:
+            5rem;
+    }
+
+
+    .project-outcome__statement {
+
+        margin-top:
+            5rem;
+    }
+
+
+    .project-outcome__statement h3 {
+
+        margin-top:
+            3.5rem;
+
+        font-size:
+            clamp(2.5rem,
+                13vw,
+                5rem);
+    }
+
+}

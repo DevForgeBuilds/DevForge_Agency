@@ -1,0 +1,671 @@
+/* ============================================================
+   DEVFORGE — PROJECT TECH STACK
+============================================================ */
+
+.project-tech {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding:
+        1.2rem clamp(1.2rem, 5vw, 5rem) 7rem;
+
+    background:
+        var(--df-studio-ink);
+
+    color:
+        var(--df-ivory);
+}
+
+
+/* ============================================================
+   META
+============================================================ */
+
+.project-tech__meta {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom:
+        1rem;
+
+    border-bottom:
+        1px solid var(--df-studio-dark-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+.project-tech__index {
+
+    display: flex;
+
+    align-items: center;
+
+    gap:
+        0.7rem;
+}
+
+
+.project-tech__dot {
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-studio-lime);
+
+    box-shadow:
+        0 0 12px var(--df-studio-dot-glow);
+}
+
+
+/* ============================================================
+   INTRO
+============================================================ */
+
+.project-tech__intro {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) minmax(280px, 0.5fr);
+
+    align-items: end;
+
+    gap:
+        5rem;
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    padding:
+        7rem 0 5rem;
+}
+
+
+.project-tech__eyebrow {
+
+    grid-column:
+        1 / -1;
+
+    margin-bottom:
+        -1rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+.project-tech__title {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4.5rem,
+            9vw,
+            10rem);
+
+    font-weight:
+        700;
+
+    line-height:
+        0.76;
+
+    letter-spacing:
+        -0.08em;
+
+    color:
+        var(--df-ivory);
+}
+
+
+.project-tech__title span {
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+.project-tech__description {
+
+    max-width:
+        470px;
+
+    margin:
+        0;
+
+    padding-bottom:
+        0.3rem;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        0.95rem;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-studio-dark-soft);
+}
+
+
+/* ============================================================
+   LIST
+============================================================ */
+
+.project-tech__list {
+
+    position:
+        relative;
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    border-top:
+        1px solid var(--df-studio-dark-line);
+
+    border-bottom:
+        1px solid var(--df-studio-dark-line);
+}
+
+
+/* ============================================================
+   ITEM
+============================================================ */
+
+.project-tech__item {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        90px minmax(0, 1fr) 220px 60px;
+
+    align-items:
+        center;
+
+    min-height:
+        105px;
+
+    border-bottom:
+        1px solid var(--df-studio-dark-line);
+
+    transition:
+        background 0.45s ease,
+        padding 0.45s var(--df-ease);
+}
+
+
+.project-tech__item:last-child {
+
+    border-bottom:
+        0;
+}
+
+
+.project-tech__item::before {
+
+    content:
+        '';
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        var(--df-studio-dark-hover);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left center;
+
+    transition:
+        transform 0.5s var(--df-ease);
+
+    pointer-events:
+        none;
+}
+
+
+.project-tech__item:hover::before {
+
+    transform:
+        scaleX(1);
+}
+
+
+/* ============================================================
+   NUMBER
+============================================================ */
+
+.project-tech__number {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    padding-left:
+        0.3rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.1em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+/* ============================================================
+   NAME
+============================================================ */
+
+.project-tech__name {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+}
+
+
+.project-tech__name h3 {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(1.7rem,
+            3vw,
+            3rem);
+
+    font-weight:
+        600;
+
+    line-height:
+        0.9;
+
+    letter-spacing:
+        -0.045em;
+
+    color:
+        var(--df-ivory);
+
+    transition:
+        color 0.4s ease,
+        transform 0.4s var(--df-ease);
+}
+
+
+.project-tech__item:hover .project-tech__name h3 {
+
+    color:
+        var(--df-studio-lime);
+
+    transform:
+        translateX(8px);
+}
+
+
+/* ============================================================
+   CATEGORY
+============================================================ */
+
+.project-tech__category {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+}
+
+
+.project-tech__category span {
+
+    display:
+        inline-block;
+
+    padding:
+        0.5rem 0.7rem;
+
+    border:
+        1px solid var(--df-studio-dark-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        7px;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-dark-muted);
+
+    transition:
+        border-color 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.project-tech__item:hover .project-tech__category span {
+
+    border-color:
+        var(--df-studio-lime);
+
+    color:
+        var(--df-studio-lime);
+}
+
+
+/* ============================================================
+   ARROW
+============================================================ */
+
+.project-tech__arrow {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    font-family:
+        var(--df-font-body);
+
+    font-size:
+        1.1rem;
+
+    text-align:
+        right;
+
+    color:
+        var(--df-studio-dark-muted);
+
+    transition:
+        color 0.4s ease,
+        transform 0.4s var(--df-ease);
+}
+
+
+.project-tech__item:hover .project-tech__arrow {
+
+    color:
+        var(--df-studio-lime);
+
+    transform:
+        translate(4px, -4px);
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.project-tech__footer {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    align-items:
+        end;
+
+    gap:
+        3rem;
+
+    max-width:
+        1500px;
+
+    margin:
+        5rem auto 0;
+
+    padding-top:
+        1.2rem;
+
+    border-top:
+        1px solid var(--df-studio-dark-line);
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--df-studio-dark-muted);
+}
+
+
+.project-tech__footer p {
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(1.2rem,
+            2vw,
+            2rem);
+
+    font-weight:
+        600;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.035em;
+
+    color:
+        var(--df-ivory);
+}
+
+
+.project-tech__footer>span:last-child {
+
+    text-align:
+        right;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .project-tech__intro {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            2.5rem;
+
+        padding:
+            5rem 0;
+    }
+
+
+    .project-tech__item {
+
+        grid-template-columns:
+            70px minmax(0, 1fr) 150px 40px;
+    }
+
+
+    .project-tech__footer {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .project-tech__footer p {
+
+        grid-column:
+            1 / -1;
+
+        grid-row:
+            1;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .project-tech {
+
+        padding:
+            1rem 1.2rem 5rem;
+    }
+
+
+    .project-tech__meta>span:last-child {
+
+        display:
+            none;
+    }
+
+
+    .project-tech__title {
+
+        font-size:
+            clamp(3.5rem,
+                18vw,
+                6rem);
+    }
+
+
+    .project-tech__description {
+
+        font-size:
+            0.88rem;
+    }
+
+
+    .project-tech__item {
+
+        grid-template-columns:
+            45px minmax(0, 1fr) 30px;
+
+        min-height:
+            90px;
+
+        gap:
+            0.5rem;
+    }
+
+
+    .project-tech__category {
+
+        display:
+            none;
+    }
+
+
+    .project-tech__number {
+
+        padding:
+            0;
+    }
+
+
+    .project-tech__name h3 {
+
+        font-size:
+            1.5rem;
+    }
+
+
+    .project-tech__footer {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            2rem;
+    }
+
+
+    .project-tech__footer>span:last-child {
+
+        text-align:
+            left;
+    }
+
+}

@@ -1,0 +1,970 @@
+/* ============================================================
+   DEVFORGE — SERVICE DETAIL
+   Theme-driven / Global Tokens
+============================================================ */
+
+
+/* ============================================================
+   MAIN
+============================================================ */
+
+.service-detail {
+
+    min-height:
+        100vh;
+
+    overflow:
+        hidden;
+
+    background:
+
+        radial-gradient(circle at 75% 25%,
+            var(--df-detail-glow),
+            transparent 30%),
+
+        var(--df-detail-bg);
+
+    color:
+        var(--df-detail-cream);
+}
+
+
+/* ============================================================
+   TOP
+============================================================ */
+
+.service-detail__top {
+
+    width:
+        min(calc(100% - 8rem),
+            1440px);
+
+    margin:
+        auto;
+
+    padding-top:
+        2rem;
+
+    padding-bottom:
+        1.2rem;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    border-bottom:
+        1px solid var(--df-detail-line);
+
+    font-family:
+        var(--df-font-mono);
+}
+
+
+.service-detail__index,
+.service-detail__meta {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.14em;
+}
+
+
+.service-detail__meta {
+
+    gap:
+        25px;
+
+    color:
+        var(--df-detail-muted);
+}
+
+
+.service-detail__status {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-detail-lime);
+
+    box-shadow:
+        0 0 10px rgba(183, 243, 74, 0.7);
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.service-detail__hero {
+
+    width:
+        min(calc(100% - 8rem),
+            1440px);
+
+    min-height:
+        calc(100vh - 80px);
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    align-items:
+        center;
+
+    gap:
+        5rem;
+}
+
+
+/* ============================================================
+   HERO COPY
+============================================================ */
+
+.service-detail__hero-copy {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+}
+
+
+.service-detail__eyebrow {
+
+    display:
+        block;
+
+    margin-bottom:
+        2rem;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.16em;
+
+    color:
+        var(--df-detail-lime);
+}
+
+
+.service-detail__title {
+
+    max-width:
+        700px;
+
+    margin:
+        0;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            8vw,
+            9rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.82;
+
+    letter-spacing:
+        -0.075em;
+
+    opacity:
+        0;
+}
+
+
+.service-detail__description {
+
+    max-width:
+        400px;
+
+    margin:
+        2.5rem 0 0;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--df-detail-muted);
+
+    opacity:
+        0;
+}
+
+
+.service-detail__hero-meta {
+
+    margin-top:
+        2.2rem;
+
+    display:
+        flex;
+
+    gap:
+        10px;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        var(--df-detail-muted);
+}
+
+
+/* ============================================================
+   HERO VISUAL
+============================================================ */
+
+.service-detail__hero-visual {
+
+    position:
+        relative;
+
+    min-height:
+        560px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid var(--df-detail-line);
+
+    background:
+        var(--df-detail-cream);
+
+    color:
+        var(--df-detail-ink);
+
+    opacity:
+        0;
+
+    transform:
+        scale(0.88);
+}
+
+
+/* ============================================================
+   VISUAL GRID
+============================================================ */
+
+.service-detail__visual-grid {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background-image:
+
+        linear-gradient(var(--df-detail-paper-line) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            var(--df-detail-paper-line) 1px,
+            transparent 1px);
+
+    background-size:
+        45px 45px;
+}
+
+
+/* ============================================================
+   VISUAL CODE
+============================================================ */
+
+.service-detail__visual-code {
+
+    position:
+        absolute;
+
+    left:
+        30px;
+
+    top:
+        35px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        12px;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    color:
+        rgba(18, 24, 15, 0.42);
+}
+
+
+.service-detail__visual-code span:first-child {
+
+    color:
+        var(--df-detail-green);
+}
+
+
+/* ============================================================
+   BROWSER
+============================================================ */
+
+.service-detail__visual-browser {
+
+    position:
+        absolute;
+
+    left:
+        18%;
+
+    right:
+        9%;
+
+    top:
+        23%;
+
+    height:
+        54%;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--df-charcoal);
+
+    color:
+        var(--df-detail-cream);
+
+    box-shadow:
+        20px 25px 60px var(--df-detail-dark-shadow);
+}
+
+
+.service-detail__browser-top {
+
+    height:
+        34px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        5px;
+
+    padding:
+        0 14px;
+
+    border-bottom:
+        1px solid rgba(246, 242, 232, 0.1);
+}
+
+
+.service-detail__browser-top>span {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(246, 242, 232, 0.3);
+}
+
+
+.service-detail__browser-top>span:first-child {
+
+    background:
+        var(--df-detail-lime);
+}
+
+
+.service-detail__browser-top small {
+
+    margin-left:
+        auto;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        9px;
+
+    line-height:
+        1.3;
+
+    color:
+        rgba(246, 242, 232, 0.42);
+}
+
+
+.service-detail__browser-content {
+
+    padding:
+        55px 40px;
+}
+
+
+.service-detail__browser-content small {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        9px;
+
+    line-height:
+        1.4;
+
+    color:
+        rgba(246, 242, 232, 0.45);
+}
+
+
+.service-detail__browser-content strong {
+
+    display:
+        block;
+
+    margin-top:
+        12px;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(3rem,
+            5vw,
+            5rem);
+
+    line-height:
+        0.75;
+
+    letter-spacing:
+        -0.08em;
+}
+
+
+.service-detail__browser-content strong:last-child {
+
+    color:
+        var(--df-detail-lime);
+}
+
+
+/* ============================================================
+   ORBIT
+============================================================ */
+
+.service-detail__visual-orbit {
+
+    position:
+        absolute;
+
+    right:
+        8%;
+
+    bottom:
+        8%;
+
+    width:
+        130px;
+
+    height:
+        130px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--df-detail-green);
+
+    color:
+        var(--df-detail-cream);
+
+    box-shadow:
+        0 0 0 20px rgba(14, 51, 35, 0.08);
+}
+
+
+.service-detail__visual-orbit::before {
+
+    content:
+        '';
+
+    position:
+        absolute;
+
+    inset:
+        12px;
+
+    border:
+        1px solid rgba(183, 243, 74, 0.5);
+
+    border-radius:
+        50%;
+}
+
+
+.service-detail__visual-orbit span {
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        28px;
+
+    color:
+        var(--df-detail-lime);
+}
+
+
+/* ============================================================
+   SCROLL INDICATOR
+============================================================ */
+
+.service-detail__scroll {
+
+    position:
+        absolute;
+
+    right:
+        4rem;
+
+    top:
+        92vh;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-detail-muted);
+}
+
+
+.service-detail__scroll i {
+
+    width:
+        30px;
+
+    height:
+        1px;
+
+    background:
+        var(--df-detail-lime);
+}
+
+
+/* ============================================================
+   STATEMENT
+============================================================ */
+
+.service-detail__statement {
+
+    min-height:
+        100vh;
+
+    padding:
+        12rem 8rem;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    background:
+        var(--df-detail-cream);
+
+    color:
+        var(--df-detail-ink);
+}
+
+
+.service-detail__statement>span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-detail-green);
+}
+
+
+.service-detail__statement h2 {
+
+    max-width:
+        1200px;
+
+    margin-top:
+        3rem;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            9vw,
+            10rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.82;
+
+    letter-spacing:
+        -0.08em;
+}
+
+
+.service-detail__statement em {
+
+    display:
+        block;
+
+    color:
+        var(--df-detail-green);
+
+    font-style:
+        normal;
+}
+
+
+/* ============================================================
+   END
+============================================================ */
+
+.service-detail__end {
+
+    min-height:
+        70vh;
+
+    padding:
+        8rem;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    background:
+        var(--df-detail-green);
+
+    color:
+        var(--df-detail-cream);
+}
+
+
+.service-detail__end>span {
+
+    font-family:
+        var(--df-font-mono);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+
+    letter-spacing:
+        0.15em;
+
+    color:
+        var(--df-detail-lime);
+}
+
+
+.service-detail__end h2 {
+
+    margin-top:
+        2rem;
+
+    font-family:
+        var(--df-font-display);
+
+    font-size:
+        clamp(4rem,
+            10vw,
+            11rem);
+
+    font-weight:
+        500;
+
+    line-height:
+        0.8;
+
+    letter-spacing:
+        -0.08em;
+}
+
+
+.service-detail__end h2 span {
+
+    color:
+        var(--df-detail-lime);
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 800px) {
+
+    .service-detail__top,
+    .service-detail__hero {
+
+        width:
+            calc(100% - 2.4rem);
+    }
+
+
+    .service-detail__hero {
+
+        min-height:
+            auto;
+
+        padding:
+            5rem 0 6rem;
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            4rem;
+    }
+
+
+    .service-detail__title {
+
+        font-size:
+            clamp(3.5rem,
+                15vw,
+                6rem);
+    }
+
+
+    .service-detail__hero-visual {
+
+        min-height:
+            430px;
+    }
+
+
+    .service-detail__scroll {
+
+        display:
+            none;
+    }
+
+
+    .service-detail__statement {
+
+        padding:
+            7rem 1.2rem;
+
+        min-height:
+            80vh;
+    }
+
+
+    .service-detail__end {
+
+        padding:
+            6rem 1.2rem;
+    }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .service-detail *,
+    .service-detail *::before,
+    .service-detail *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+}
+
+/* =========================================================
+   BACK NAVIGATION
+========================================================= */
+
+.service-detail__back {
+    position: relative;
+    z-index: 20;
+    padding: 24px 5vw 0;
+}
+
+.service-detail__back button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    border: 0;
+    padding: 0;
+
+    background: transparent;
+    color: inherit;
+
+    font: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.service-detail__back button span:first-child {
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.service-detail__back button:hover {
+    opacity: 0.65;
+}
+
+.service-detail__back button:hover span:first-child {
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .service-detail__back {
+        padding: 18px 20px 0;
+    }
+
+    .service-detail__back button {
+        font-size: 10px;
+    }
+}
