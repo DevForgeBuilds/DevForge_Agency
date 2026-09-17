@@ -1089,94 +1089,51 @@ const getOppositeNavbarColors = (
 };
 
 
-/* ============================================================
-   WRITE RGB VARIABLES
-============================================================ */
+// /* ============================================================
+//    WRITE RGB VARIABLES
+// ============================================================ */
 
-const writeRGB = (
-    element: HTMLElement,
-    prefix: string,
-    color: RGB
-) => {
+// const writeRGB = (
+//     element: HTMLElement,
+//     prefix: string,
+//     color: RGB
+// ) => {
 
-    element.style.setProperty(
-        `--${prefix}-r`,
-        String(
-            Math.round(
-                color.r
-            )
-        )
-    );
-
-
-    element.style.setProperty(
-        `--${prefix}-g`,
-        String(
-            Math.round(
-                color.g
-            )
-        )
-    );
+//     element.style.setProperty(
+//         `--${prefix}-r`,
+//         String(
+//             Math.round(
+//                 color.r
+//             )
+//         )
+//     );
 
 
-    element.style.setProperty(
-        `--${prefix}-b`,
-        String(
-            Math.round(
-                color.b
-            )
-        )
-    );
+//     element.style.setProperty(
+//         `--${prefix}-g`,
+//         String(
+//             Math.round(
+//                 color.g
+//             )
+//         )
+//     );
 
-};
+
+//     element.style.setProperty(
+//         `--${prefix}-b`,
+//         String(
+//             Math.round(
+//                 color.b
+//             )
+//         )
+//     );
+
+// };
 
 
 /* ============================================================
    APPLY COLORS
 ============================================================ */
-
-const applyColors = (
-    element: HTMLElement,
-    prefix: string,
-    colors: NavbarColors
-) => {
-
-    writeRGB(
-        element,
-        `${prefix}-bg`,
-        colors.background
-    );
-
-
-    writeRGB(
-        element,
-        `${prefix}-text`,
-        colors.text
-    );
-
-
-    writeRGB(
-        element,
-        `${prefix}-muted`,
-        colors.muted
-    );
-
-
-    writeRGB(
-        element,
-        `${prefix}-accent`,
-        colors.accent
-    );
-
-
-    writeRGB(
-        element,
-        `${prefix}-border`,
-        colors.border
-    );
-
-};
-
 
 /* ============================================================
    MAIN INITIALIZER
@@ -1319,8 +1276,8 @@ export const initNavbarAnimation = (
 
 
             const sectionId =
-                closest?.id ??
-                'hero';
+    (closest as HTMLElement | null)?.id ??
+    'hero';
 
 
             if (

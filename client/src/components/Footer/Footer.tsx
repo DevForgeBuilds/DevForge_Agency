@@ -429,7 +429,6 @@ import { initFooterAnimation } from '../../animations/footerAnimation';
 import devforgeMiniLogo from '../../assets/devforge-mini-logo.png';
 import {
     FaGithub,
-    FaLinkedinIn,
     FaInstagram,
 } from 'react-icons/fa6';
 

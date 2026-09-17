@@ -588,8 +588,7 @@ export const initServiceDetailAnimation = (
                 };
 
 
-            const processTrigger =
-                gsap.to(
+            gsap.to(
                     processTrack,
                     {
                         x:

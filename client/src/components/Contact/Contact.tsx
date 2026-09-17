@@ -1,4 +1,5 @@
-import { FormEvent, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import type { FormEvent } from 'react';
 import { initContactAnimation } from '../../animations/contactAnimation';
 import {
     submitInquiry,

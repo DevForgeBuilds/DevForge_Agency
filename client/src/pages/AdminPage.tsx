@@ -292,18 +292,18 @@ const schemas: Record<
   ],
 };
 
-const sectionNames: Record<string, string> = {
-  dashboard: 'Dashboard',
-  inquiries: 'Inquiries',
-  services: 'Services',
-  projects: 'Projects',
-  reviews: 'Reviews',
-  clients: 'Clients',
-  admins: 'Admin Accounts',
-  activity: 'Activity History',
-  settings: 'Website Settings',
-  profile: 'Admin Profile',
-};
+// const sectionNames: Record<string, string> = {
+//   dashboard: 'Dashboard',
+//   inquiries: 'Inquiries',
+//   services: 'Services',
+//   projects: 'Projects',
+//   reviews: 'Reviews',
+//   clients: 'Clients',
+//   admins: 'Admin Accounts',
+//   activity: 'Activity History',
+//   settings: 'Website Settings',
+//   profile: 'Admin Profile',
+// };
 
 const sectionSingularNames: Record<string, string> = {
   services: 'service',
@@ -1115,10 +1115,10 @@ status: row?.status ?? 'planning',
     onClose();
   };
 
-  const arrayToLines = (value: any, formatter: (item: any) => string) => {
-    if (!Array.isArray(value)) return value || '';
-    return value.map(formatter).join('\n');
-  };
+  // const arrayToLines = (value: any, formatter: (item: any) => string) => {
+  //   if (!Array.isArray(value)) return value || '';
+  //   return value.map(formatter).join('\n');
+  // };
 
   const save = async (e: FormEvent) => {
     e.preventDefault();
@@ -1199,18 +1199,18 @@ status: row?.status ?? 'planning',
     }
   };
 
-  const sections = [
-    { id: 'basic', number: '01', title: 'Basic Information', hint: 'Identity, client and project status' },
-    { id: 'media', number: '02', title: 'Cover & Media', hint: 'Images, video and live links' },
-    { id: 'story', number: '03', title: 'Case Study', hint: 'Overview and challenge' },
-    { id: 'process', number: '04', title: 'Process', hint: 'How the project was built' },
-    { id: 'gallery', number: '05', title: 'Gallery', hint: 'Project screenshots' },
-    { id: 'tech', number: '06', title: 'Technologies', hint: 'Tools and technologies used' },
-    { id: 'features', number: '07', title: 'Features', hint: 'Key product capabilities' },
-    { id: 'results', number: '08', title: 'Results', hint: 'Outcomes and metrics' },
-    { id: 'credits', number: '09', title: 'Credits', hint: 'People and roles' },
-    { id: 'publish', number: '10', title: 'Publishing', hint: 'Visibility and homepage placement' },
-  ];
+  // const sections = [
+  //   { id: 'basic', number: '01', title: 'Basic Information', hint: 'Identity, client and project status' },
+  //   { id: 'media', number: '02', title: 'Cover & Media', hint: 'Images, video and live links' },
+  //   { id: 'story', number: '03', title: 'Case Study', hint: 'Overview and challenge' },
+  //   { id: 'process', number: '04', title: 'Process', hint: 'How the project was built' },
+  //   { id: 'gallery', number: '05', title: 'Gallery', hint: 'Project screenshots' },
+  //   { id: 'tech', number: '06', title: 'Technologies', hint: 'Tools and technologies used' },
+  //   { id: 'features', number: '07', title: 'Features', hint: 'Key product capabilities' },
+  //   { id: 'results', number: '08', title: 'Results', hint: 'Outcomes and metrics' },
+  //   { id: 'credits', number: '09', title: 'Credits', hint: 'People and roles' },
+  //   { id: 'publish', number: '10', title: 'Publishing', hint: 'Visibility and homepage placement' },
+  // ];
 
   const Input = ({
     label,

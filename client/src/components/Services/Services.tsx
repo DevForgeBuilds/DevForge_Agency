@@ -132,7 +132,6 @@ const Services = () => {
 
     const {
         services: apiServices,
-        loading,
     } = useServices();
 
 
