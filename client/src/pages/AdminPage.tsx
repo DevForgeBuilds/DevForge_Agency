@@ -381,18 +381,12 @@ function Login({ onLogin }: { onLogin: () => void }) {
         body: JSON.stringify({ email, password }),
       });
 
-      if (!r.requiresOtp || !r.otpToken) {
-        throw new Error('OTP could not be started. Please try again.');
+            if (!r.token) {
+        throw new Error('Login failed. Please try again.');
       }
 
-      setOtpToken(r.otpToken);
-      setMaskedEmail(r.email || email);
-      setMessage(
-        r.message || 'A 6-digit OTP has been sent to your email.'
-      );
-      setOtp('');
-      setCountdown(60);
-      setMode('otp');
+      localStorage.setItem('devforge_admin_token', r.token);
+      onLogin();
     } catch (x: any) {
       setError(x.message);
     } finally {
