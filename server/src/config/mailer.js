@@ -1,108 +1,73 @@
-// import nodemailer from 'nodemailer';
 
-// let transporter = null;
+import { Resend } from 'resend';
 
-// /**
-//  * Lazily creates (and caches) the SMTP transporter.
-//  * Returns null if SMTP env vars are not configured.
-//  */
-// export const getTransporter = () => {
-//     if (transporter) {
-//         return transporter;
-//     }
-
-//     const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env;
-
-//     if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
-//         console.warn(
-//             '[Mailer] SMTP env vars missing — emails will be skipped. See .env.example'
-//         );
-//         return null;
-//     }
-
-//     transporter = nodemailer.createTransport({
-//         host: SMTP_HOST,
-//         port: Number(SMTP_PORT) || 587,
-//         secure: process.env.SMTP_SECURE === 'true',
-//         auth: {
-//             user: SMTP_USER,
-//             pass: SMTP_PASS,
-//         },
-//     });
-
-//     return transporter;
-// };
-
-// export const verifyMailer = async () => {
-//     const t = getTransporter();
-
-//     if (!t) return false;
-
-//     try {
-//         await t.verify();
-//         console.log('[Mailer] SMTP connection verified ✔');
-//         return true;
-//     } catch (error) {
-//         console.error(
-//             '[Mailer] SMTP verification failed:',
-//             error.message
-//         );
-//         return false;
-//     }
-// };
-import nodemailer from 'nodemailer';
-
-let transporter = null;
+let mailer = null;
 
 /**
- * Lazily creates (and caches) the SMTP transporter.
- * Returns null if SMTP env vars are not configured.
+ * Lazily creates and caches a Resend-compatible mailer.
+ * Returns null when required environment variables are missing.
  */
 export const getTransporter = () => {
-    if (transporter) {
-        return transporter;
+    if (mailer) {
+        return mailer;
     }
 
-    const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env;
+    const { RESEND_API_KEY, ADMIN_EMAIL, EMAIL_FROM } = process.env;
 
-    if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+    if (!RESEND_API_KEY || !ADMIN_EMAIL || !EMAIL_FROM) {
         console.warn(
-            '[Mailer] SMTP env vars missing — emails will be skipped. See .env.example'
+            '[Mailer] Resend env vars missing - emails will be skipped.'
         );
         return null;
     }
 
-    transporter = nodemailer.createTransport({
-        host: SMTP_HOST,
-        port: Number(SMTP_PORT) || 587,
-        secure: process.env.SMTP_SECURE === 'true',
-        auth: {
-            user: SMTP_USER,
-            pass: SMTP_PASS,
-        },
-        family: 4,
-        connectionTimeout: 15000,
-        greetingTimeout: 15000,
-        socketTimeout: 15000,
-    });
+    const resend = new Resend(RESEND_API_KEY);
 
-    return transporter;
+    mailer = {
+        sendMail: async ({
+            from,
+            to,
+            subject,
+            html,
+            text,
+            replyTo,
+        }) => {
+            const { data, error } = await resend.emails.send({
+                from: from || EMAIL_FROM,
+                to: Array.isArray(to) ? to : [to || ADMIN_EMAIL],
+                subject,
+                html,
+                text,
+                replyTo,
+            });
+
+            if (error) {
+                throw new Error(error.message || 'Resend email failed');
+            }
+
+            return data;
+        },
+    };
+
+    return mailer;
 };
 
+/**
+ * Resend uses an HTTPS API, so no SMTP connection verification is required.
+ */
 export const verifyMailer = async () => {
-    const t = getTransporter();
+    const configured =
+        Boolean(process.env.RESEND_API_KEY) &&
+        Boolean(process.env.ADMIN_EMAIL) &&
+        Boolean(process.env.EMAIL_FROM);
 
-    if (!t) return false;
-
-    try {
-        await t.verify();
-        console.log('[Mailer] SMTP connection verified ✔');
-        return true;
-    } catch (error) {
-        console.error(
-            '[Mailer] SMTP verification failed:',
-            error.message
+    if (!configured) {
+        console.warn(
+            '[Mailer] Resend env vars missing - emails will be skipped.'
         );
         return false;
     }
+
+    console.log('[Mailer] Resend API configured');
+    return true;
 };
