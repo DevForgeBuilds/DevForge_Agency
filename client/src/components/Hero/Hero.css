@@ -1803,13 +1803,73 @@ Each letter is an individual transform target.
 
 
 /* MOBILE */
-
-@media (max-width: 760px) {
+@media (max-width: 820px) {
     .hero__df-svg .df-segment {
         stroke-width: 2.2;
+
+        /* Keep complete D and F visible on mobile */
+        stroke-dasharray: 12 7;
+        stroke-dashoffset: 0;
+
+        animation: none;
+        opacity: 1;
     }
 
     .hero__df-svg .df-detail {
-        opacity: 0.8;
+        stroke-width: 1.2;
+        opacity: 0.85;
+    }
+
+    .hero__df-svg .df-node {
+        opacity: 1;
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 100svh;
+        overflow-x: clip;
+        overflow-y: visible;
+    }
+
+    .hero__blueprint {
+        width: min(100%, 420px);
+        aspect-ratio: 1 / 1;
+        justify-self: center;
+        margin-inline: auto;
+    }
+
+    .hero__df-svg {
+        inset: 6%;
+        width: 88%;
+        height: 88%;
+        max-width: 100%;
+        transform-origin: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__blueprint {
+        width: calc(100vw - 32px);
+        max-width: 380px;
+    }
+}
+@media (max-width: 520px) {
+    .hero__container {
+        padding: 5.5rem 1rem 2.5rem;
+        gap: 1.5rem;
+        justify-content: flex-start;
+    }
+
+    .hero__blueprint {
+        width: min(78vw, 300px);
+        margin-top: 0;
+        flex-shrink: 0;
+    }
+
+    .hero__df-svg {
+        inset: 4%;
+        width: 92%;
+        height: 92%;
     }
 }

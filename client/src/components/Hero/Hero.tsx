@@ -905,82 +905,83 @@ const Hero = () => {
                         aria-hidden="true"
                     >
                         {/* =========================
-        D — FRAGMENTED
-    ========================= */}
+       {/* =========================
+    D — FRAGMENTED
+========================= */}
 
-                        <path
-                            className="df-segment df-segment--1"
-                            d="M85 75V425"
-                        />
+<path
+    className="df-segment df-segment--1"
+    d="M55 75V425"
+/>
 
-                        <path
-                            className="df-segment df-segment--2"
-                            d="M85 75H195"
-                        />
+<path
+    className="df-segment df-segment--2"
+    d="M55 75H145"
+/>
 
-                        <path
-                            className="df-segment df-segment--3"
-                            d="M195 75C285 75 335 140 335 250"
-                        />
+<path
+    className="df-segment df-segment--3"
+    d="M145 75C215 75 255 140 255 250"
+/>
 
-                        <path
-                            className="df-segment df-segment--4"
-                            d="M335 250C335 360 285 425 195 425H85"
-                        />
+<path
+    className="df-segment df-segment--4"
+    d="M255 250C255 360 215 425 145 425H55"
+/>
 
-                        {/* D inner broken construction */}
+{/* D inner broken construction */}
 
-                        <path
-                            className="df-detail"
-                            d="M125 120V380"
-                        />
+<path
+    className="df-detail"
+    d="M95 120V380"
+/>
 
-                        <path
-                            className="df-detail"
-                            d="M125 120H190"
-                        />
+<path
+    className="df-detail"
+    d="M95 120H140"
+/>
 
-                        <path
-                            className="df-detail"
-                            d="M190 120C245 120 285 170 285 250"
-                        />
+<path
+    className="df-detail"
+    d="M140 120C185 120 215 170 215 250"
+/>
 
-                        <path
-                            className="df-detail"
-                            d="M285 250C285 330 245 380 190 380H125"
-                        />
+<path
+    className="df-detail"
+    d="M215 250C215 330 185 380 140 380H95"
+/>
 
 
-                        {/* =========================
-        F — FRAGMENTED
-    ========================= */}
+                 {/* =========================
+    F — FRAGMENTED
+========================= */}
 
-                        <path
-                            className="df-segment df-segment--5"
-                            d="M285 75H425"
-                        />
+<path
+    className="df-segment df-segment--5"
+    d="M295 75H445"
+/>
 
-                        <path
-                            className="df-segment df-segment--6"
-                            d="M285 75V425"
-                        />
+<path
+    className="df-segment df-segment--6"
+    d="M295 75V425"
+/>
 
-                        <path
-                            className="df-segment df-segment--7"
-                            d="M285 250H405"
-                        />
+<path
+    className="df-segment df-segment--7"
+    d="M295 250H420"
+/>
 
-                        {/* F broken details */}
+{/* F broken details */}
 
-                        <path
-                            className="df-detail"
-                            d="M325 115H425"
-                        />
+<path
+    className="df-detail"
+    d="M335 115H435"
+/>
 
-                        <path
-                            className="df-detail"
-                            d="M325 250H395"
-                        />
+<path
+    className="df-detail"
+    d="M335 285H405"
+/>
 
 
                         {/* =========================
@@ -1022,19 +1023,24 @@ const Hero = () => {
         TECHNICAL NODES
     ========================= */}
 
-                        <circle className="df-node" cx="85" cy="75" r="5" />
-                        <circle className="df-node" cx="85" cy="425" r="5" />
+                       {/* D nodes */}
 
-                        <circle className="df-node" cx="195" cy="75" r="4" />
-                        <circle className="df-node" cx="335" cy="250" r="5" />
-                        <circle className="df-node" cx="195" cy="425" r="4" />
+<circle className="df-node" cx="55" cy="75" r="5" />
+<circle className="df-node" cx="55" cy="425" r="5" />
 
-                        <circle className="df-node" cx="285" cy="75" r="5" />
-                        <circle className="df-node" cx="425" cy="75" r="4" />
+<circle className="df-node" cx="145" cy="75" r="4" />
+<circle className="df-node" cx="255" cy="250" r="5" />
+<circle className="df-node" cx="145" cy="425" r="4" />
 
-                        <circle className="df-node" cx="285" cy="250" r="5" />
-                        <circle className="df-node" cx="405" cy="250" r="4" />
-                        <circle className="df-node" cx="285" cy="425" r="5" />
+
+{/* F nodes */}
+
+<circle className="df-node" cx="295" cy="75" r="5" />
+<circle className="df-node" cx="445" cy="75" r="4" />
+
+<circle className="df-node" cx="295" cy="250" r="5" />
+<circle className="df-node" cx="420" cy="250" r="4" />
+<circle className="df-node" cx="295" cy="425" r="5" />
 
 
                         {/* =========================
